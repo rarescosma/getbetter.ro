@@ -1,0 +1,3 @@
+[submodule "themes/pelican-hyde"]
+	path = themes/pelican-hyde
+	url = https://github.com/rarescosma/pelican-hyde
