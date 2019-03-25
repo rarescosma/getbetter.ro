@@ -11,7 +11,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 SSH_HOST=vps
 SSH_USER=karelian
-SSH_TARGET_DIR=/pv/kube/services/getbetter-pelican
+SSH_TARGET_DIR=/pv/kube/services/getbetter-www
 
 
 DEBUG ?= 0
