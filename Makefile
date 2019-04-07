@@ -24,6 +24,8 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
+VERIF_FILE=googleef313a2aa1735a89.html
+
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -76,7 +78,10 @@ endif
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-sync: publish
+output/$(VERIF_FILE):
+	cp -f var/$(VERIF_FILE) output/
+
+sync: publish output/$(VERIF_FILE)
 	git push
 	rsync -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
