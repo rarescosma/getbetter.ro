@@ -49,4 +49,19 @@ THEME = 'themes/pelican-hyde'
 
 # Plugins
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['summary']
+PLUGINS = ['sitemap', 'summary']
+
+# Sitemap
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.75,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly',
+    },
+}
