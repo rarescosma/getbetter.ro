@@ -95,40 +95,55 @@ Title: Climbing Warmup
 # Lower body (9)
 
 ## Buttocks & lower back
-* TODO: picturs
+
+![Buttocks & lower back](/images/climbing/stretch/buttocks.png)
 
 ## Hamstrings
-* TODO: picturs
+
+![Hamstrings](/images/climbing/stretch/hamstrings.png)
 
 ## Piriformis
-* TODO: picturs
+
+![Piriformis](/images/climbing/stretch/piriformis.png)
 
 ## Adductor
-* TODO: picturs
+
+![Adductor](/images/climbing/stretch/adductor.png)
 
 ## Groin
-* TODO: picturs
+
+![Groin](/images/climbing/stretch/groin.png)
 
 ## Quadriceps, groin & hip flexors
-* TODO: picturs
+
+![Quads, groin & hip flexors](/images/climbing/stretch/quad_groin_hip_flexors.png)
 
 ## Quadriceps & hip flexors
-* TODO: picturs
+
+![Quad & hip flexors](/images/climbing/stretch/quad_hip_flexors.png)
 
 ## Calf
-* TODO: picturs
 
+![Calf](/images/climbing/stretch/calf.png)
+
+## Lower back & buttocks
+
+![Lower back & buttocks](/images/climbing/stretch/lower_back_buttocks.png)
 
 # Torso / core (4)
 
 ## Obliques
-* TODO: picturs
+
+![Obliques](/images/climbing/stretch/obliques.png)
 
 ## Abdominals
-* TODO: picturs
+
+![Abdominals](/images/climbing/stretch/abdominals.png)
 
 ## Trunk rotation
-* TODO: picturs
+
+![Trunk](/images/climbing/stretch/trunk_rotation.png)
 
 ## Lower back & hips
-* TODO: picturs
+
+![Lower back & hips](/images/climbing/stretch/lower_back_hips.png)
