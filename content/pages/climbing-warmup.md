@@ -51,15 +51,15 @@ Title: Climbing Warmup
 
 ## Finger flexors
 
-![Flexors Stretch](/images/climbing/stretch_flexors.png)
+![Flexors Stretch](/images/climbing/stretch/flexors.png)
 
 ## Finger extensors
 
-![Flexors Stretch](/images/climbing/stretch_extensors.png)
+![Flexors Stretch](/images/climbing/stretch/extensors.png)
 
 ## Finger isolation
 
-![Finger Isolation](/images/climbing/stretch_finger_isolation.png)
+![Finger Isolation](/images/climbing/stretch/finger_isolation.png)
 
 ## Finger splits
 
@@ -78,7 +78,7 @@ Title: Climbing Warmup
 
 ## Triceps
 
-![Triceps Stretch](/images/climbing/stretch_triceps.png)
+![Triceps Stretch](/images/climbing/stretch/triceps.png)
 
 ## Biceps
 * on the floor with feet flat and knees bent about halfway
@@ -90,7 +90,7 @@ Title: Climbing Warmup
 
 ## Deltoids & latissimus
 
-![Deltoids latissimus](/images/climbing/stretch_deltoids.png)
+![Deltoids latissimus](/images/climbing/stretch/deltoids.png)
 
 # Lower body (9)
 
