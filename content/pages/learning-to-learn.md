@@ -4,7 +4,7 @@ Title: Learning to Learn
 
 ### B - Belief
 
-If you don't believe you can or if you believe you can't, you're right.
+> If you don't believe you can or if you believe you can't, you're right.
 
 Avoid mental blocks by believing you can do better.
 
