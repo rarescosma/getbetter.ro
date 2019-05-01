@@ -1,4 +1,4 @@
-Title: Climbing Warmup
+Title: Climbing Warm-up
 
 # General (8)
 
@@ -19,7 +19,7 @@ Title: Climbing Warmup
 
 ## Arm scissors
 * arms to the sides and parallel to the floor
-* move arms forward until they pass eachother and cross at 90deg
+* move arms forward until they pass each other and cross at 90deg
 * reverse direction and move them back to the sides. Cease motion when shoulders are tense.
 * 30 reps at 1-2s/rep
 
@@ -68,7 +68,7 @@ Title: Climbing Warmup
 * gradually expand the bunched-up fingers to force the two fanned-out fingers farther apart
 
 
-## Rhomboids & trapezius
+## Rhomboids & trapezium
 * one arm across chest until the hand rests on opposite shoulder
 * maintain the bent elbow at chest level so that arm is parallel to the floor
 * grasp with other hand behind the bent elbow from below
