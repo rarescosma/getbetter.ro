@@ -29,8 +29,8 @@ through the upper and lower harness hoops: OUTSIDE, OUTSIDE, INSIDE
 
 * climber end should point upwards
 * hand end should point downwards
-* make a rope loop, pass it through, then pass carbine through both rope loop and
-the belay device hoop
+* make a rope bite, pass it through the belay device, then pass carbine through
+the rope bite, the belay device cable and into the belay loop
 * there should be a knot near the end of the rope
 
 #### The technique:
@@ -49,8 +49,8 @@ the belay device hoop
 #### Climber body check:
 
 * compare the knot loop length to the belay loop length
-* check that the figure 8 is correctly tied (5 times 2 on up/down sides. 4 parallel
-lines on left/right sides)
+* check that the figure 8 is correctly tied (5 times 2 on up/down sides.
+4 parallel lines on left/right sides)
 * check that the slack is not longer than 10cm
 
 #### Belayer check:
