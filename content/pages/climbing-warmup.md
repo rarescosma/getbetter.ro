@@ -195,3 +195,13 @@ Title: Climbing Warmup
 * secondary 20-30s while pulling the bent knee all the way to the floor
 
 ![Lower back & hips](/images/climbing/stretch/lower_back_hips.png)
+
+# General Stretch Advice
+
+* Warm-up / increase heart rate before stretching
+* Stretch in a slow, gradually progressive manner. Never bounce or do any motion that is forceful or painful. Stretching should produce some discomfort, but never pain.
+* Consider PNF (proprioceptive neuromuscular facilitation) for overcoming uncommon lack of flexibility
+* Concentrate on the area you’re stretching. Focus on relaxing the muscle and visualize tension escaping like air from a balloon.
+* Maintain slow, deep breathing throughout the stretch. Inhale through your nose and exhale through your mouth.
+* Maintain a neutral back position - neither rounded nor hyperextended - to maximize the stretch and avoid injury.
+* Engage in some stretching five or six days per week, and not just on climbing days.
