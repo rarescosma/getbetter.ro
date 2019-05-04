@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %}{{ SITENAME }} - Blog - {{ article.title }}{% endblock %}
+
 {% block metadata %}
 	<meta name="description" content="{{ article.summary|striptags|escape }}">
 	<meta property="og:description" content="{{ article.summary|striptags|escape }}">

@@ -3,7 +3,11 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Rareș Cosma'
-SITENAME = 'getbetter.ro'
+SITENAME = 'Getbetter'
+SITESUBTITLE = (
+   'A life journey of constant improvement in all areas of interests '
+   'by Rareș Cosma'
+)
 SITEURL = ''
 SITESRC = 'https://github.com/rarescosma/getbetter.ro'
 
@@ -23,13 +27,6 @@ AUTHOR_FEED_RSS = None
 # Biography
 BIO = "Senior software engineer / SRE<br/>Presently @ Klarna"
 PROFILE_IMAGE = 'avatar.png'
-
-
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
 
 # Social widget
 SOCIAL = (('email', 'rares@getbetter.ro'),
