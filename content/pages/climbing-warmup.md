@@ -1,4 +1,5 @@
 Title: Climbing Warmup
+Tags: Climbing, Wiki
 
 # General (8)
 

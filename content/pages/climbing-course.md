@@ -1,4 +1,5 @@
 Title: Climbing Course
+Tags: Climbing, Wiki
 
 # Part 1
 

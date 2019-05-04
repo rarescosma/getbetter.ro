@@ -62,3 +62,5 @@ SITEMAP = {
         'pages': 'monthly',
     },
 }
+
+TEMPLATE_PAGES = {'wiki.html': 'wiki/index.html'}

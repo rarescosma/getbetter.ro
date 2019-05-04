@@ -1,4 +1,5 @@
 Title: Learning to Learn
+Tags: Learn, Wiki
 
 # The BE FAST Method
 

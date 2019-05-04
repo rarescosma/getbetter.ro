@@ -1,0 +1,33 @@
+{% extends "page.html" %}
+
+{% block title %}{{ SITENAME }} - Wiki{% endblock %}
+
+{% set categorized={} %}
+{% for page in pages %}
+{% if 'Wiki' in page.tags %}
+{% for tag in page.tags %}
+{% if tag.name != 'Wiki' %}
+{% set x=categorized.__setitem__(
+    tag.name,
+    categorized.get(tag.name, []) + [page])
+%}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% block content %}
+<div class="page">
+    <h1 class="page-title">Wiki</h1>
+    <div class="posts">
+        {% for cat in categorized.keys() | sort %}
+                <h3>{{ cat }}</h3>
+                <ul>
+                    {% for page in categorized[cat] %}
+                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
