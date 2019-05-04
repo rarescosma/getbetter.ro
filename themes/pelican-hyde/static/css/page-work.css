@@ -1,0 +1,11 @@
+div.page img.align-left {
+  border-radius: 0;
+  float: left;
+  margin-right: 2rem;
+}
+
+div.page img.align-right {
+  border-radius: 0;
+  float: right;
+  margin-left: 2rem;
+}

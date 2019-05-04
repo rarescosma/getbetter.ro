@@ -1,0 +1,11 @@
+/*
+ * Details
+ */
+
+div.page table, tr, td, th {
+    border: none;
+}
+
+div.page td {
+    padding-right: 0;
+}

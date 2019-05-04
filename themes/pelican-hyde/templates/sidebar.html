@@ -1,0 +1,47 @@
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="{{ SITEURL }}/images/{{ PROFILE_IMAGE }}">
+					{{ AUTHOR }}
+				</a>
+			</h1>
+			<p class="lead">{{ BIO }} </p>
+			<p></p>
+		</div>
+		<nav class="sidebar-nav">
+			{% if DISPLAY_PAGES_ON_MENU %}
+				<ul class="sidebar-nav-pages">
+					<li><a href="{{ SITEURL }}/pages/about/">About</a></li>
+					<li><a href="{{ SITEURL }}/">Blog</a></li>
+					<li><a href="{{ SITEURL }}/pages/projects/">Projects</a></li>
+					<li><a href="{{ SITEURL }}/pages/work/">Work</a></li>
+				</ul>
+			{% endif %}
+
+			{% for name, link in SOCIAL %}
+				{% if name == 'email' %}
+					<a class="sidebar-nav-item" href="mailto:{{ link }}">
+						<i class="fa fa-envelope"></i>
+					</a>
+				{% else %}
+					<a class="sidebar-nav-item" href="{{ link }}">
+						<i class="fa fa-{{ name }}"></i>
+					</a>
+				{% endif %}
+			{% endfor %}
+			{% if FEED_ALL_ATOM %}
+				<a class="sidebar-nav-item" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}">
+					<i class="fa fa-feed"></i>
+				</a>
+			{% endif %}
+			{% if FEED_ALL_RSS %}
+				<a class="sidebar-nav-item" href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">
+					<i class="fa fa-feed"></i>
+				</a>
+			{% endif %}
+		</nav>
+	</div>
+</div>
