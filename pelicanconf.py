@@ -46,7 +46,7 @@ THEME = 'themes/pelican-hyde'
 
 # Plugins
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'summary']
+PLUGINS = ['sitemap', 'summary', 'liquid_tags.youtube']
 
 # Sitemap
 SITEMAP = {
