@@ -23,9 +23,9 @@ categorized.get(tag.name, []) + [c_page])
 	{{ page.content }}
 
     {% if 'Wiki' in page.tags %}
-    <h3>See also</h3>
     {% for tag in page.tags %}
     {% if categorized.get(tag.name) %}
+    <h4>Related pages in the '{{tag.name}}' category:</h4>
     <ul>
         {% for related_page in categorized.get(tag.name, []) %}
         <li><a href="{{ SITEURL }}/{{ related_page.url }}">{{ related_page.title }}</a></li>
