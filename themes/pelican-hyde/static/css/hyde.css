@@ -22,6 +22,7 @@
  * Container
  * Reverse layout
  * Themes
+ * Embeds
  */
 
 
@@ -295,4 +296,25 @@ a.sidebar-nav-item.active:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/*
+ * Embeds
+ */
+.videobox {
+    padding-bottom: 56.25%;  /* inverse of 16:9 aspect ratio */
+}
+.videobox {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+.videobox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
 }
