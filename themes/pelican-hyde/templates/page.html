@@ -3,9 +3,37 @@
 {% block title %}{{ SITENAME }} - {{ page.title }}{% endblock %}
 
 {% block content %}
+
+{% set categorized={} %}
+{% for c_page in pages %}
+{% if 'Wiki' in c_page.tags %}
+{% for tag in c_page.tags %}
+{% if tag.name != 'Wiki' and c_page.title != page.title %}
+{% set x=categorized.__setitem__(
+tag.name,
+categorized.get(tag.name, []) + [c_page])
+%}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
 <div class="page">
 	<h1 class="page-title">{{ page.title }}</h1>
 	{{ page.content }}
+
+    {% if 'Wiki' in page.tags %}
+    <h3>See also</h3>
+    {% for tag in page.tags %}
+    {% if categorized.get(tag.name) %}
+    <ul>
+        {% for related_page in categorized.get(tag.name, []) %}
+        <li><a href="{{ SITEURL }}/{{ related_page.url }}">{{ related_page.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
 </div>
 {% endblock %}
 
