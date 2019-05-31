@@ -1,5 +1,5 @@
 Title: Running Old Packages on Arch
-Tags: Arch, Wiki
+Tags: Linux, Wiki
 
 # The problem
 
