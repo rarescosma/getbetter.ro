@@ -34,10 +34,9 @@ YOUTUBE = re.compile(r'([\S]+)(\s+([\d%]+)\s([\d%]+))?')
 
 @LiquidTags.register('youtube')
 def youtube(preprocessor, tag, markup):
-    width = 0
-    height = 0
+    width = 640
+    height = 390
     youtube_id = None
-    hw = ""
 
     match = YOUTUBE.search(markup)
     if match:
@@ -47,19 +46,15 @@ def youtube(preprocessor, tag, markup):
         height = groups[3] or height
 
     if youtube_id:
-        if width or height:
-            hw = """
-            width="{width}" height="{height}"
-            """.format(width=width, height=height)
         youtube_out = """
-            <div class="videobox">
-                <iframe {hw}
+            <span class="videobox">
+                <iframe width="{width}" height="{height}"
                     src='https://www.youtube.com/embed/{youtube_id}'
                     frameborder='0' webkitAllowFullScreen mozallowfullscreen
                     allowFullScreen>
                 </iframe>
-            </div>
-        """.format(hw=hw, youtube_id=youtube_id).strip()
+            </span>
+        """.format(width=width, height=height, youtube_id=youtube_id).strip()
     else:
         raise ValueError("Error processing input, "
                          "expected syntax: {0}".format(SYNTAX))
