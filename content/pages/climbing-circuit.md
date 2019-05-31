@@ -31,7 +31,7 @@ Rest 1 to 2 minutes between sets.
 Begin with a total weight equal to about 25% of body weight and progress 
 up to 50% (never more).
 
-{% youtube rT7DgCr-3pg %}
+{% gb_youtube rT7DgCr-3pg %}
 
 
 ## Shoulder Press 
@@ -40,14 +40,14 @@ Press straight upward with your palms maintaining a forward-facing position.
 As your arms become straight, squeeze your hands slightly inward until 
 the dumbbells touch end-to-end.
 
-{% youtube qEwKCR5JCog %}
+{% gb_youtube qEwKCR5JCog %}
 
 
 ## Pec Fly 
 
 Gist: straight elbows instead of bent elbows. 
 
-{% youtube WMte8QiV9h8 %}
+{% gb_youtube WMte8QiV9h8 %}
 
 ## Lat Pull-Down 
 
@@ -55,7 +55,7 @@ Grip the bar with your hands shoulder width apart. Many pull-down machines
 possess bars designed for the much wider hand position preferred by bodybuilders
  — do not use this wide grip.
 
-{% youtube CAwf7n6Luuc %}
+{% gb_youtube CAwf7n6Luuc %}
 
 ## Upright Rows 
 
@@ -63,40 +63,40 @@ Gist: hold the grips with the overhand grip and lift it straight up to the colla
 
 Possible with [the cable machine](https://en.wikipedia.org/wiki/Upright_row).
 
-{% youtube amCU-ziHITM %}
+{% gb_youtube amCU-ziHITM %}
 
 ## Triceps Extension 
 
 Gist: the upper arms should remain stationary and only the forearms should move. 
 
-{% youtube YbX7Wd8jQ-Q %}
+{% gb_youtube YbX7Wd8jQ-Q %}
 
 ## Biceps Curl 
 
 Gist: soft elbows + control the motion and do not swing the weight. 
 
-{% youtube 8d2we4UqOSs %}
+{% gb_youtube 8d2we4UqOSs %}
 
 ## Leg Press 
 
 Gist: never lock the knees during the extension. 
 
-{% youtube IZxyjW7MPJQ %}
+{% gb_youtube IZxyjW7MPJQ %}
 
 ## Leg Extension 
 
 Gist: perhaps skip due to increased risk of injury to knees?
 
-{% youtube YyvSfVjQeL0 %}
+{% gb_youtube YyvSfVjQeL0 %}
 
 ## Leg Curl 
 
 Isolation exercise for hamstrings. Yummy.
 
-{% youtube ELOCsoDSmrg %}
+{% gb_youtube ELOCsoDSmrg %}
 
 ## Rotary Torso 
 
 Gist: need more info in regards to the safety of these machines.
 
-{% youtube 97boSjZ0erk %}
+{% gb_youtube 97boSjZ0erk %}

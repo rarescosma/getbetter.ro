@@ -4,6 +4,10 @@ ExtraTags: travel
 
 Work in progress post describing the beautiful dream that was biking the Mosel valley with my two favorite allies.
 
+## Approximate Track
+
+{% gb_mymaps 1cPtOtDxXs4pNlRi3iosQqWZzHpj9W8lS %}
+
 # Day 1
 
 *Distance* - 56.23km
