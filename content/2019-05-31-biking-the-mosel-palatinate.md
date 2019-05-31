@@ -145,9 +145,22 @@ the local terrace.
 
 *Distance* - 69.2km
 
-Bernkastel Kues - Traben Trarbach - Aussichtsturm Prinzenkopf (Zell) - Cochem
+## Bernkastel Kues - Traben-Trarbach
+
+1st breakfast at cafe. Bought an egg. Still wasn't enough. 
+
+Shopping for sunscreen, supermarket breakfast on heavy mayo + fruity supplies.
+
+## Traben-Trarbach - Aussichtsturm Prinzenkopf (Zell)
+
+Bum, under-the-bridge pause in Traben Trarbach.
+
+After crossing the bridge, Mex & I got separated from Chris, as he kept forward
+when there were stairs on the left side leading to the waterfront. 
 
 The epic route failure around Aussichtsturm Prinzenkopf.
+
+## Aussichtsturm Prinzenkopf (Zell) - Cochem
 
 Epic descent as well.
 
@@ -155,3 +168,4 @@ Mushroom-shaped guest house.
 
 Arrival & evening in Cochem: gas pump hostel, castel hike, schweinhaxe v2, schlager musik + lots of kolsch,
 then balcony / gas station party + bedtime philosophy until 3am.
+
