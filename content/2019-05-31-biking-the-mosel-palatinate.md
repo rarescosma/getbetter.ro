@@ -7,6 +7,7 @@ Work in progress post describing the beautiful dream that was biking the Mosel
 valley with my two favorite allies.
 
 TODO:
+
 * day 3
 * gallery plugin
 * add photos
