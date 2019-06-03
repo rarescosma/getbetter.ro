@@ -46,7 +46,15 @@ THEME = 'themes/pelican-hyde'
 
 # Plugins
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'summary', 'liquid_tags.getbetter']
+PLUGINS = ['sitemap', 'summary', 'liquid_tags.getbetter', 'photos']
+
+# Photos
+PHOTO_LIBRARY = "~/src/getbetter.ro/var/galleries"
+PHOTO_GALLERY = (1024, 768, 80)
+PHOTO_ARTICLE = (760, 506, 80)
+PHOTO_THUMB = (192, 144, 60)
+PHOTO_RESIZE_JOBS = 5
+PHOTO_WATERMARK = False
 
 # Sitemap
 SITEMAP = {
