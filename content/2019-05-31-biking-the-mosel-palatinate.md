@@ -1,4 +1,5 @@
 Title: Biking through the Mosel Palatinate
+Gallery: {photo}2019.05.22.mosel.day1{Day 1},{photo}2019.05.23.mosel.day2{Day 2},{photo}2019.05.24.mosel.day3{Day 3}
 Tags: travel, germany, biking
 ExtraTags: travel
 
@@ -14,7 +15,7 @@ TODO:
 
 {% gb_mymaps 1cPtOtDxXs4pNlRi3iosQqWZzHpj9W8lS %}
 
-# Day 1
+# Day 1 - the 22nd of May, 2019
 
 *Distance* - 56.23km
 
@@ -102,7 +103,7 @@ path going south of Trier and close to the city center. Making it to the
 city center + glorious entrance through the Porta Nigra. Chillin' near the
 church with some Schnitzels.
 
-# Day 2
+# Day 2 - the 23rd of May, 2019
 
 *Distance* - 66km
 
@@ -189,7 +190,7 @@ in place.
 Of course, before going to sleep we cleaned out another couple of beers on
 the local terrace.
 
-# Day 3 - TODO
+# Day 3 - the 24th of May, 2019
 
 *Distance* - 69.2km
 
