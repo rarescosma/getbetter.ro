@@ -2,7 +2,13 @@ Title: Biking through the Mosel Palatinate
 Tags: travel, germany, biking
 ExtraTags: travel
 
-Work in progress post describing the beautiful dream that was biking the Mosel valley with my two favorite allies.
+Work in progress post describing the beautiful dream that was biking the Mosel 
+valley with my two favorite allies.
+
+TODO:
+* day 3
+* gallery plugin
+* add photos
 
 ## Approximate Track
 
@@ -16,36 +22,78 @@ Work in progress post describing the beautiful dream that was biking the Mosel v
 
 ### Morning at Chris'
 
-Waking up to the reality of having to take Chris' bikes for the trip.
-"Fixing" a broken back-wheel spoke on one of the MRBs.
-Adjusting seats n' stuff.
+Woke up with the belly full of last night's Schweinhaxe, plus a slight 
+hangover. Luckily, the swedish Resorb clone pills worked like a charm. 
 
-Making sandwiches. Thank the Lord for the Resorb pills from Sweden.
+We had a pretty slow start with coffee, protein shakes and some minimal
+breakfast (not in quantity, but in composition), did some abs, 
+then starting preparing sandwiches for the trip and inspecting Chris' bikes. 
+
+Apart from small mechanical adjustments we had
+to "fix" a broken back-wheel spoke on one of them by completely removing it. 
+This turned out to be quite an adventure as the material is hard to bend and
+working around the back-wheel cassette quickly became very annoying.
+
+When all was said and done we, of course, had no chance to catch the planned
+train trip, so had to take a later train towards Türkismühle.  
 
 ### Train ride to Türkismühle
 
 Not much to say here except that the landscape is nice and green and the region
-seems dotted with quaint villages and good nature.
+seems dotted with quaint villages and good nature. Also, the Sun came out, 
+so we were in for a good trip. Well, there was the extra weight of the rain
+gear, but that's just more training, right?
 
-### Türkismühle - Nonnweiler
+### Türkismühle - Nonnweiler - Reinsfeld
 
-A nice climb that managed to lift spirits and leave Chris pretty mad b/c of
-the shitty bike and heavy backpack.
+We mostly rode on roads shared with cars on this segment, passed a few small
+settlements, had coffee in one of them and took a longer break in another
+to eat sandwiches and change into lighter clothes. 
 
-Eating sandwiches. Changing into the spandex-diaper-pants...
+At some point we encountered a really long incline, not at a very steep angle, 
+but enough to lift spirits and leave Chris somewhat mad because of his shitty 
+bike and heavy backpack. 
 
-### Nonnweiler - Reinsfeld
+We did see a wind turbine up close along the way, which was pretty cool. 
 
-A good intended lady in a random field advertising a *the* bike path
-to Trier (50km range). Another random old walking couple advertising
-the same, going from Reinsfeld apparently. Getting mad in Reinsfeld.
+The last stop was in Nonnweiler where I've got a bunch of chocolate from a gas
+station. Mex's stomach was still pretty upset about the Schweinhaxe attempt so
+medication was in order, along with an extended break. 
+
+Finding the way to the dedicated bike path was somewhat challenging as it rode
+close to an old rail line and there were a lot of fenced up areas. Finally, we
+took a detour through a small part of town and merged. Escaping cars and going
+through the countryside and fields was bliss. 
+
+At some point we passed a bridge over a regional road and met with a good 
+intended German lady who was advertising a novel bike path that allegedly went
+straight to Trier and was mostly downhill, albeit a bit longer (50km). This
+got our attention, especially after we've also met with a random old walking 
+couple who re-confirmed its existence and told us to just take the car road 
+back to Reinsfeld and look for this bike path.
+
+We did that, but once in Reinsfeld the atmosphere got very negative 
+because of inconsistencies in Google Maps and the inability to converge on a 
+good plan to proceed. There was the first mention of throwing Gorgan's 
+bike into the Mosel. 
 
 ### Reinsfeld - Riveris
 
-Taking lead. Picking a path through the middle of the forest along the Riveris.
-An *awesome* ride through the forest that recharged all the karma.
-Exiting the forest on a nice downhill ride to find ourselves in a completely
-new climatic region. Shit got hot all of a sudden.
+It was at this point that I took lead and picked a path through the middle 
+of the forest along the (aptly named) river Riveris.
+This turned out to be a very good decision as the forest road was surrounded
+by really lush forest areas and generally following the course of the river. 
+
+The light/shadow, forest/meadow and water/land/sky interplay together with the
+added technical challenge of the trail completely changed the karma balance of
+the group and by the time we were about to exit into the Mosel valley region
+everyone was just blissfully happy. 
+
+The entire adventure was topped off with a nice downhill ride merging into the
+road to Morscheid & Waldrach - both settlements within the climatic influence
+of the Mosel. This influence is quite heavy: there were 18-19C where we entered
+the forest, and around 24-25C where we exited. Transcedence. Also, time for
+a stop to shed even more clothing. 
 
 ### Riveris - Ruwer - Trier
 
@@ -147,25 +195,45 @@ the local terrace.
 
 ## Bernkastel Kues - Traben-Trarbach
 
-1st breakfast at cafe. Bought an egg. Still wasn't enough. 
+The previously unmentioned snorring issues were greatly ameliorated during
+the night by isolating Chris into his own bed - definitely a winning strategy. 
 
-Shopping for sunscreen, supermarket breakfast on heavy mayo + fruity supplies.
+We got up relatively early (around 8:00), got ready, dropped the key in the 
+postbox and moved out to catch some breakfast at the closest cafe. You'd think
+a basic sandwich and an extra boiled egg would fit the bill, but it was far
+from enough. 
+
+Noticing the extreme biker's tan that I've managed to acquire so far I've 
+decided to veer off towards the city center and look for some sunscreen. 
+A fortunate decision since the pharmacy was quite close to supermarket, where
+we all got our second breakfast and got some super-fruity supplies as well. 
+
+1st breakfast at cafe. Bought an extra boiled egg. Still wasn't enough. 
+
+Shopping for sunscreen, supermarket breakfast (heavy mayo, wtf) + super-fruity 
+supplies.
 
 ## Traben-Trarbach - Aussichtsturm Prinzenkopf (Zell)
 
-Bum, under-the-bridge pause in Traben Trarbach.
+Bum-lile, under-the-bridge break in Traben Trarbach + marginal exploration. 
 
 After crossing the bridge, Mex & I got separated from Chris, as he kept forward
 when there were stairs on the left side leading to the waterfront. 
 
-The epic route failure around Aussichtsturm Prinzenkopf.
+The epic routing failure around Aussichtsturm Prinzenkopf. 2nd to the left
+was a longer, but asphalt smooth road to the top, 1st to the left was hell.
+
+Got there so early compared to Chris & Mex that I was able to squeeze in a 20
+minute nap. 
 
 ## Aussichtsturm Prinzenkopf (Zell) - Cochem
 
-Epic descent as well.
+EPIC descent. 
 
-Mushroom-shaped guest house.
+Mushroom-shaped guest house. 
 
-Arrival & evening in Cochem: gas pump hostel, castel hike, schweinhaxe v2, schlager musik + lots of kolsch,
-then balcony / gas station party + bedtime philosophy until 3am.
+Breaking another back-wheel spoke.
 
+Arrival & evening in Cochem: gas pump hostel, castel hike, schweinhaxe v2, 
+schlager musik + lots of kolsch, then balcony / gas station party + drunken 
+philosophy until 3AM.
