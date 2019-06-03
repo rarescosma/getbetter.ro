@@ -43,6 +43,10 @@
 
 		<!-- Analytics -->
 		{% include 'fragments/google_analytics.html' %}
+
+        {% if (article and article.photo_gallery) %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/magnific-popup.css">
+        {% endif %}
 	</head>
 
 	<body class="theme-base-me">
@@ -54,5 +58,37 @@
 				<p>&copy; 2010-2019 {{ AUTHOR }} &bull; Built using <a href="https://blog.getpelican.com/" target="_blank">Pelican</a> &bull; Source available on <a href="{{ SITESRC }}">GitHub</a></p>
 			</div>
 		</div>
+        {% if (article and article.photo_gallery) %}
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-2.1.4.min.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.xgallerify.min.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.magnific-popup.min.js"></script>
+        <script>
+          $('.gallery').gallerify({
+            margin: 2,
+            lastRow: 'adjust',
+            mode: {
+              maxHeight: screen.height * 0.15,
+              breakPoints:[
+                {
+                  minWidth: 1,
+                  columns: 3,
+                }
+              ]
+            },
+            galleryMargin: 2,
+            jsSetup: true,
+
+          });
+          $('.gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+              enabled: true,
+              navigateByImgClick: true,
+              preload: [1,2]
+            }
+          });
+        </script>
+        {% endif %}
 	</body>
 </html>

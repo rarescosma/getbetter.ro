@@ -234,6 +234,16 @@ img {
   border-radius: 5px;
 }
 
+.gallery {
+    margin: auto;
+    font-size: 0px;
+}
+.gallery img {
+    display: inline-block;
+    margin: 0;
+    border-radius: 0;
+}
+
 /* Tables */
 table {
   margin-bottom: 1rem;
