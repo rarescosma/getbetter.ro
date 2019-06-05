@@ -17,6 +17,8 @@ from pelican.settings import DEFAULT_CONFIG
 from pelican import signals
 from pelican.utils import pelican_open
 
+from .gallery_tag import my_stuff
+
 logger = logging.getLogger(__name__)
 
 try:
@@ -521,6 +523,8 @@ def process_gallery(generator, content, location):
         else:
             logger.error('photos: Gallery does not exist: {} at {}'.format(gallery['location'], dir_gallery))
 
+    my_stuff(content)
+
 
 def detect_gallery(generator, content):
     if 'gallery' in content.metadata:
@@ -594,6 +598,7 @@ def register():
     signals.initialized.connect(initialized)
     try:
         signals.content_object_init.connect(detect_content)
+        # signals.all_generators_finalized.connect(my_stuff)
         signals.all_generators_finalized.connect(detect_images_and_galleries)
         signals.article_writer_finalized.connect(resize_photos)
     except Exception as e:

@@ -22,6 +22,8 @@ TODO:
 
 ## Highlights
 
+{% gb_gallery 2 %}
+
 ### Morning at Chris'
 
 Woke up with the belly full of last night's Schweinhaxe, plus a slight 
