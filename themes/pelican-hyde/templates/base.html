@@ -63,30 +63,28 @@
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.xgallerify.min.js"></script>
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.magnific-popup.min.js"></script>
         <script>
-          $('.gallery').gallerify({
-            margin: 2,
-            lastRow: 'adjust',
-            mode: {
-              maxHeight: screen.height * 0.15,
-              breakPoints:[
-                {
-                  minWidth: 1,
-                  columns: 3,
-                }
-              ]
-            },
-            galleryMargin: 2,
-            jsSetup: true,
-
-          });
-          $('.gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-              enabled: true,
-              navigateByImgClick: true,
-              preload: [1,2]
-            }
+          $('.gallery').each(function(i, g) {
+            $(g).gallerify({
+              margin: 2,
+              mode: {
+                maxHeight: screen.height * 0.15,
+                breakPoints: [
+                  {
+                    minWidth: 1,
+                    columns: 4,
+                  }
+                ]
+              },
+              jsSetup: true,
+            }).magnificPopup({
+              delegate: 'a',
+              type: 'image',
+              gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [1, 2]
+              }
+            });
           });
         </script>
         {% endif %}
