@@ -17,6 +17,8 @@ from pelican.settings import DEFAULT_CONFIG
 from pelican import signals
 from pelican.utils import pelican_open
 
+from .gallery_tag import gallery_tag
+
 logger = logging.getLogger(__name__)
 
 try:
@@ -520,6 +522,8 @@ def process_gallery(generator, content, location):
             DEFAULT_CONFIG['created_galleries']['gallery'] = content_gallery
         else:
             logger.error('photos: Gallery does not exist: {} at {}'.format(gallery['location'], dir_gallery))
+
+    gallery_tag(content)
 
 
 def detect_gallery(generator, content):

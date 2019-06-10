@@ -15,17 +15,5 @@
 	<h1 class="post-title">{{ article.title }}</h1>
 	<span class="post-date">{{ article.locale_date }}</span>
 	{{ article.content }}
-    {% if article.photo_gallery %}
-    <h2>Photos</h2>
-        {% for title, gallery in article.photo_gallery %}
-        <h3>{{ title }}</h3>
-        <div class="gallery">
-        {% for name, photo, thumb, exif, caption in gallery %}
-        <a href="{{ SITEURL }}/{{ photo }}" title="{{ name }}"><img src="{{ SITEURL }}/{{ thumb }}"></a>
-        {% endfor %}
-        </div>
-        {% endfor %}
-    {% endif %}
 </div>
 {% endblock %}
-
