@@ -1,16 +1,10 @@
 Title: Biking through the Mosel Palatinate
-Gallery: {photo}2019.05.22.mosel.day1{Day 1},{photo}2019.05.23.mosel.day2{Day 2},{photo}2019.05.24.mosel.day3{Day 3}
+Gallery: {photo}2019.05.22.mosel.day1{Gallery},{photo}2019.05.23.mosel.day2{Gallery},{photo}2019.05.24.mosel.day3{Gallery}
 Tags: travel, germany, biking
 ExtraTags: travel
 
-Work in progress post describing the beautiful dream that was biking the Mosel 
-valley with my two favorite allies.
-
-TODO:
-
-* day 3
-* gallery plugin
-* add photos
+A beautiful dream of biking along the meandering Mosel valley with my two 
+favorite allies.
 
 ## Approximate Track
 
@@ -24,7 +18,7 @@ TODO:
 
 ### Morning at Chris'
 
-Woke up with the belly full of last night's Schweinhaxe, plus a slight 
+I woke up with the belly full of last night's Schweinhaxe, plus a slight 
 hangover. Luckily, the swedish Resorb clone pills worked like a charm. 
 
 We had a pretty slow start with coffee, protein shakes and some minimal
@@ -94,7 +88,7 @@ everyone was just blissfully happy.
 The entire adventure was topped off with a nice downhill ride merging into the
 road to Morscheid & Waldrach - both settlements within the climatic influence
 of the Mosel. This influence is quite heavy: there were 18-19C where we entered
-the forest, and around 24-25C where we exited. Transcedence. Also, time for
+the forest, and around 24-25C where we exited. Transcendence. Also, time for
 a stop to shed even more clothing. 
 
 ### Riveris - Ruwer - Trier
@@ -103,6 +97,8 @@ Mostly downhill ride towards Trier. Almost missed a nice bike-dedicated
 path going south of Trier and close to the city center. Making it to the
 city center + glorious entrance through the Porta Nigra. Chillin' near the
 church with some Schnitzels.
+
+{% gb_gallery 0 %}
 
 # Day 2 - the 23rd of May, 2019
 
@@ -191,13 +187,15 @@ in place.
 Of course, before going to sleep we cleaned out another couple of beers on
 the local terrace.
 
+{% gb_gallery 1 %}
+
 # Day 3 - the 24th of May, 2019
 
 *Distance* - 69.2km
 
 ## Bernkastel Kues - Traben-Trarbach
 
-The previously unmentioned snorring issues were greatly ameliorated during
+The previously unmentioned snoring issues were greatly ameliorated during
 the night by isolating Chris into his own bed - definitely a winning strategy. 
 
 We got up relatively early (around 8:00), got ready, dropped the key in the 
@@ -210,32 +208,97 @@ decided to veer off towards the city center and look for some sunscreen.
 A fortunate decision since the pharmacy was quite close to supermarket, where
 we all got our second breakfast and got some super-fruity supplies as well. 
 
-1st breakfast at cafe. Bought an extra boiled egg. Still wasn't enough. 
-
-Shopping for sunscreen, supermarket breakfast (heavy mayo, wtf) + super-fruity 
-supplies.
+A couple of kilometers before Traben-Trarback we passed under a *massive*
+suspended concrete bridge. Say what you will about medieval / antic structures
+being prettier, but sometimes their modern counterparts are just unbelievable. 
+(well, for the engineering part anyway)
 
 ## Traben-Trarbach - Aussichtsturm Prinzenkopf (Zell)
 
-Bum-lile, under-the-bridge break in Traben Trarbach + marginal exploration. 
+Just like bums, we chilled a bit under the main bridge of Traben-Trarbach once
+reaching this fine establishment. The Mosel runs quite wide here and there was
+some boat traffic - good for photos.  
 
-After crossing the bridge, Mex & I got separated from Chris, as he kept forward
-when there were stairs on the left side leading to the waterfront. 
+This is also the first place where one member got completely separated from
+the group: Chris picked up (yet another) phone call while crossing the bridge
+and failed to notice the stairs leading back to the waterfront on its left. 
+No worries, the gang got reunited couple of hundred meters downstream. 
 
-The epic routing failure around Aussichtsturm Prinzenkopf. 2nd to the left
-was a longer, but asphalt smooth road to the top, 1st to the left was hell.
+Next up was a regular ~15km segment in the direction of Zell, a place where
+the river turns abruptly to the south-east, then back to the north-west again
+in a chicane enclosing some very high grounds. What better place to build a 
+cloister and an observation tower? And built them they have. We've decided
+to cut the corner here, and skip the entire chicane, but go up into the 
+Aussichtsturm Prinzenkopf for some awesome views of the valley below. 
 
-Got there so early compared to Chris & Mex that I was able to squeeze in a 20
-minute nap. 
+Google Maps was drunk again and it tried to lead us up a dirt path towards
+the tower. We decided to ignore that and keep forward. Then we met with a bunch
+of Romanian field workers who said the best way is to turn left at the end
+of a straight segment and take the asphalt road up. This showed up on Maps
+as the *second* turn to the right. As this was on a mild incline, I gained
+some distance and at stopped at the crux to look for the others. They vanished.
+
+I kept on, took the left turn and climbed some more to reach a nice place with
+one of those oversize wooden benches where you can lay down with the entire
+body. Phoning Mex & Chris I found out that they have decided (on their own) to
+skip the incline and take the *first* turn to the left instead as it appeared
+to be shorter. 
+
+Honestly, I was a bit disappointed in their decision to abandon 
+their leader, but pushed on and was chilling in the observation tower shortly
+thereafter. They ended up missing the road completely, pushing their bikes up
+through vines and berries and having to stop at the cloister for water before
+finally making it to the tower. I had enough time to take all the nice photos
+and also nap for 20 minutes, hahah. It was extremely fun to have the entire 
+tower for myself, have chocolate and fruit, set up some nice chilling music on 
+the bluetooth speaker and simply phase out. 
 
 ## Aussichtsturm Prinzenkopf (Zell) - Cochem
 
-EPIC descent. 
+As we've gained around 120m of altitude climbing to the tower, an epic descent
+followed: passing through the forest, a couple of villages and a section of Alf.
 
-Mushroom-shaped guest house. 
+There was a very interesting event house along the way - it's guest house 
+(or whatever the structure was) was shaped and decorated as a giant mushroom.   
 
-Breaking another back-wheel spoke.
+The next two ~16km segments where super-smooth - we were basically surrounded
+on all sides by endless vineyards, quaint villages, greenery and the 
+ever-so-slowly flowing Mosel. 
 
-Arrival & evening in Cochem: gas pump hostel, castel hike, schweinhaxe v2, 
-schlager musik + lots of kolsch, then balcony / gas station party + drunken 
-philosophy until 3AM.
+A couple of kilometers before reaching the center of Cochem I heard a weird 
+popping noise and the back-wheel started making clanging sounds: turns out I'd
+managed to break another back-wheel spoke. No coincidence that it was exactly
+diametrically opposed to the one we removed before setting off. We removed one
+half of it and continued - but so did the clanging sound, which we simply 
+ignored. 
+
+At some point I could not take it anymore so we stopped to have a closer
+look and it turned out the hub-side half of the broken spoke was still there 
+and clanging randomly against the transmission. It could've locked the disk
+break completely and with it the entire wheel. Luckily, that had not happened. 
+We took our time to remove it properly this time around. 
+
+We used booking.com again to find some accommodation that was conveniently close
+to the train station as we were on a tight schedule the following day. 
+
+After dropping the bikes and backpacks we hiked under threat of rain up to the
+11th century medieval castle and explored the fortifications for a while. The
+views and the castle itself were spectacular. 
+
+Then it was back to the city center to find some food as we were all ravenous
+after biking 70km. (and some of us pushing bikes through vines)
+Of course I had to have my second serving oh Schweinhaxe - which I slowly 
+proceeded to clean out. Chris was very impressed with my ability to finish it, 
+contrary to all belief. 
+
+After the meal we were in the mood for beers. We tried to convince Mex to join
+for a few, but he went home to preserve his stomach. Obviously, the only natural
+choice for Chris & I was to go for a Schlager Musik party in a popular local
+bar and have 6 or so Kölsch beers each. Properly imbibed with both beer and 
+party spirit we headed home around 1:30AM, then partied on the balcony for a 
+while, right above the gas station and then engaging in drunken philosophy
+until 3AM. 
+
+The end. Wake up.
+
+{% gb_gallery 2 %}
