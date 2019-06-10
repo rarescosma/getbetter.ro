@@ -51,8 +51,8 @@ PLUGINS = ['sitemap', 'summary', 'liquid_tags.getbetter', 'photos']
 # Photos
 PHOTO_LIBRARY = "~/src/getbetter.ro/var/galleries"
 PHOTO_GALLERY = (1024, 768, 80)
-PHOTO_ARTICLE = (760, 506, 80)
-PHOTO_THUMB = (192, 144, 60)
+PHOTO_ARTICLE = (1024, 768, 95)
+PHOTO_THUMB = (640, 480, 80)
 PHOTO_RESIZE_JOBS = 5
 PHOTO_WATERMARK = False
 
