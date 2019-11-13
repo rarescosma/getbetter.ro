@@ -7,6 +7,7 @@ import json
 import logging
 import multiprocessing
 import os
+from pathlib import Path
 import pprint
 import re
 import sys
@@ -259,7 +260,6 @@ def manipulate_exif(img, settings):
 
 
 def resize_worker(orig, resized, spec, settings):
-
     logger.info('photos: make photo {} -> {}'.format(orig, resized))
     im = Image.open(orig)
 
