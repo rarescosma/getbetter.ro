@@ -16,4 +16,15 @@
 	<span class="post-date">{{ article.locale_date }}</span>
 	{{ article.content }}
 </div>
+
+{% if article.prev_article or article.next_article %}
+<div class="pagination">
+	{% if article.prev_article %}
+	<a class="pagination-item" href="{{ SITEURL }}/{{ article.prev_article.url}}" title="{{ article.prev_article.title }}">Prev</a>
+	{% endif %}
+	{% if article.next_article %}
+	<a class="pagination-item" href="{{ SITEURL }}/{{ article.next_article.url}}" title="{{ article.next_article.title }}">Next</a>
+	{% endif %}
+</div>
+{% endif %}
 {% endblock %}
