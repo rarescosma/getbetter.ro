@@ -13,6 +13,8 @@ SSH_HOST=vps
 SSH_USER=karelian
 SSH_TARGET_DIR=/pv/kube/services/getbetter-www
 
+RSYNC_OPTS?=
+
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -54,6 +56,6 @@ output/$(VERIF_FILE):
 
 sync: publish output/$(VERIF_FILE) ### upload the web site via rsync+ssh
 	git push
-	rsync -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	rsync -P -rvzc --cvs-exclude --delete $(RSYNC_OPTS) $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 .PHONY: help html clean serve publish sync
