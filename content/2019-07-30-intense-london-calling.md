@@ -1,4 +1,4 @@
-Title: Intense London Calling
+Title: Intense London calling
 Gallery: {photo}2019.07.london{Gallery}
 Tags: travel, uk, london, l'enterloup, calibre, jazz cafe, xoyo, street art, primrose hill
 ExtraTags: travel
