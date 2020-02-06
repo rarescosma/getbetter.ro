@@ -2,12 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = "Rareș Cosma"
+AUTHOR = "Rareș"
 SITENAME = "Getbetter"
-SITESUBTITLE = (
-    "A life journey of constant improvement in all areas of interests "
-    "by Rareș Cosma"
-)
+SITESUBTITLE = "A life journey of constant improvement in all areas of interests by Rareș"
 SITEURL = ""
 SITESRC = "https://github.com/rarescosma/getbetter.ro"
 
@@ -25,7 +22,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Biography
-BIO = "Senior software engineer / SRE<br/>Presently @ Klarna"
+BIO = "Well balanced software engineer<br/><br />Presently building awesome data pipelines @ Klarna in Stockholm"
 PROFILE_IMAGE = "avatar.png"
 
 # Social widget
