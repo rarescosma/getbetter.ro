@@ -29,21 +29,6 @@ extra:
 
 docs_dir: content
 
-nav:
-  - About: index.md
-  - journal.md
-  - Climbing:
-    - climbing/circuit_exercises.md
-    - climbing/course.md
-    - climbing/warmup.md
-  - Ops:
-    - ops/12_factor_apps.md
-  - Learning:
-    - learning/learning_to_learn.md
-  - Linux:
-    - linux/rsync_tricks.md
-    - linux/running_old_packages_on_arch.md
-
 markdown_extensions:
   - admonition
   - codehilite
@@ -61,6 +46,7 @@ markdown_extensions:
 plugins:
   - search:
       prebuild_index: true
+  - awesome-pages
   - exclude:
       glob:
       - _build/*
