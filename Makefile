@@ -1,61 +1,36 @@
-PY?=python3
-PELICAN?=pelican
-PORT?=8000
-PELICANOPTS=
-
-BASEDIR=$(CURDIR)
-INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/output
-CONFFILE=$(BASEDIR)/pelicanconf.py
-PUBLISHCONF=$(BASEDIR)/publishconf.py
-
+.DEFAULT_GOAL := help
 SSH_HOST=vps
 SSH_USER=karelian
 SSH_TARGET_DIR=/pv/kube/services/getbetter-www
-
-RSYNC_OPTS?=
-
-DEBUG ?= 0
-ifeq ($(DEBUG), 1)
-	PELICANOPTS += -D
-endif
-
-RELATIVE ?= 0
-ifeq ($(RELATIVE), 1)
-	PELICANOPTS += --relative-urls
-endif
-
-VERIF_FILE=googleef313a2aa1735a89.html
-
-default: help
+DOCKER_IMAGE=localhost:5000/getbetter-ro:v0
+RSYNC_OPTS?=--dry-run
 
 help:
 	@echo 'Usage: make [target] ...'
 	@echo
 	@echo 'Targets:'
-	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep  \
-	| sed -e 's/^\(.*\):[^#]*#\(.*\)/\1 \2/' | tr '#' "\t"
-	@echo
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
-	@echo 'Set the RELATIVE variable to 1 to enable relative urls'
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	| awk 'BEGIN {FS = ":.*?## "}; {printf "%-16s %s\n", $$1, $$2}'
 
-html: ### (re)generate the web site
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+site: content ## Build the site using mkdocs
+	mkdocs build
 
-clean: ### remove the generated files
-	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+.PHONY: serve
+serve: ## Serve the site on http://localhost:8000
+	mkdocs serve
 
-serve: ### serve site at http://localhost:[PORT=8000] and regenerate on file changes
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
+.PHONY: clean
+clean: ## Cleanup
+	rm -rf *.egg-info
+	rm -rf build
+	rm -rf dist
+	rm -rf site
+	rm -rf content/_build
 
-publish: ## generate using production settings
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+.PHONY: sync
+sync: site ## Sync the site to the $(SSH_HOST)
+	rsync -P -rvzc --delete $(RSYNC_OPTS) site/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
-output/$(VERIF_FILE):
-	cp -f var/$(VERIF_FILE) output/
-
-sync: publish output/$(VERIF_FILE) ### upload the web site via rsync+ssh
-	git push
-	rsync -P -rvzc --cvs-exclude --delete $(RSYNC_OPTS) $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
-
-.PHONY: help html clean serve publish sync
+.PHONY: docker
+docker: ## Build the server docker image
+	docker build . -t $(DOCKER_IMAGE)

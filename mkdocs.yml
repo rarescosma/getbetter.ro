@@ -1,0 +1,57 @@
+site_name: getbetter
+site_description: Rareș' 2nd brain
+strict: true
+site_url: https://getbetter.ro/
+
+theme:
+  name: 'material'
+  palette:
+    primary: indigo
+    accent: indigo
+  logo: 'logo.svg'
+  favicon: 'favicon.png'
+
+repo_name: rarescosma/getbetter.ro
+repo_url: https://github.com/rarescosma/getbetter.ro
+
+extra_css:
+  - extra/macros.css
+  - extra/popup.css
+extra_javascript:
+  - extra/gallery.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/rarescosma
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/rarescosma
+
+docs_dir: content
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - extra
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown_include.include:
+      base_path: content
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: 🔗
+
+plugins:
+  - awesome-pages
+  - exclude:
+      glob:
+      - _build/*
+      - build/*
+  - git-revision-date
+  - macros
+  - minify:
+      minify_html: true
+  - search:
+      prebuild_index: true
