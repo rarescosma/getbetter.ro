@@ -51,6 +51,7 @@ plugins:
       glob:
       - _build/*
       - build/*
+  - git-revision-date
   - macros
   - minify:
       minify_html: true
