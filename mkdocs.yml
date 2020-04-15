@@ -44,8 +44,6 @@ markdown_extensions:
       permalink: 🔗
 
 plugins:
-  - search:
-      prebuild_index: true
   - awesome-pages
   - exclude:
       glob:
@@ -55,3 +53,5 @@ plugins:
   - macros
   - minify:
       minify_html: true
+  - search:
+      prebuild_index: true
