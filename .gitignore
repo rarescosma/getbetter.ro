@@ -1,4 +1,5 @@
 .idea/
+/.venv
 *.py[cod]
 *.egg-info/
 /build/
@@ -11,5 +12,6 @@ dist/
 _build/
 /.ghtopdep_cache/
 /codecov.sh
-/content/galleries
-/content/_galleries_raw
+/content/photos
+/content/google*.html
+/raw_galleries
