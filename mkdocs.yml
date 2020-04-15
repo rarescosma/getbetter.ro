@@ -48,7 +48,6 @@ markdown_extensions:
   - admonition
   - codehilite
   - extra
-  - gb.youtube
   - markdown.extensions.codehilite:
       guess_lang: false
   - markdown_include.include:
@@ -66,5 +65,6 @@ plugins:
       glob:
       - _build/*
       - build/*
+  - macros
   - minify:
       minify_html: true
