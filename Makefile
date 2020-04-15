@@ -29,7 +29,7 @@ clean: ## Cleanup
 
 .PHONY: sync
 sync: site ## Sync the site to the $(SSH_HOST)
-	rsync -P -rvzc --delete $(RSYNC_OPTS) site/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	rsync -P -rvzzc --delete $(RSYNC_OPTS) site/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 .PHONY: docker
 docker: ## Build the server docker image
