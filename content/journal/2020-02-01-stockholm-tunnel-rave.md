@@ -1,11 +1,9 @@
 Title: Tunnel raving
-Gallery: {photo}2020.02.tunnel.rave{Gallery}
 Tags: rave, techno, underground, saragat, nocturnal, habits
 ExtraTags: party
 
 Probably the best party of my life (so far): 18 *hours* of positive vibes,
 techno energy and real people.
-<!-- PELICAN_END_SUMMARY -->
 
 Thank you Stockholm for finally letting me graduate into this beautiful crowd!
 
@@ -21,7 +19,7 @@ the logistics so well!
 
 This memory is for life, truly a spiritual transformation.
 
-{% gb_gallery 0 %}
+{{ gb_gallery("2020.02.tunnel.rave") }}
 
 *Photo copyright goes to their respective authors. EXIF had
 to be removed though ;-)*

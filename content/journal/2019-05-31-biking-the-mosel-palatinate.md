@@ -1,11 +1,9 @@
 Title: Biking through the Mosel Palatinate
-Gallery: {photo}2019.05.22.mosel.day1{Gallery},{photo}2019.05.23.mosel.day2{Gallery},{photo}2019.05.24.mosel.day3{Gallery}
 Tags: travel, germany, biking
 ExtraTags: travel
 
 A beautiful dream of biking along the meandering Mosel valley with my two
 favorite allies.
-<!-- PELICAN_END_SUMMARY -->
 
 ## Approximate Track
 
@@ -15,7 +13,7 @@ favorite allies.
 
 **Day 3** - *69.2km* - Bernkastel-Kues - Traben-Trarbach - Aussichtsturm Prinzenkopf - Cochem
 
-{% gb_mymaps 1cPtOtDxXs4pNlRi3iosQqWZzHpj9W8lS %}
+{{ gb_mymaps("1cPtOtDxXs4pNlRi3iosQqWZzHpj9W8lS") }}
 
 ## Day 1 - the 22nd of May, 2019
 
@@ -101,7 +99,7 @@ path going south of Trier and close to the city center. Making it to the
 city center + glorious entrance through the Porta Nigra. Chillin' near the
 church with some Schnitzels.
 
-{% gb_gallery 0 %}
+{{ gb_gallery("2019.05.22.mosel.day1") }}
 
 ## Day 2 - the 23rd of May, 2019
 
@@ -186,7 +184,7 @@ in place.
 Of course, before going to sleep we cleaned out another couple of beers on
 the local terrace.
 
-{% gb_gallery 1 %}
+{{ gb_gallery("2019.05.23.mosel.day2") }}
 
 ## Day 3 - the 24th of May, 2019
 
@@ -300,4 +298,4 @@ until 3AM.
 
 The end. Wake up.
 
-{% gb_gallery 2 %}
+{{ gb_gallery("2019.05.24.mosel.day3") }}
