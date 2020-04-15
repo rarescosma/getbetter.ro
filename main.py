@@ -26,7 +26,7 @@ MAPS_TPL = """
 IMAGE_TEMPLATE = """<a href="/{url}" title="{title}"><img src="/{thumb}"></a>"""
 
 CONTENT_DIR = Path(__file__).parent.resolve() / "content"
-GALLERY_DIR = CONTENT_DIR / "galleries"
+PHOTOS_DIR = CONTENT_DIR / "photos"
 
 
 def youtube(video_id: str) -> str:
@@ -38,16 +38,16 @@ def gb_mymaps(map_id: str) -> str:
 
 
 def gb_gallery(gallery_id: str) -> str:
-    gallery_dir = GALLERY_DIR / gallery_id
+    photos_dir = PHOTOS_DIR / gallery_id
 
-    if not gallery_dir.exists() or not gallery_dir.is_dir():
-        LOG.warning(f"Gallery directory {gallery_dir} is invalid.")
+    if not photos_dir.exists() or not photos_dir.is_dir():
+        LOG.warning(f"Gallery directory {photos_dir} is invalid.")
         return ""
 
     image_paths = sorted(
         [
             _.relative_to(CONTENT_DIR)
-            for _ in gallery_dir.glob("*.jpg")
+            for _ in photos_dir.glob("*.jpg")
             if _thumb_path(_).exists()
         ]
     )
