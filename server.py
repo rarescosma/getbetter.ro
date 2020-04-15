@@ -59,6 +59,8 @@ def handle_static(path):
     if not path:
         return send_from_directory(SITE_DIR, "index.html")
     if Path(path).suffix == "":
+        if not path.endswith("/"):
+            return redirect(f"{path}/", code=302)
         return send_from_directory(SITE_DIR, path + "/index.html")
     return send_from_directory(SITE_DIR, path)
 
