@@ -14,3 +14,14 @@
     margin: 0;
     border: 0;
 }
+
+.gallery {
+    margin: auto;
+    font-size: 0px;
+}
+
+.gallery img {
+    display: inline-block;
+    margin: 0;
+    border-radius: 0;
+}

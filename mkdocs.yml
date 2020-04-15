@@ -10,15 +10,15 @@ theme:
     accent: indigo
   logo: 'logo.svg'
   favicon: 'favicon.png'
-  features:
-    - instant
 
 repo_name: rarescosma/getbetter.ro
 repo_url: https://github.com/rarescosma/getbetter.ro
 
 extra_css:
-  - extra/videobox.css
-extra_javascript: []
+  - extra/macros.css
+  - extra/popup.css
+extra_javascript:
+  - extra/gallery.js
 
 extra:
   social:
