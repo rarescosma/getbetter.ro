@@ -16,8 +16,12 @@ site: content ## Build the site using mkdocs
 	mkdocs build
 
 .PHONY: serve
-serve: ## Serve the site on http://localhost:8000
+serve: ## Serve the site on http://localhost:8000 via MkDocs
 	mkdocs serve
+
+.PHONY: gserve
+gserve: ## Serve the site on http://localhost:8000 via gunicorn
+	gunicorn --reload server:app
 
 .PHONY: clean
 clean: ## Cleanup
