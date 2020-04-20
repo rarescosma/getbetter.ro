@@ -1,4 +1,3 @@
-import json
 import logging
 from pathlib import Path
 from typing import Any
@@ -30,14 +29,20 @@ PHOTOS_DIR = CONTENT_DIR / "photos"
 
 
 def youtube(video_id: str) -> str:
+    """ Renders a YouTube videobox.
+    """
     return YOUTUBE_TPL.format(video_id=video_id.strip())
 
 
-def gb_mymaps(map_id: str) -> str:
+def mymaps(map_id: str) -> str:
+    """ Renders an embedded map from google mymaps.
+    """
     return MAPS_TPL.format(map_id=map_id.strip())
 
 
-def gb_gallery(gallery_id: str) -> str:
+def photos(gallery_id: str) -> str:
+    """ Renders a photo gallery.
+    """
     photos_dir = PHOTOS_DIR / gallery_id
 
     if not photos_dir.exists() or not photos_dir.is_dir():
@@ -59,13 +64,14 @@ def gb_gallery(gallery_id: str) -> str:
 
 
 def _thumb_path(img_path: Path) -> Path:
+    """ image.jpg -> imaget.jpg
+    """
     return Path(str(img_path).replace(img_path.suffix, f"t{img_path.suffix}"))
 
 
 def define_env(env: Any):
-    """
-    This is the hook for declaring variables, macros and filters (new form)
+    """ Hook for declaring variables, macros and filters.
     """
     env.macro(youtube, "yt")
-    env.macro(gb_mymaps, "gb_mymaps")
-    env.macro(gb_gallery)
+    env.macro(mymaps)
+    env.macro(photos)

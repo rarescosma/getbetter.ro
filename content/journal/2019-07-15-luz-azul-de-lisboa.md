@@ -4,4 +4,4 @@ ExtraTags: travel
 
 Initial exploration of the light & friendly Lisbon area.
 
-{{ gb_gallery("2019.07.lisbon") }}
+{{ photos("2019.07.lisbon") }}

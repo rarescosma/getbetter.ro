@@ -19,7 +19,7 @@ the logistics so well!
 
 This memory is for life, truly a spiritual transformation.
 
-{{ gb_gallery("2020.02.tunnel.rave") }}
+{{ photos("2020.02.tunnel.rave") }}
 
 *Photo copyright goes to their respective authors. EXIF had
 to be removed though ;-)*
