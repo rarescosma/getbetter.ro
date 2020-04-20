@@ -4,6 +4,7 @@ import re
 from collections import defaultdict
 from difflib import SequenceMatcher
 from functools import lru_cache
+import logging
 from pathlib import Path
 from typing import Iterable, Optional, Pattern
 
@@ -14,6 +15,9 @@ SITE_DIR: str = "site"
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
 SIMILARITY_THRESHOLD: float = 0.65
 SIMILARITY_RATIO_THRESHOLD: float = 1.4
+logging.basicConfig(
+    level=logging.INFO, format="[%(asctime)s] [%(levelname)s] %(message)s"
+)
 
 app = Flask(__name__, static_url_path=f"/{SITE_DIR}")
 
@@ -43,25 +47,38 @@ def _find_similar(req_path: str, known_paths: Iterable[str]) -> Optional[str]:
     for known_path in known_paths:
         sim_map[_similar(req_path, known_path)].append(known_path)
 
-    max_similarity = max(sim_map.keys())
+    similar, max_similarity = None, max(sim_map.keys())
     if max_similarity >= SIMILARITY_THRESHOLD:
-        return sim_map[max_similarity].pop()
+        similar = sim_map[max_similarity].pop()
+        logging.info(
+            f"Max similarity {max_similarity} >= "
+            f"SIMILARITY_THRESHOLD {SIMILARITY_THRESHOLD}"
+        )
     else:
         next_best = max(set(sim_map.keys()) - {max_similarity})
-        if max_similarity / next_best >= SIMILARITY_RATIO_THRESHOLD:
-            return sim_map[max_similarity].pop()
-    return None
+        ratio = max_similarity / next_best
+        if ratio >= SIMILARITY_RATIO_THRESHOLD:
+            logging.info(
+                f"Ratio between best and next best guess {ratio} >= "
+                f"SIMILARITY_RATIO_THRESHOLD {SIMILARITY_RATIO_THRESHOLD}"
+            )
+            similar = sim_map[max_similarity].pop()
+    return similar
 
 
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
 def handle_static(path):
     if not path:
+        logging.info("Serving root /")
         return send_from_directory(SITE_DIR, "index.html")
     if Path(path).suffix == "":
+        logging.info(f"Serving a dir-like URL: {path}")
         if not path.endswith("/"):
+            logging.warn("Adding ending /")
             return redirect(f"{path}/", code=302)
-        return send_from_directory(SITE_DIR, path + "/index.html")
+        return send_from_directory(SITE_DIR, path + "index.html")
+    logging.info(f"Serving asset: {path}")
     return send_from_directory(SITE_DIR, path)
 
 
@@ -69,6 +86,7 @@ def handle_static(path):
 def handle_not_found(_):
     similar_url = _find_similar(request.path, known_paths=_sitemap_paths())
     if similar_url is not None:
+        logging.info(f"Redirecting '{request.path}' to '/{similar_url}/'")
         return redirect(f"/{similar_url}/", code=301)
     return "Nope.", 404
 
