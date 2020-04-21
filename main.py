@@ -64,9 +64,9 @@ def photos(gallery_id: str) -> str:
 
 
 def _thumb_path(img_path: Path) -> Path:
-    """ image.jpg -> imaget.jpg
+    """ image.jpg -> image.thumb.jpg
     """
-    return Path(str(img_path).replace(img_path.suffix, f"t{img_path.suffix}"))
+    return img_path.with_suffix(f".thumb{img_path.suffix}")
 
 
 def define_env(env: Any):
