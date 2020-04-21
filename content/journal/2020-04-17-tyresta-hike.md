@@ -116,7 +116,7 @@ Structure:
 
 ## Photos
 
-_gallery goes here_
+{{ photos("2020.04.tyresta") }}
 
 ## Lessons learned
 
