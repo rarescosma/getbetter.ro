@@ -106,13 +106,113 @@ and went back to sleep.
 
 ## Day 2 - Saturday, the 18th of April, 2020 (TODO)
 
-Structure:
+### Morning & breakfast
 
-* breakfast
-* trail to the Baltic
-* Lillströmsträsk
-* lunch + hike towards Raksta
-* nevermind Raksta - trail back to Nyfors
+I woke up to the sound of birds chirping which is always nice. However, there
+was this nagging sensation of always having the palms cold which only went away
+after doing some morning exercises: jumping jacks, pushups, squat jumps, etc.
+
+One of my friends cooked an awesome breakfast: oatmeal with 2 cartons of
+coconut milk (100%, no water, just the milk) and raisins. We added some
+nuts remaining from yesterday's snacks and it was delicious.
+
+Washing dishes in the cold lake water without any surfacing agent whatsoever
+wasn't that fun. I managed to drop a spoon in the lake, but not at great depth,
+so recovered it. Putting the entire arm in the cold water and briging it out
+would give this interesting warmth sensation.
+
+Needless to say, packing camp went much faster than putting it up.
+
+### Trail to the Baltic
+
+After breakfast one of our friends decided to
+[pull a Cartman](https://www.youtube.com/watch?v=RXS1sJm7QEA) so it was 3 of
+us who needed to get our Baltic fix. We plotted a route going East to the
+Vissvass - Raksta road, packed the trash onto a carbine and set out.
+
+200m from the camp we found a metallic box which we thought was a trash bin,
+so were happy we'd get rid of the annoying dangling plastic bag. We opened
+the lid, and to our great surprise and bemusement, it was full of ready cut
+firewood. Turns out the Tyresta crew are providing it near all the "official"
+camping spots. Yes, it also means we didn't have to chop-chop in the middle
+of the night to keep the fire up. Lesson learned.
+
+Another 200m we cought out with Cartman, who was walking very leisurly and
+seemed to be more than impressed with the surrounding environment, so we let
+him be.
+
+The rest of the hike up to the road was pretty straightforward: I kept veering
+South, one friend kept veering North so on average we managed to head East.
+Also, getting rid of the longjohns was very welcome.
+
+The landscape was mostly bouldery with a lot of dried up wood and shrubbery,
+but also some valleys home to a particularly green type of moss, which I've
+come to realize is indicative of wet feet.
+
+But all was good and we reached the car road, quickly realizing why it was
+built where it was built: on the other side there was a massive stone wall.
+We circled it towards the South and set our next destination: a small round
+lake called Lillströmsträsk.
+
+### Lillströmsträsk and the quest for the Baltic
+
+We reached the lake on its Southern shore after descending a ridge. As it
+was afternoon, we would circle it to get to the Eastern shore and stop there
+for some Sun and some rest and much needed water. The circling prooved a bit
+tricky as the vegetation around the lake was extremely wet, so we needed to
+backpedal and gain a bit of altitude.
+
+I used a friend's [very cool water filter](https://www.naturkompaniet.se/grayl-geopress-purifier-camo-black-2082384/?sku=852703004584)
+to refill the camelbak and we also had a nice carb-packed snack.
+
+Next, we set out to reach the seaside, but instead reached
+[someone's house](https://www.google.com/maps/place/Sisshammarv%C3%A4gen+9,+135+67+Tyres%C3%B6/@59.2036959,18.3559339,574m/data=!3m2!1e3!4b1!4m5!3m4!1s0x46f580badc6f2225:0xfbb9ff52b0149299!8m2!3d59.2036932!4d18.3581279).
+
+But that's OK, because there's this
+[special little law in Sweden](https://en.wikipedia.org/wiki/Freedom_to_roam#Sweden)
+which forbids blocking public access to the shoreline so you're basically
+free to pass thru anyone's garden, private property or not. Actually, turns
+out "freedom to roam" is in the *Constitution*. Pretty cool, no?
+
+Anyhow, we continued on Sisshammarvägen, then took a sideroad to the right
+and after crossing through a gate and passing through a field we found a cool
+spot near the shore and some old trees to stop and have lunch.
+
+Rice & lentils, ramen noodles and homemade vegan paella were on the menu and
+we gorged and also had coffee along with some deeply philosophical discussions.
+
+We set the next destination to be a village to the North called Raksta where
+we would take a bus back towards Stockholm. However, on the car road leading
+there we realized the bus had no more planned departures for Saturday, so
+plans needed to be changed.
+
+### Nevermind Raksta - trail back to Nyfors
+
+Around Brakmaren we got confused by a fenced up area. We knew we needed to go
+towards the power line, but the field we were in seemed fenced up in all
+directions. So we jumped fence to the East and found ourselved in the company
+of the beloved orange triangle marker (Sörmlandsleden).
+
+From here we took kind of a wayward route to the South of lake Grändalssjön.
+At some point we found a small encampment with what looked to be a container
+with corn seeds for wild animals aaaaand also _a TRASH bin_! Victory! No more
+dangling trash bag!
+
+The last segment of the hike was particularly beautiful with old growth
+shadowy vegetation spots everywere. You could tell we were approaching the
+North entry area again. We circled the Northeastern shore of Tyresö-Flaten lake
+which had this steep stony inclines. On flat surfaces, people were chilling in
+the Sun.
+
+We took what I call "the hobbit entrance" out of the reservation, as this was
+the entrance I took when I first visited Tyresta (and decided that carrying
+a city bike through 16km of muddy/stony trails while getting rained on was
+a good idea). We got back to Nyfors just in time to take the Stockholm-bound
+bus 873.
+
+The dream is over, time to wake up!
+
+(P.S. _they know that you know_)
 
 ## Photos
 
@@ -123,6 +223,7 @@ Structure:
 * Bring rope. Always. Bring it. Always bring rope.
 * Do *NOT* inflate air mats with your mouth. This leads to condensation in
 colder temperatures. Use the provided pump instead.
+* Check if the camping destinations provide ready cut firewood.
 * Gas stoves are more reliable than alchohol stoves.
 * Close the top end of the sleeping bag as good as possible.
 * "Last time I went my beer weighed more than my gear. I soon learned that whisky works better."
