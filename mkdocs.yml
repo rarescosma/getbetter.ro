@@ -2,6 +2,8 @@ site_name: getbetter
 site_description: Rareș' 2nd brain
 strict: true
 site_url: https://getbetter.ro/
+copyright: |
+  Copyright &copy; 2010 - 2020 <a href="https://github.com/rarescosma"  target="_blank" rel="noopener">Rareș Cosma</a>
 
 theme:
   name: 'material'
