@@ -1,9 +1,11 @@
-.DEFAULT_GOAL := help
+.DEFAULT_GOAL:=help
 SSH_HOST=vps
 SSH_USER=karelian
 SSH_TARGET_DIR=/pv/kube/services/getbetter-www
 DOCKER_IMAGE=localhost:5000/getbetter-ro:v0
 RSYNC_OPTS?=--dry-run
+
+SITE_DEPS=$(shell find content -type f)
 
 help:
 	@echo 'Usage: make [target] ...'
@@ -12,7 +14,7 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "%-16s %s\n", $$1, $$2}'
 
-site: content ## Build the site using mkdocs
+site: $(SITE_DEPS) ## Build the site using mkdocs
 	mkdocs build
 
 .PHONY: serve
