@@ -11,8 +11,8 @@ the hikes we did after [Tyresta](https://getbetter.ro/journal/2020-04-17-tyresta
 
 ### Experiences
 
-* First hike with the 65L Osprey - amazing suspension, awesome camelbak
-* Didn't even bring a knife to sharpen sticks for hotdogs
+* First hike with the [65L Osprey](https://www.outdoorgearlab.com/reviews/camping-and-hiking/backpacks-backpacking/osprey-atmos-65-ag) - amazing suspension, awesome camelbak
+* Didn't even bring a knife to sharpen sticks for hotdogs :-(
 * Viking fire lay worked very well in windy conditions
 * Random dude on the other side of the lake navigating through seemingly
 impossible terrain while looking at his phone
@@ -27,7 +27,7 @@ impossible terrain while looking at his phone
 ### Experiences
 
 * Monet-like sunset
-* Gombhoy is an absolute beast
+* [Gomboy](https://www.amazon.com/dp/B01D8OGM88) is an absolute beast
 * Starting fires does actually require a fair amount of sticks and pencils
 * It's fairly easy to cook yummy chorizo + garlic + oil + jalapeno dinner
 * Facing the A-frame of the tarp towards water is not necessarily bad, it
@@ -71,7 +71,7 @@ intrinsically reflective or get a paracord lanyard
 * Do not use gloves when filling up water filter
 * Humans are mostly stupid and uncooperative (sic)
 * Need compass + offline maps
-* Learn the tripod + diagonal lashings
+* Learn the [tripod](https://www.animatedknots.com/tripod-lashing-knot) + [diagonal](https://www.animatedknots.com/diagonal-lashing-knot) lashings
 * Wind situation is much milder when camping inland
 * Need to find a way to avoid/clean some of the grease from Ti cookware (small metallic brush?)
 * Use sunscreen
