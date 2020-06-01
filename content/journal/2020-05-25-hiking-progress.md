@@ -59,19 +59,43 @@ intrinsically reflective or get a paracord lanyard
 
 ### Experiences
 
-* Keep your dominant leg behind when hitting/splitting/fucking up logs with two-handed swings
-* It's possible to pack for 1 night in 20L, but definitely not enough room for culinary spoiling
+* Keep your dominant leg behind when hitting/splitting/fucking up logs with
+two-handed swings
+* It's possible to pack for 1 night in 20L, but definitely not enough room
+for culinary spoiling
 * Bring the 65-er ffs
 * Rotate ferro rods to avoid permanent damage from the knife edge
 * Build wooden base for storing fuel above ground to avoid moisture creeping in
-* Get: hiking towel, thermal pad, wool shirts, ..., large titanium saucepan (to be used as plate too)
+* Get: hiking towel, <del>thermal pad</del>, <del>wool shirts</del>, ...,
+large titanium saucepan (to be used as plate too)
 * Wood stove is friggin' amazing if the weather / fuel situation permits it
-* Ridgeline: move Prusiks on other side of Bowline *before* tightening up with hitch
+* Ridgeline: move Prusiks on other side of Bowline
+*before* tightening up with hitch
 * Should clean up water filter at home after usage
 * Do not use gloves when filling up water filter
 * Humans are mostly stupid and uncooperative (sic)
 * Need compass + offline maps
-* Learn the [tripod](https://www.animatedknots.com/tripod-lashing-knot) + [diagonal](https://www.animatedknots.com/diagonal-lashing-knot) lashings
+* Learn the [tripod](https://www.animatedknots.com/tripod-lashing-knot) + [square](https://www.animatedknots.com/square-lashing-knot) lashings
 * Wind situation is much milder when camping inland
-* Need to find a way to avoid/clean some of the grease from Ti cookware (small metallic brush?)
+* Need to find a way to avoid/clean some of the grease from Ti cookware
+(small metallic brush?)
 * Use sunscreen
+
+## 05.30 - Tyresta
+
+### Photos
+
+{{ photos("2020.05.30.tyresta") }}
+
+### Experiences
+
+* Focus on better hydration during walk segments (perhaps try to fill camelbak
+instead of filter)
+* Don't be leavin' that Morakniv on the forest floor
+* Prusiks + carbines rock
+* Don't put scorching hot titanium parts on top of textile sleeves
+* No more ketchup + senap, go with spring onions instead
+* Dry fatwood is really nice to get the fire going
+* Still need a plate
+* Have spare batteries
+* Have drumliner trash bags
