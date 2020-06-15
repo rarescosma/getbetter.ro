@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 
+import logging
+import os
 import re
 from collections import defaultdict
 from difflib import SequenceMatcher
 from functools import lru_cache
-import logging
 from pathlib import Path
 from typing import Iterable, Optional, Pattern
 
+import sh
+from devtools import debug
 from flask import Flask, redirect, request, send_from_directory
 from mkdocs.config import load_config
 
-SITE_DIR: str = "site"
+SITE_DIR: str = os.getenv("SITE_DIR", "/pv/site")
+REPO_DIR: Path = Path(os.getenv("REPO_DIR", "/pv/git"))
+WEBHOOK_SECRET: str = os.getenv("WEBHOOK_SECRET", "")
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
 SIMILARITY_THRESHOLD: float = 0.65
 SIMILARITY_RATIO_THRESHOLD: float = 1.4
@@ -20,6 +25,7 @@ logging.basicConfig(
 )
 
 app = Flask(__name__, static_url_path=f"/{SITE_DIR}")
+git_client = sh.git.bake(_cwd=str(REPO_DIR))
 
 
 @lru_cache(maxsize=1)
@@ -80,6 +86,21 @@ def handle_static(path):
         return send_from_directory(SITE_DIR, path + "index.html")
     logging.info(f"Serving asset: {path}")
     return send_from_directory(SITE_DIR, path)
+
+
+@app.route("/github-webhook", methods=["POST"])
+def handle_webhook():
+    if not WEBHOOK_SECRET:
+        return ""
+
+    event = request.get_json()
+    if event.get("ref") != "refs/heads/master" or not event.get("after"):
+        return ""
+
+    debug("refreshing git repo", repo_dir=REPO_DIR)
+    debug(git_client.fetch("--all", "--prune"))
+    debug(git_client.reset("--hard", event["after"]))
+    return ""
 
 
 @app.errorhandler(404)
