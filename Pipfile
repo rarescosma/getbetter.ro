@@ -7,6 +7,7 @@ verify_ssl = true
 mypy = "*"
 
 [packages]
+devtools = "==0.5.1"
 mkdocs = ">=1.1"
 markdown-include = "==0.5.1"
 mkdocs-exclude = "==1.0.2"
@@ -21,6 +22,7 @@ Pygments = ">=2.6"
 Markdown = ">=3.2"
 gunicorn = "==20.0.4"
 Flask = "==1.1.2"
+sh = "==1.13.1"
 
 [requires]
 python_version = "3.8"
