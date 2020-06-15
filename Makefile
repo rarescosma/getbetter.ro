@@ -1,7 +1,7 @@
 .DEFAULT_GOAL:=help
 SSH_HOST=vps
 SSH_USER=karelian
-SSH_TARGET_DIR=/pv/kube/services/getbetter-www
+SSH_TARGET_DIR=/pv/kube/services/getbetter-ro/site
 DOCKER_IMAGE=localhost:5000/getbetter-ro:v0
 RSYNC_OPTS?=--dry-run
 RSYNC_TARGET?=$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
