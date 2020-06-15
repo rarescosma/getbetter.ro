@@ -4,6 +4,7 @@ SSH_USER=karelian
 SSH_TARGET_DIR=/pv/kube/services/getbetter-www
 DOCKER_IMAGE=localhost:5000/getbetter-ro:v0
 RSYNC_OPTS?=--dry-run
+RSYNC_TARGET?=$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 SITE_DEPS=$(shell find content -type f)
 
@@ -35,7 +36,7 @@ clean: ## Cleanup
 
 .PHONY: sync
 sync: site ## Sync the site to the $(SSH_HOST)
-	rsync -P -rvzzc --delete $(RSYNC_OPTS) site/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	rsync -P -rvzzc --delete $(RSYNC_OPTS) site/ $(RSYNC_TARGET)
 
 .PHONY: docker
 docker: ## Build the server docker image
