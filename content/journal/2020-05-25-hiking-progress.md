@@ -1,7 +1,7 @@
 Title: Hiking progress around Stockholm
 
 Decided to bind together some photo galleries, as well as some experiences from
-the hikes we did after [Tyresta](https://getbetter.ro/journal/2020-04-17-tyresta-hike/).
+the hikes we did before & after [the great Tyresta hike](https://getbetter.ro/journal/2020-04-17-tyresta-hike/).
 
 ## 04.11 - Tyresta
 
