@@ -6,17 +6,19 @@ import re
 from collections import defaultdict
 from difflib import SequenceMatcher
 from functools import lru_cache
+from hashlib import sha1
+from hmac import HMAC, compare_digest
 from pathlib import Path
 from typing import Iterable, Optional, Pattern
 
 import sh
 from devtools import debug
-from flask import Flask, redirect, request, send_from_directory
+from flask import Flask, Request, redirect, request, send_from_directory
 from mkdocs.config import load_config
 
 SITE_DIR: str = os.getenv("SITE_DIR", "/pv/site")
 REPO_DIR: Path = Path(os.getenv("REPO_DIR", "/pv/git"))
-WEBHOOK_SECRET: str = os.getenv("WEBHOOK_SECRET", "")
+WEBHOOK_SECRET: bytes = os.getenv("WEBHOOK_SECRET", "").encode()
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
 SIMILARITY_THRESHOLD: float = 0.65
 SIMILARITY_RATIO_THRESHOLD: float = 1.4
@@ -72,6 +74,16 @@ def _find_similar(req_path: str, known_paths: Iterable[str]) -> Optional[str]:
     return similar
 
 
+def _verify_signature(req: Request) -> bool:
+    received_sign = (
+        req.headers.get("X-Hub-Signature").split("sha1=")[-1].strip()
+    )
+    expected_sign = HMAC(
+        key=WEBHOOK_SECRET, msg=req.data, digestmod=sha1
+    ).hexdigest()
+    return compare_digest(received_sign, expected_sign)
+
+
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
 def handle_static(path):
@@ -90,17 +102,20 @@ def handle_static(path):
 
 @app.route("/github-webhook", methods=["POST"])
 def handle_webhook():
-    if not WEBHOOK_SECRET:
-        return ""
+    if not WEBHOOK_SECRET or not _verify_signature(request):
+        return "Nope.", 401
 
     event = request.get_json()
     if event.get("ref") != "refs/heads/master" or not event.get("after"):
-        return ""
+        return "Nope.", 400
 
-    debug("refreshing git repo", repo_dir=REPO_DIR)
-    debug(git_client.fetch("--all", "--prune"))
-    debug(git_client.reset("--hard", event["after"]))
-    return ""
+    debug(event, headers=request.headers)
+
+    res = dict()
+    res["fetch"] = str(git_client.fetch("--all", "--prune"))
+    res["reset"] = str(git_client.reset("--hard", event["after"]))
+
+    return res
 
 
 @app.errorhandler(404)
