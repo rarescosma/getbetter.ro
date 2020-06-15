@@ -58,4 +58,4 @@ plugins:
   - minify:
       minify_html: true
   - search:
-      prebuild_index: true
+      prebuild_index: false
