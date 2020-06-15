@@ -8,7 +8,7 @@ mypy = "*"
 
 [packages]
 devtools = "==0.5.1"
-mkdocs = ">=1.1"
+mkdocs = "==1.1.0"
 markdown-include = "==0.5.1"
 mkdocs-exclude = "==1.0.2"
 mkdocs-git-revision-date-plugin = "==0.3"

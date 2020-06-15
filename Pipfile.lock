@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0f490be08ef86550984d91fe86c205c90fbcc4d92c665a83e051659c1eeefb23"
+            "sha256": "2f5f8ce87756756be991d31b24af165211afcead6387a04280f8a5b97a53f224"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -111,10 +111,10 @@
                 "languages"
             ],
             "hashes": [
-                "sha256:aab3f489c4d4fab4c1294a257a30fec397db56f0a50273218ccc3efdbf01d6ca",
-                "sha256:c4fb063b98eff775dd638b3df380008ae85e6cb1d1a24d1cd81a10ef6391c26e"
+                "sha256:1208622930c915a07e6f8e8640474357826bad48534c0f57969b6fca9bffc88e",
+                "sha256:7be69d7186f65784a4f2adf81e5c58efd6a9921aa95966babcb1f2f2ada75c20"
             ],
-            "version": "==0.5.8"
+            "version": "==0.5.6"
         },
         "markdown": {
             "hashes": [
@@ -160,11 +160,11 @@
         },
         "mkdocs": {
             "hashes": [
-                "sha256:096f52ff52c02c7e90332d2e53da862fde5c062086e1b5356a6e392d5d60f5e9",
-                "sha256:f0b61e5402b99d7789efa032c7a74c90a20220a9c81749da06dbfbcbd52ffb39"
+                "sha256:1e385a70aea8a9dedb731aea4fd5f3704b2074801c4f96f06b2920999babda8a",
+                "sha256:9243291392f59e20b655e4e46210233453faf97787c2cf72176510e868143174"
             ],
             "index": "pypi",
-            "version": "==1.1.2"
+            "version": "==1.1"
         },
         "mkdocs-awesome-pages-plugin": {
             "git": "https://github.com/rarescosma/mkdocs-awesome-pages-plugin.git",
