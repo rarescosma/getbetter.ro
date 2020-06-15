@@ -81,7 +81,7 @@ def handle_static(path):
     if Path(path).suffix == "":
         logging.info(f"Serving a dir-like URL: {path}")
         if not path.endswith("/"):
-            logging.warn("Adding ending /")
+            logging.warning("Adding ending /")
             return redirect(f"{path}/", code=302)
         return send_from_directory(SITE_DIR, path + "index.html")
     logging.info(f"Serving asset: {path}")
