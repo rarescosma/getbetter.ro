@@ -7,7 +7,7 @@ the hikes we did after [Tyresta](https://getbetter.ro/journal/2020-04-17-tyresta
 
 ### Photos
 
-{{ photos("2020.04.11.tyresta") }}
+{{ gallery("2020.04.11.tyresta") }}
 
 ### Experiences
 
@@ -22,7 +22,7 @@ impossible terrain while looking at his phone
 
 ### Photos
 
-{{ photos("2020.05.02.paradiset") }}
+{{ gallery("2020.05.02.paradiset") }}
 
 ### Experiences
 
@@ -41,7 +41,7 @@ intrinsically reflective or get a paracord lanyard
 
 ### Photos
 
-{{ photos("2020.05.09.björnö") }}
+{{ gallery("2020.05.09.björnö") }}
 
 ### Experiences
 
@@ -55,7 +55,7 @@ intrinsically reflective or get a paracord lanyard
 
 ### Photos
 
-{{ photos("2020.05.21.ornö") }}
+{{ gallery("2020.05.21.ornö") }}
 
 ### Experiences
 
@@ -85,7 +85,7 @@ large titanium saucepan (to be used as plate too)
 
 ### Photos
 
-{{ photos("2020.05.30.tyresta") }}
+{{ gallery("2020.05.30.tyresta") }}
 
 ### Experiences
 

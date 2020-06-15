@@ -4,4 +4,4 @@ ExtraTags: travel
 
 This is a London story. It's intense, it's restless, but most importantly a bonding experience.
 
-{{ photos("2019.07.london") }}
+{{ gallery("2019.07.london") }}

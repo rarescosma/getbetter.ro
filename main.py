@@ -25,7 +25,7 @@ MAPS_TPL = """
 IMAGE_TEMPLATE = """<a href="/{url}" title="{title}"><img src="/{thumb}"></a>"""
 
 CONTENT_DIR = Path(__file__).parent.resolve() / "content"
-PHOTOS_DIR = CONTENT_DIR / "photos"
+GALLERIES_DIR = CONTENT_DIR / "galleries"
 
 
 def youtube(video_id: str) -> str:
@@ -40,19 +40,19 @@ def mymaps(map_id: str) -> str:
     return MAPS_TPL.format(map_id=map_id.strip())
 
 
-def photos(gallery_id: str) -> str:
+def gallery(gallery_id: str) -> str:
     """ Renders a photo gallery.
     """
-    photos_dir = PHOTOS_DIR / gallery_id
+    gallery_dir = GALLERIES_DIR / gallery_id
 
-    if not photos_dir.exists() or not photos_dir.is_dir():
-        LOG.warning(f"Gallery directory {photos_dir} is invalid.")
+    if not gallery_dir.exists() or not gallery_dir.is_dir():
+        LOG.warning(f"Gallery directory {gallery_dir} is invalid.")
         return ""
 
     image_paths = sorted(
         [
             _.relative_to(CONTENT_DIR)
-            for _ in photos_dir.glob("*.jpg")
+            for _ in gallery_dir.glob("*.jpg")
             if _thumb_path(_).exists()
         ]
     )
@@ -74,4 +74,4 @@ def define_env(env: Any):
     """
     env.macro(youtube, "yt")
     env.macro(mymaps)
-    env.macro(photos)
+    env.macro(gallery)

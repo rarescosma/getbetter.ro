@@ -99,7 +99,7 @@ path going south of Trier and close to the city center. Making it to the
 city center + glorious entrance through the Porta Nigra. Chillin' near the
 church with some Schnitzels.
 
-{{ photos("2019.05.22.mosel.day1") }}
+{{ gallery("2019.05.22.mosel.day1") }}
 
 ## Day 2 - the 23rd of May, 2019
 
@@ -184,7 +184,7 @@ in place.
 Of course, before going to sleep we cleaned out another couple of beers on
 the local terrace.
 
-{{ photos("2019.05.23.mosel.day2") }}
+{{ gallery("2019.05.23.mosel.day2") }}
 
 ## Day 3 - the 24th of May, 2019
 
@@ -298,4 +298,4 @@ until 3AM.
 
 The end. Wake up.
 
-{{ photos("2019.05.24.mosel.day3") }}
+{{ gallery("2019.05.24.mosel.day3") }}

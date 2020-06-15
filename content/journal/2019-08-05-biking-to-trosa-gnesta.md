@@ -4,4 +4,4 @@ ExtraTags: travel
 
 70km Sunday ride to beautiful Trosa followed by an amazing forest trail to Gnesta.
 
-{{ photos("2019.08.trosa.gnesta") }}
+{{ gallery("2019.08.trosa.gnesta") }}

@@ -12,6 +12,6 @@ dist/
 _build/
 /.ghtopdep_cache/
 /codecov.sh
-/content/photos
+/content/galleries
 /content/google*.html
 /raw_galleries

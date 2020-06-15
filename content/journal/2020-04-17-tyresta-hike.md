@@ -216,7 +216,7 @@ The dream is over, time to wake up!
 
 ## Photos
 
-{{ photos("2020.04.tyresta") }}
+{{ gallery("2020.04.tyresta") }}
 
 ## Lessons learned
 
