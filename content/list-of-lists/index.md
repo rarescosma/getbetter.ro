@@ -27,7 +27,7 @@ Let the expansion begin.
 
 ## Saved messages in Telegram
 
-2020.02.10 - [Alan Sokal speaking in Stockholm](https://www.youtube.com/watch?v=kuKmMyhnG94)
+#### 2020.02.10 - [Alan Sokal speaking in Stockholm](https://www.youtube.com/watch?v=kuKmMyhnG94)
 
 !!! notes
     * Sloppy thinking transcends international boundaries easily.
@@ -106,7 +106,7 @@ Let the expansion begin.
     to an __evidence-based__ worldview is very far from being complete...
 
 
-2020.02.10 - [David Foster Wallace on Responsibility and Maturity (2003)](https://www.youtube.com/watch?time_continue=1&v=dLHoEQSoGLs)
+#### 2020.02.10 - [David Foster Wallace on Responsibility and Maturity (2003)](https://www.youtube.com/watch?time_continue=1&v=dLHoEQSoGLs)
 
 !!! notes
     * __Wounded inner child__ / __inner pain__ == language that's the result of
