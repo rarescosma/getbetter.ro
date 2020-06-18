@@ -16,7 +16,7 @@ from devtools import debug
 from flask import Flask, Request, redirect, request, send_from_directory
 from mkdocs.config import load_config
 
-SITE_DIR: str = os.getenv("SITE_DIR", "site")
+SERVE_DIR: str = os.getenv("SERVE_DIR", "serve")
 REPO_DIR: Path = Path(os.getenv("REPO_DIR", "/pv"))
 WEBHOOK_SECRET: bytes = os.getenv("WEBHOOK_SECRET", "").encode()
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
@@ -26,12 +26,12 @@ logging.basicConfig(
     level=logging.INFO, format="[%(asctime)s] [%(levelname)s] %(message)s"
 )
 
-app = Flask(__name__, static_url_path=f"/{SITE_DIR}")
+app = Flask(__name__, static_url_path=f"/{SERVE_DIR}")
 git_client = sh.git.bake(_cwd=str(REPO_DIR))
 
 
 @lru_cache(maxsize=1)
-def _sitemap_paths(sitemap_file: Path = Path(SITE_DIR) / "sitemap.xml"):
+def _sitemap_paths(sitemap_file: Path = Path(SERVE_DIR) / "sitemap.xml"):
     cfg = load_config()
     return [
         _.replace(cfg["site_url"], "").strip("/")
@@ -89,15 +89,15 @@ def _verify_signature(req: Request) -> bool:
 def handle_static(path):
     if not path:
         logging.info("Serving root /")
-        return send_from_directory(SITE_DIR, "index.html")
+        return send_from_directory(SERVE_DIR, "index.html")
     if Path(path).suffix == "":
         logging.info(f"Serving a dir-like URL: {path}")
         if not path.endswith("/"):
             logging.warning("Adding ending /")
             return redirect(f"{path}/", code=302)
-        return send_from_directory(SITE_DIR, path + "index.html")
+        return send_from_directory(SERVE_DIR, path + "index.html")
     logging.info(f"Serving asset: {path}")
-    return send_from_directory(SITE_DIR, path)
+    return send_from_directory(SERVE_DIR, path)
 
 
 @app.route("/github-webhook", methods=["POST"])
