@@ -1,4 +1,3 @@
 #!/bin/bash
 umask 002
-gallerize
-
+gallerize -w
