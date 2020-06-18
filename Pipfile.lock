@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2f5f8ce87756756be991d31b24af165211afcead6387a04280f8a5b97a53f224"
+            "sha256": "bf15df32abad42857f0a84300096dd6ff29119487a3d576e8c84390436c4b71a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -230,6 +230,13 @@
             ],
             "index": "pypi",
             "version": "==2.6.1"
+        },
+        "pyinotify": {
+            "hashes": [
+                "sha256:9c998a5d7606ca835065cdabc013ae6c66eb9ea76a00a1e3bc6e0cfe2b4f71f4"
+            ],
+            "index": "pypi",
+            "version": "==0.9.6"
         },
         "pymdown-extensions": {
             "hashes": [

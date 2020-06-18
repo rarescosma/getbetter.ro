@@ -23,6 +23,7 @@ Markdown = ">=3.2"
 gunicorn = "==20.0.4"
 Flask = "==1.1.2"
 sh = "==1.13.1"
+pyinotify = "==0.9.6"
 
 [requires]
 python_version = "3.8"

@@ -14,7 +14,10 @@ RUN wget -qO- "https://github.com/mattgreen/watchexec/releases/download/1.8.6/wa
 COPY Pipfile* ./
 RUN pipenv install --system --deploy
 
-COPY server.py ./
+COPY getbetter ./
+COPY setup.py ./
+
+RUN pip install -e .
 
 RUN useradd -u 1000 -U getbetter
 USER getbetter
