@@ -16,6 +16,7 @@ RUN pipenv install --system --deploy
 
 COPY getbetter ./getbetter
 COPY setup.py ./
+COPY hacks/gallerize-entrypoint.sh /usr/bin/
 
 RUN pip install .
 
