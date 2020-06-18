@@ -13,3 +13,4 @@ _build/
 /content/galleries
 /content/google*.html
 /raw_galleries
+/var
