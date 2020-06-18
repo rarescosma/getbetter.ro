@@ -30,6 +30,7 @@ extra:
       link: https://linkedin.com/in/rarescosma
 
 docs_dir: content
+site_dir: var/www/site
 
 markdown_extensions:
   - admonition

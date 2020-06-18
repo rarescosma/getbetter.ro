@@ -1,12 +1,15 @@
 .DEFAULT_GOAL:=help
+
+SITE_DEPS=$(shell find content -type f)
+SITE_DIR=var/www/site
+
 SSH_HOST=vps
 SSH_USER=karelian
-SSH_TARGET_DIR=/pv/kube/services/getbetter-ro/site
+SSH_TARGET_DIR=/pv/kube/services/getbetter-ro/$(SITE_DIR)
 DOCKER_IMAGE=localhost:5000/getbetter-ro:v0
 RSYNC_OPTS?=--dry-run
 RSYNC_TARGET?=$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
-SITE_DEPS=$(shell find content -type f)
 
 help:
 	@echo 'Usage: make [target] ...'
@@ -15,7 +18,7 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "%-16s %s\n", $$1, $$2}'
 
-site: $(SITE_DEPS) ## Build the site using mkdocs
+$(SITE_DIR): $(SITE_DEPS) ## Build the site using mkdocs
 	mkdocs build
 
 .PHONY: serve
@@ -24,19 +27,16 @@ serve: ## Serve the site on http://localhost:8000 via MkDocs
 
 .PHONY: gserve
 gserve: ## Serve the site on http://localhost:8000 via gunicorn
-	gunicorn --reload server:app
+	cd var/www && gunicorn --reload server:app
+	cd -
 
 .PHONY: clean
 clean: ## Cleanup
-	rm -rf *.egg-info
-	rm -rf build
-	rm -rf dist
-	rm -rf site
-	rm -rf content/_build
+	rm -rf *.egg-info build dist $(SITE_DIR)
 
 .PHONY: sync
-sync: site ## Sync the site to the $(SSH_HOST)
-	rsync -P -rvzzc --delete $(RSYNC_OPTS) site/ $(RSYNC_TARGET)
+sync: $(SITE_DIR) ## Sync the site to the $(SSH_HOST)
+	rsync -P -rvzzc --delete $(RSYNC_OPTS) $(SITE_DIR)/ $(RSYNC_TARGET)
 
 .PHONY: docker
 docker: ## Build the server docker image

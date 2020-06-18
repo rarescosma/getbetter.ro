@@ -16,8 +16,8 @@ from devtools import debug
 from flask import Flask, Request, redirect, request, send_from_directory
 from mkdocs.config import load_config
 
-SITE_DIR: str = os.getenv("SITE_DIR", "/pv/site")
-REPO_DIR: Path = Path(os.getenv("REPO_DIR", "/pv/git"))
+SITE_DIR: str = os.getenv("SITE_DIR", "site")
+REPO_DIR: Path = Path(os.getenv("REPO_DIR", "/pv"))
 WEBHOOK_SECRET: bytes = os.getenv("WEBHOOK_SECRET", "").encode()
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
 SIMILARITY_THRESHOLD: float = 0.65
