@@ -1,4 +1,4 @@
-Title: Hiking progress around Stockholm
+Title: Hiking progress around Sweden
 
 Decided to bind together some photo galleries, as well as some experiences from
 the hikes we did before & after [the great Tyresta hike](https://getbetter.ro/journal/2020-04-17-tyresta-hike/).
@@ -99,3 +99,13 @@ instead of filter)
 * Still need a plate
 * Have spare batteries
 * Have drumliner trash bags
+
+## 06.06 - Sörmlandsleden between Hälleforsnäs and Eskilstuna
+
+### Photos
+
+{{ gallery("2020.06.06.sörmlandsleden") }}
+
+### Experiences
+
+* todo
