@@ -3,6 +3,28 @@ Title: Hiking progress around Sweden
 Decided to bind together some photo galleries, as well as some experiences from
 the hikes we did before & after [the great Tyresta hike](https://getbetter.ro/journal/2020-04-17-tyresta-hike/).
 
+## 06.19 - Bouldery Midsommar around (Gamla) Grisslehamn
+
+### Photos
+
+{{ gallery("2020.06.19.grisslehamn") }}
+
+### Experiences
+
+* Tighten up shoes before climbing on boulders
+* Ice-cream sugar rush was awesome (and also the meth Skåneman song).
+* The shoreline North of Stockholm is extremely beautiful.
+* [Very tasty falafel](https://j.mp/37Ja9K0)
+* Bring pot regardless of leaving gas stove home
+* Try out larger variety of canned food
+* Do not use towel as sitting pad
+* Stick stove suitable for steaks if enough coals are formed - just use thicker fat wood sticks
+* Some water fountains require extra bucket to be present to reactivate the pump - respect that
+* Some people have way too much time on their hands for redecorating the front lawn
+* Mesh bags + drum-liner made life waaaaay easier
+* Do not pass hot cans to friends who aren't wearing gloves
+* Bouldering jacked up on sugars is fun
+
 ## 06.06 - Sörmlandsleden between Hälleforsnäs and Eskilstuna
 
 ### Photos
