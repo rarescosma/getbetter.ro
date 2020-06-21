@@ -41,3 +41,8 @@ sync: $(BUILD_DIR) ## Sync the built site to the $(SSH_HOST)
 .PHONY: docker
 docker: ## Build the server docker image
 	docker build . -t $(DOCKER_IMAGE)
+
+.PHONY: test
+test: ## Run python code tests
+	mypy getbetter --ignore-missing-imports
+	pylint --rcfile=setup.cfg getbetter

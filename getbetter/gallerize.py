@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
-"""
-    Assumptions:
-    * path names are unique => they can serve as keys in the hash cache
-    * it would be nice to persist the hashes (but not necessary)
-"""
+
 import os
+import sys
 import time
 from dataclasses import dataclass, replace
 from multiprocessing import Pool
 from pathlib import Path
-import sys
 from threading import Thread
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
+import pyinotify
 import sh
 from devtools import debug
-from pyinotify import Event
 
 from .fs import multiglob
 from .fun import flatmap
@@ -65,9 +61,7 @@ class ResizeOp:
         ]
 
 
-def destinations(image: Path) -> Tuple[ResizeOp, ResizeOp]:
-    """ Return a tuple containing the resized image and thumbnail paths.
-    """
+def get_resize_ops(image: Path) -> Tuple[ResizeOp, ResizeOp]:
     rel = image.relative_to(RAW_GALLERIES)
     resize_op = ResizeOp(src=image, dest=RESIZED_GALLERIES / str(rel).lower())
 
@@ -81,17 +75,26 @@ def resize(op: ResizeOp) -> str:
 
     debug(op)
     op.dest.parent.mkdir(parents=True, exist_ok=True)
-    return str(sh.convert(*op.as_convert_args))
+    return str(sh.convert(*op.as_convert_args))  # pylint: disable=no-member
 
 
-def resize_handler(event: Event) -> Event:
+def resize_handler(event: pyinotify.Event) -> pyinotify.Event:
+    if (resize_path := get_resize_path(event)) is not None:
+        for resize_op in get_resize_ops(resize_path):
+            resize(resize_op)
+    return event
+
+
+def get_resize_path(event: pyinotify.Event) -> Optional[Path]:
     if event.maskname != "IN_CLOSE_WRITE":
-        return event
+        return None
 
     event_path = Path(event.pathname)
-    if event_path.is_file() and event_path.suffix[1:] in EXTENSIONS:
-        for resize_op in destinations(event_path):
-            resize(resize_op)
+    return (
+        event_path
+        if event_path.is_file() and event_path.suffix[1:] in EXTENSIONS
+        else None
+    )
 
 
 def main() -> None:
@@ -103,15 +106,16 @@ def main() -> None:
     """
     if "-w" in sys.argv[1:]:
         # Watch for new images being added and resize them accordingly
-        thread = Thread(target=start_notifier, args=(RAW_GALLERIES, resize_handler))
+        thread = Thread(
+            target=start_notifier, args=(RAW_GALLERIES, resize_handler)
+        )
         thread.daemon = True
         thread.start()
 
     # Make sure existing images are processed
     images = multiglob(RAW_GALLERIES, extensions=EXTENSIONS)
-    resize_ops = flatmap(destinations, images)
-    with Pool() as p:
-        p.map(resize, resize_ops)
+    with Pool() as pool:
+        pool.map(resize, flatmap(get_resize_ops, images))
 
     if "-w" in sys.argv[1:]:
         while True:

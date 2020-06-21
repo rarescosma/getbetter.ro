@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 mypy = "*"
+pylint = "*"
 
 [packages]
 devtools = "==0.5.1"

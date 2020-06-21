@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Any, Callable
 
-import pyinotify as pyinotify
+import pyinotify
 from devtools import debug
 
 from .fs import all_subdirs, is_link_to_dir
@@ -35,7 +35,7 @@ class ProcessEvent(pyinotify.ProcessEvent):
         debug(event)
         try:
             self.__handler(event)
-        except Exception as exc:
+        except Exception as exc:  # pylint: disable=broad-except
             self.__error_handler(exc)
 
     process_IN_CLOSE_WRITE = _process

@@ -79,8 +79,8 @@ def _verify_signature(req: Request) -> bool:
         req.headers.get("X-Hub-Signature", "").split("sha1=")[-1].strip()
     )
     expected_sign = HMAC(
-        key=WEBHOOK_SECRET, msg=req.data, digestmod=sha1
-    ).hexdigest()
+        WEBHOOK_SECRET, msg=req.data, digestmod=sha1
+    ).hexdigest()  # type: ignore
     return compare_digest(received_sign, expected_sign)
 
 
