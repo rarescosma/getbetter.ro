@@ -32,7 +32,7 @@ gserve: ## Serve the site on http://localhost:8000 via gunicorn
 
 .PHONY: clean
 clean: ## Cleanup
-	rm -rf *.egg-info build dist $(BUILD_DIR)
+	rm -rf build dist $(BUILD_DIR)
 
 .PHONY: sync
 sync: $(BUILD_DIR) ## Sync the built site to the $(SSH_HOST)
