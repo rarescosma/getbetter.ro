@@ -22,9 +22,6 @@ class WatchManager(pyinotify.WatchManager):
 class ProcessEvent(pyinotify.ProcessEvent):
     """Calls handler with the changed file path on CLOSE_WRITE"""
 
-    __handler: Callable
-    __error_handler: Callable
-
     def __init__(
         self, handler: Callable, error_handler: Callable, **kargs: Any
     ) -> None:
