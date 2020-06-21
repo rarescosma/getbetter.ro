@@ -24,6 +24,7 @@ the hikes we did before & after [the great Tyresta hike](https://getbetter.ro/jo
 * Mesh bags + drum-liner made life waaaaay easier
 * Do not pass hot cans to friends who aren't wearing gloves
 * Bouldering jacked up on sugars is fun
+* Mosquitoes can **(and will)** bite through socks
 
 ## 06.06 - Sörmlandsleden between Hälleforsnäs and Eskilstuna
 
