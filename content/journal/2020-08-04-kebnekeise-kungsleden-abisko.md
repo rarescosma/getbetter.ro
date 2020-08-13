@@ -1,5 +1,12 @@
 Title: Kebnekeise summit followed by Kungsleden to Abisko
 
+Decided to go climb the [highest mountain in Sweden](https://en.wikipedia.org/wiki/Kebnekaise).
+
+And [hike](https://en.wikipedia.org/wiki/Kungsleden) 120km through unadulterated
+raw polar wilderness, way past the [tree line](https://en.wikipedia.org/wiki/Tree_line).
+
+Here's how it went.
+
 ## Map + stats
 
 {{ mymaps("1SEol6wIoFuU-gj6HUyXRbKTEbE83zFWr") }}
