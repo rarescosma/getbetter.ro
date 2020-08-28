@@ -3,6 +3,50 @@ Title: Hiking progress around Sweden
 Decided to bind together some photo galleries, as well as some experiences from
 the hikes we did before & after [the great Tyresta hike](https://getbetter.ro/journal/2020-04-17-tyresta-hike/).
 
+## 07.18 - 2020: A Nynäshamn Odyssey
+
+### Photos
+
+{{ gallery("2020.07.18.nynasviken") }}
+
+### Experiences
+
+* Smooth pendel 43 ride
+* Lunch at [Lydia](https://goo.gl/maps/Jc3kkA6sevpuAz837) - waiter tried to
+serve us burgers, but we wanted the planstek, so planstek we got -
+very nice plate arrangement.
+Fresh sage goes well with steaks & the mashed potatoes were delish.
+* Got supplies from Coop. Went with spring onions + sweet potatoes for veggies,
+also a jar of cornichons, the traditional baguettes for fish tins and some
+coconut milk for breakfast. (Note: should bring more stuff to share next time -
+tins at least if not full breakfast portions,
+or maybe just initialize the peanut butter / nutella tubes)
+* Coconut matcha for energy and off we went with a bus to take us closer
+to the starting point
+* An alco lady held court the entire bus ride, preaching to an alco couple. Oh well.
+* Segment of road shared with cars, then we entered the forest and started our trail down to the lake
+* A bit clumsy to synchronize walking with trekking poles, but we're getting there
+* Summited Vinsberget, the highest point on the mass land, at a whooping altitude of 67 meters
+* Took a swim near a [boat mooring point](https://goo.gl/maps/5BQWZ1ve5UZRqPuY9)
+to get the core temp down a bit and shared some sardine tins (delicacy!)
+* Pushed on through the in-between to the Rassaträsk lake
+* Had a ton of fun trying to filter out water from the lake,
+turns out the Sawyer filter is not quite there yet
+* Attempted to find a spot on the east shore from the lake, but it was all
+taken by boats, so traversed to the west shore instead and settled down
+between some boulders and the sea
+* Tent setup went surprisingly well
+* Late but smooth fire making and steaks grilling
+* Snugged up under the UQ by 1AM
+* Saw a seal the next morning
+* Moslty chilled in the hammock
+* Had a blast 2001-ing a large herbivorous skull 💀
+* Hiked back with a nice swim on the way
+* Found a creepy crypt belonging to a "Sjögren" and tried to figure out
+who he was or if there were any leeches in there
+* Rushed it a bit, thinking we won't make it in time for the pendel home, but managed to get
+one from one station farther North instead
+
 ## 06.19 - Bouldery Midsommar around (Gamla) Grisslehamn
 
 ### Photos
