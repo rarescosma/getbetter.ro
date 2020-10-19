@@ -18,7 +18,9 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "%-16s %s\n", $$1, $$2}'
 
-$(BUILD_DIR): $(BUILD_DEPS) ## Build the site using mkdocs
+build: $(BUILD_DIR)/index.html
+
+$(BUILD_DIR)/index.html: $(BUILD_DEPS) ## Build the site using mkdocs
 	mkdocs build
 
 .PHONY: serve
@@ -32,10 +34,10 @@ gserve: ## Serve the site on http://localhost:8000 via gunicorn
 
 .PHONY: clean
 clean: ## Cleanup
-	rm -rf build dist $(BUILD_DIR)
+	rm -rf build dist $(BUILD_DIR)/*
 
 .PHONY: sync
-sync: $(BUILD_DIR) ## Sync the built site to the $(SSH_HOST)
+sync: $(BUILD_DIR)/index.html ## Sync the built site to the $(SSH_HOST)
 	rsync -P -rvzzc --delete $(RSYNC_OPTS) $(BUILD_DIR)/ $(RSYNC_TARGET)
 
 .PHONY: docker
