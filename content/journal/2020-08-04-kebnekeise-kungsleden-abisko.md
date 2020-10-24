@@ -26,30 +26,26 @@ Here's how it went.
 * sun 11:49
 * mon 13:13
 
-## Day 1 - August 4th, 2020
-
-{{ gallery("2020.08.04.kbk.day1") }}
-
-## Day 2 - August 5th, 2020
+## Day 1 - August 5th, 2020
 
 {{ gallery("2020.08.05.kbk.day2") }}
 
-## Day 3 - August 6th, 2020
+## Day 2 - August 6th, 2020
 
 {{ gallery("2020.08.06.kbk.day3") }}
 
-## Day 4 - August 7th, 2020
+## Day 3 - August 7th, 2020
 
 {{ gallery("2020.08.07.kbk.day4") }}
 
-## Day 5 - August 8th, 2020
+## Day 4 - August 8th, 2020
 
 {{ gallery("2020.08.08.kbk.day5") }}
 
-## Day 6 - August 9th, 2020
+## Day 5 - August 9th, 2020
 
 {{ gallery("2020.08.09.kbk.day6") }}
 
-## Day 7 - August 10th, 2020
+## Day 6 - August 10th, 2020
 
 {{ gallery("2020.08.10.kbk.day7") }}
