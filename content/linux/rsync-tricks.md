@@ -5,7 +5,7 @@ Just a bunch of nifty `rsync` tricks gathered over the years.
 
 ### List all files that do not exist in `$TARGET` but exist in `$SOURCE`
 
-This one helps with previewing what will actually get synced. 
+This one helps with previewing what will actually get synced.
 
 ```
 rsync -avun --delete $TARGET/ $SOURCE/ | grep "^deleting "
@@ -24,4 +24,8 @@ Make sure `$DATA/.rsync_ignore` excludes itself and the mirror directory to avoi
 ```
 .rsync_ignore
 .rsync_mirror
-``` 
+```
+
+### Good for backups
+
+    rsync -a -HA --sparse --devices --delete --checksum --numeric-ids --xattrs
