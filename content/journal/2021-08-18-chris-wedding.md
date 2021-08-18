@@ -1,4 +1,4 @@
-Title: Venturing through the Rheinland to celebrate the wedding of a close friend
+Title: Brozzky wedding in the Rheinland
 
 ## Photos
 
