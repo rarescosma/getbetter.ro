@@ -3,7 +3,7 @@ site_description: Rareș' 2nd brain
 strict: true
 site_url: https://getbetter.ro/
 copyright: |
-  Copyright &copy; 2010 - 2020 <a href="https://github.com/rarescosma"  target="_blank" rel="noopener">Rareș Cosma</a>
+  Copyright &copy; 2010 - 2022 <a href="https://github.com/rarescosma"  target="_blank" rel="noopener">Rareș Cosma</a>
 
 theme:
   name: 'material'
@@ -12,9 +12,6 @@ theme:
     accent: indigo
   logo: 'logo.svg'
   favicon: 'favicon.png'
-
-repo_name: rarescosma/getbetter.ro
-repo_url: https://github.com/rarescosma/getbetter.ro
 
 extra_css:
   - extra/macros.css

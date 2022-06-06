@@ -9,7 +9,7 @@ Here's how it went.
 
 ## Map + stats
 
-{{ mymaps("1SEol6wIoFuU-gj6HUyXRbKTEbE83zFWr") }}
+{{ mymaps("1o6RO5qSIAZr4PRGH-YR4acV8gD-pWrf9") }}
 
 ### Geo
 

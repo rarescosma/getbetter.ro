@@ -13,7 +13,7 @@ favorite allies.
 
 **Day 3** - *69.2km* - Bernkastel-Kues - Traben-Trarbach - Aussichtsturm Prinzenkopf - Cochem
 
-{{ mymaps("1cPtOtDxXs4pNlRi3iosQqWZzHpj9W8lS") }}
+{{ mymaps("1UNryqlUM3j70Yg1jf0QV81DtZR7DwlQ1") }}
 
 ## Day 1 - the 22nd of May, 2019
 

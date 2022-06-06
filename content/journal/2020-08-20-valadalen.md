@@ -10,7 +10,7 @@ breaking my personal best daily hiking distance record.
 
 ## Map + stats
 
-{{ mymaps("1qu_CaCbKFoTAu5KMht0Q7X4qF9UUBvGH") }}
+{{ mymaps("1FkeTk2FjZfupPFFJswXjo_9MjrbcIpu7") }}
 
 ### Geo
 

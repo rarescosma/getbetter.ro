@@ -2,7 +2,7 @@ Title: The Quest for Old Tjikko in Fulufjället
 
 ## Map + stats
 
-{{ mymaps("1LgACoSFQrc7z55NWs2grGF5ppialJbYA") }}
+{{ mymaps("14NBR0hegzyAkL0Pesj9Cr_4wXt-boi8d") }}
 
 ### Geo
 
