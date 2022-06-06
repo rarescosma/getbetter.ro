@@ -6,7 +6,7 @@ BUILD_DIR=var/build
 SSH_HOST=vps
 SSH_USER=karelian
 SSH_TARGET_DIR=/pv/kube/services/getbetter-ro/$(BUILD_DIR)
-DOCKER_IMAGE=localhost:5000/getbetter-ro:v0
+DOCKER_IMAGE=localhost:5000/getbetter-ro:v1
 RSYNC_OPTS?=--dry-run
 RSYNC_TARGET?=$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 

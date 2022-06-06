@@ -1,4 +1,4 @@
-FROM python:3.8.2-slim
+FROM python:3.10.4-slim
 
 WORKDIR /pv
 

@@ -9,7 +9,7 @@ pylint = "*"
 
 [packages]
 devtools = "==0.5.1"
-mkdocs = "==1.1.0"
+mkdocs = "==1.2.4"
 markdown-include = "==0.5.1"
 mkdocs-exclude = "==1.0.2"
 mkdocs-git-revision-date-plugin = "==0.3"
@@ -22,12 +22,12 @@ mkdocs-awesome-pages-plugin = {git = "https://github.com/rarescosma/mkdocs-aweso
 Pygments = ">=2.6"
 Markdown = ">=3.2"
 gunicorn = "==20.0.4"
-Flask = "==1.1.2"
+Flask = "==2.1.2"
 sh = "==1.13.1"
 pyinotify = "==0.9.6"
 
 [requires]
-python_version = "3.8"
+python_version = "3.10"
 
 [pipenv]
 allow_prereleases = true

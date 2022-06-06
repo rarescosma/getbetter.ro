@@ -111,9 +111,10 @@ def handle_webhook():
 
     debug(event, headers=request.headers)
 
-    res = dict()
-    res["fetch"] = str(git_client.fetch("--all", "--prune"))
-    res["reset"] = str(git_client.reset("--hard", event["after"]))
+    res = {
+        "fetch": str(git_client.fetch("--all", "--prune")),
+        "reset": str(git_client.reset("--hard", event["after"]))
+    }
 
     return res
 
