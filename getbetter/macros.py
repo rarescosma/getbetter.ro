@@ -24,7 +24,7 @@ MAPS_TPL = """
 
 IMAGE_TEMPLATE = """<a href="/{url}" title="{title}"><img src="/{thumb}"></a>"""
 
-CONTENT_DIR = Path(__file__).parent.resolve() / "content"
+CONTENT_DIR = (Path(__file__).parent / "../content").resolve()
 GALLERIES_DIR = CONTENT_DIR / "galleries"
 
 

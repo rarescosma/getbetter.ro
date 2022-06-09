@@ -52,7 +52,8 @@ plugins:
       - _build/*
       - build/*
   - git-revision-date
-  - macros
+  - macros:
+      module_name: "getbetter/macros"
   - minify:
       minify_html: true
   - search:
