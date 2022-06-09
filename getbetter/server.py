@@ -113,7 +113,7 @@ def handle_webhook():
 
     res = {
         "fetch": str(git_client.fetch("--all", "--prune")),
-        "reset": str(git_client.reset("--hard", event["after"]))
+        "reset": str(git_client.reset("--hard", event["after"])),
     }
 
     return res

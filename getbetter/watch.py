@@ -15,7 +15,9 @@ class WatchManager(pyinotify.WatchManager):
 
         for watch_path in [d, *dir_links]:
             self.add_watch(
-                str(watch_path), pyinotify.ALL_EVENTS, rec=True,
+                str(watch_path),
+                pyinotify.ALL_EVENTS,
+                rec=True,
             )
 
 

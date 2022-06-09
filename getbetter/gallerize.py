@@ -99,10 +99,10 @@ def get_resize_path(event: pyinotify.Event) -> Optional[Path]:
 
 def main() -> None:
     """
-        1) iterate through raw galleries and make sure all the images
-        have been resized + have thumbnails
-        2) start a watcher on the RAW_GALLERIES dir and pass new images
-        through the same routine
+    1) iterate through raw galleries and make sure all the images
+    have been resized + have thumbnails
+    2) start a watcher on the RAW_GALLERIES dir and pass new images
+    through the same routine
     """
     if "-w" in sys.argv[1:]:
         # Watch for new images being added and resize them accordingly

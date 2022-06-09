@@ -29,20 +29,17 @@ GALLERIES_DIR = CONTENT_DIR / "galleries"
 
 
 def youtube(video_id: str) -> str:
-    """ Renders a YouTube videobox.
-    """
+    """Renders a YouTube videobox."""
     return YOUTUBE_TPL.format(video_id=video_id.strip())
 
 
 def mymaps(map_id: str) -> str:
-    """ Renders an embedded map from google mymaps.
-    """
+    """Renders an embedded map from google mymaps."""
     return MAPS_TPL.format(map_id=map_id.strip())
 
 
 def gallery(gallery_id: str) -> str:
-    """ Renders a photo gallery.
-    """
+    """Renders a photo gallery."""
     gallery_dir = GALLERIES_DIR / gallery_id
 
     if not gallery_dir.exists() or not gallery_dir.is_dir():
@@ -64,14 +61,12 @@ def gallery(gallery_id: str) -> str:
 
 
 def _thumb_path(img_path: Path) -> Path:
-    """ image.jpg -> image.thumb.jpg
-    """
+    """image.jpg -> image.thumb.jpg"""
     return img_path.with_suffix(f".thumb{img_path.suffix}")
 
 
 def define_env(env: Any):
-    """ Hook for declaring variables, macros and filters.
-    """
+    """Hook for declaring variables, macros and filters."""
     env.macro(youtube, "yt")
     env.macro(mymaps)
     env.macro(gallery)
