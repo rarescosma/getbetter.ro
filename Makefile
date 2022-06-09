@@ -29,8 +29,7 @@ serve: ## Serve the site on http://localhost:8000 via MkDocs
 
 .PHONY: gserve
 gserve: ## Serve the site on http://localhost:8000 via gunicorn
-	cd var && gunicorn --reload server:app
-	cd -
+	gunicorn --reload getbetter.server:app
 
 .PHONY: clean
 clean: ## Cleanup

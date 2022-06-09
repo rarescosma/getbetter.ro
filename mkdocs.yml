@@ -27,7 +27,7 @@ extra:
       link: https://linkedin.com/in/rarescosma
 
 docs_dir: content
-site_dir: var/build
+site_dir: www
 
 markdown_extensions:
   - admonition
