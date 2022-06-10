@@ -35,7 +35,7 @@ steps:
         from_secret: minio-creds
     commands:
       - mkdir -p /tmp/mcli && echo $${MCONF} | base64 -d > /tmp/mcli/config.json
-      - mcli --quiet --config-dir /tmp/mcli mirror --overwrite --md5 --remove www/ local/site/
+      - mcli --quiet --config-dir /tmp/mcli mirror --overwrite --md5 --remove www/ local/site/staging/
 
 services:
   - name: docker-daemon
