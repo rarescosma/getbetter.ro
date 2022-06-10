@@ -1,0 +1,51 @@
+---
+kind: pipeline
+type: kubernetes
+name: dockery
+
+__dind_agent: &agent
+  image: registry-np.sys.svc.k8s.local:5000/dind:v5
+  pull: always
+  volumes:
+    - name: dockersock
+      path: /var/run
+  environment:
+    REGISTRY: registry-np.sys.svc.k8s.local:5000
+
+steps:
+  - name: build-the-builder
+    <<: *agent
+    commands:
+      - while ! curl -s --unix-socket /var/run/docker.sock http://localhost/; do sleep 1; done
+      - make builder
+  - name: docker-image
+    <<: *agent
+    commands:
+      - make pull || (make docker && make push)
+  - name: mkdocs
+    <<: *agent
+    commands:
+      - export BUILDER_VERSION=$(./docker/hacks/builder-version.sh)
+      - ln -sf /sandbox/getbetter.ro/galleries content/
+      - make drone-mkdocs
+  - name: publish
+    <<: *agent
+    environment:
+      MCONF:
+        from_secret: minio-creds
+    commands:
+      - mkdir -p /tmp/mcli && echo $${MCONF} | base64 -d > /tmp/mcli/config.json
+      - mcli --quiet --config-dir /tmp/mcli mirror --overwrite --md5 --remove www/ local/site/
+
+services:
+  - name: docker-daemon
+    image: registry-np.sys.svc.k8s.local:5000/dind:v5
+    pull: always
+    privileged: true
+    volumes:
+      - name: dockersock
+        path: /var/run
+
+volumes:
+  - name: dockersock
+    temp: {}
