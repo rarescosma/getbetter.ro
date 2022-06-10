@@ -1,15 +1,20 @@
 .DEFAULT_GOAL:=help
 
+PROJECT=getbetter
+
 BUILD_DEPS=$(shell find content -type f)
-BUILD_DIR=var/build
+BUILD_DIR=www
 
-SSH_HOST=vps
-SSH_USER=karelian
-SSH_TARGET_DIR=/pv/kube/services/getbetter-ro/$(BUILD_DIR)
-DOCKER_IMAGE=localhost:5000/getbetter-ro:v1
-RSYNC_OPTS?=--dry-run
-RSYNC_TARGET?=$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+REGISTRY?=localhost:5000
+DOCKER_IMAGE=$(REGISTRY)/getbetter-ro:v2
 
+DOCKERFILE?=Dockerfile
+REGISTRY?=registry.sys.svc.k8s.local
+BUILDER_VERSION?=$(shell ./docker/hacks/builder-version.sh)
+PROJECT_VERSION?=$(shell ./docker/hacks/project-version.sh)
+PROJECT_TAG=$(PROJECT):$(PROJECT_VERSION)
+
+BUILDER_MAKE=$(MAKE) PROJECT_VERSION=$(BUILDER_VERSION)
 
 help:
 	@echo 'Usage: make [target] ...'
@@ -18,9 +23,9 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "%-16s %s\n", $$1, $$2}'
 
-build: $(BUILD_DIR)/index.html
+build: $(BUILD_DIR)/index.html ## Build the site using mkdocs
 
-$(BUILD_DIR)/index.html: $(BUILD_DEPS) ## Build the site using mkdocs
+$(BUILD_DIR)/index.html: $(BUILD_DEPS)
 	mkdocs build
 
 .PHONY: serve
@@ -35,15 +40,35 @@ gserve: ## Serve the site on http://localhost:8000 via gunicorn
 clean: ## Cleanup
 	rm -rf build dist $(BUILD_DIR)/*
 
-.PHONY: sync
-sync: $(BUILD_DIR)/index.html ## Sync the built site to the $(SSH_HOST)
-	rsync -P -rvzzc --delete $(RSYNC_OPTS) $(BUILD_DIR)/ $(RSYNC_TARGET)
+.PHONY: builder
+builder: ## Build the builder
+	@$(BUILDER_MAKE) pull || ( \
+      DOCKERFILE='Dockerfile-builder' $(BUILDER_MAKE) docker \
+      && $(BUILDER_MAKE) push \
+    )
+
+.PHONY: pull
+pull: ## Pull docker image
+	docker pull $(REGISTRY)/$(PROJECT_TAG)
 
 .PHONY: docker
-docker: ## Build the server docker image
-	docker build . -t $(DOCKER_IMAGE)
+docker: ## Build the docker image
+	docker build -t $(REGISTRY)/$(PROJECT_TAG) \
+	  --build-arg BUILDER_VERSION=$(BUILDER_VERSION) \
+	  --build-arg REGISTRY=$(REGISTRY) \
+	  -f docker/$(DOCKERFILE) .
+
+.PHONY: push
+push:  ## Publish the docker image
+	docker push $(REGISTRY)/$(PROJECT_TAG)
 
 .PHONY: test
 test: ## Run python code tests
 	mypy getbetter --ignore-missing-imports
 	pylint --rcfile=setup.cfg getbetter
+
+.PHONY: drone-mkdocs
+drone-mkdocs:
+	docker run --rm -v $(PWD):/drone/src -v /sandbox:/sandbox -w /drone/src \
+	  $(REGISTRY)/$(PROJECT):$(BUILDER_VERSION) \
+	  make build

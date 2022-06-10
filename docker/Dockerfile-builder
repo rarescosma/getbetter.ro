@@ -1,6 +1,8 @@
-FROM python:3.10.4-slim
+ARG REGISTRY
 
-WORKDIR /pv
+FROM ${REGISTRY}/snakes/python:3.10.4
+
+COPY Pipfile* ./
 
 RUN apt-get -qq update \
     && apt-get -qq install -y git make wget rsync imagemagick xz-utils \
@@ -11,16 +13,4 @@ RUN wget -qO- "https://github.com/watchexec/watchexec/releases/download/1.12.0/w
   | tar -xJf - --strip-components 1 -C /tmp/ \
   && mv /tmp/watchexec /usr/bin
 
-COPY Pipfile* ./
 RUN pipenv install --system --deploy
-
-COPY getbetter ./getbetter
-COPY setup.py ./
-COPY hacks/gallerize-entrypoint.sh /usr/bin/
-
-RUN pip install .
-
-RUN useradd -u 1000 -U getbetter
-USER getbetter
-
-CMD ["gunicorn", "-b", "0.0.0.0:8000"]
