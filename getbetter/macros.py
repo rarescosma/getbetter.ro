@@ -28,6 +28,10 @@ CONTENT_DIR = (Path(__file__).parent / "../content").resolve()
 GALLERIES_DIR = CONTENT_DIR / "galleries"
 
 
+def is_link_to_dir(p: Path) -> bool:
+    return p.is_symlink() and p.resolve().is_dir()
+
+
 def youtube(video_id: str) -> str:
     """Renders a YouTube videobox."""
     return YOUTUBE_TPL.format(video_id=video_id.strip())
@@ -42,7 +46,10 @@ def gallery(gallery_id: str) -> str:
     """Renders a photo gallery."""
     gallery_dir = GALLERIES_DIR / gallery_id
 
-    if not gallery_dir.exists() or not gallery_dir.is_dir():
+    if not (
+        gallery_dir.exists()
+        and (gallery_dir.is_dir() or is_link_to_dir(gallery_dir))
+    ):
         LOG.warning(f"Gallery directory {gallery_dir} is invalid.")
         return ""
 
