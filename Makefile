@@ -5,11 +5,10 @@ PROJECT=getbetter
 BUILD_DEPS=$(shell find content -type f)
 BUILD_DIR=www
 
-REGISTRY?=localhost:5000
+REGISTRY?=registry-np.storage-system.svc.k8s.local:5000
 DOCKER_IMAGE=$(REGISTRY)/getbetter-ro:v2
 
 DOCKERFILE?=Dockerfile
-REGISTRY?=registry.sys.svc.k8s.local
 BUILDER_VERSION?=$(shell ./docker/hacks/builder-version.sh)
 PROJECT_VERSION?=$(shell ./docker/hacks/project-version.sh)
 PROJECT_TAG=$(PROJECT):$(PROJECT_VERSION)
