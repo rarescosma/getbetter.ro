@@ -22,6 +22,7 @@ steps:
     <<: *agent
     commands:
       - make pull || (make docker && make push)
+      - make push-head
   - name: mkdocs
     <<: *agent
     commands:

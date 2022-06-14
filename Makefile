@@ -61,6 +61,11 @@ docker: ## Build the docker image
 push:  ## Publish the docker image
 	docker push $(REGISTRY)/$(PROJECT_TAG)
 
+.PHONY: push-head
+push-head:
+	docker tag $(REGISTRY)/$(PROJECT_TAG) $(REGISTRY)/$(PROJECT):v2
+	docker push $(REGISTRY)/$(PROJECT):v2
+
 .PHONY: test
 test: ## Run python code tests
 	mypy getbetter --ignore-missing-imports
