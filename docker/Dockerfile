@@ -9,7 +9,7 @@ COPY getbetter ./getbetter
 COPY setup.py ./
 COPY hacks/gallerize-entrypoint.sh /usr/bin/
 
-RUN pip install -e .
+RUN pip install .
 
 RUN useradd -u 1000 -U getbetter
 USER getbetter
