@@ -27,7 +27,7 @@ steps:
     <<: *agent
     commands:
       - export BUILDER_VERSION=$(./docker/hacks/builder-version.sh)
-      - ln -sf /sandbox/getbetter.ro/galleries content/
+      - ln -sf /getbetter.ro/galleries content/
       - make drone-mkdocs
   - name: preview
     when:
@@ -49,7 +49,7 @@ steps:
         - main
     <<: *agent
     commands:
-      - cd /getbetter.ro && git pull local main
+      - rsync -avP --delete www/ /getbetter.ro/www/
 
 services:
   - name: docker-daemon
