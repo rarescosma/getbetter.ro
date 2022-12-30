@@ -27,7 +27,7 @@ of a new user on your website.
 It passes on the user ID to the callback function. 
 For our purpose, the code is very simple:
 
-```language-php
+```php
 <?php
 /**
  * Provides custom user functionality through hooks.

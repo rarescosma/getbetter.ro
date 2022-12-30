@@ -13,6 +13,6 @@ Then, extract the libs of the old package somewhere in `/opt`, for example `/opt
 
 Finally, override `LD_LIBRARY_PATH` when starting the program:
 
-```
+```shell
 LD_LIBRARY_PATH=/opt/firefox-libs firefox
 ``` 

@@ -24,7 +24,7 @@ Take the following steps:
 ​
 ### The Code
 ​
-```language-php
+```php
 <?php
 /*
 Plugin Name: Toscho's basic settings

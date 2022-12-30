@@ -7,7 +7,7 @@ Just a bunch of nifty `rsync` tricks gathered over the years.
 
 This one helps with previewing what will actually get synced.
 
-```
+```shell
 rsync -avun --delete $TARGET/ $SOURCE/ | grep "^deleting "
 ```
 
@@ -15,7 +15,7 @@ rsync -avun --delete $TARGET/ $SOURCE/ | grep "^deleting "
 
 This one is really helpful when you're dealing with a random backup tool but want a generic solution for exclusion filters. Just add anything you *don't* want mirrored into `$DATA/.rsync_ignore`.
 
-```
+```shell
 rsync -av --exclude-from $DATA/.rsync_ignore --link-dest=$DATA $DATA/ $DATA/.rsync_mirror
 ```
 
@@ -28,4 +28,6 @@ Make sure `$DATA/.rsync_ignore` excludes itself and the mirror directory to avoi
 
 ### Good for backups
 
-    rsync -a -HA --sparse --devices --delete --checksum --numeric-ids --xattrs
+```shell
+rsync -a -HA --sparse --devices --delete --checksum --numeric-ids --xattrs
+```

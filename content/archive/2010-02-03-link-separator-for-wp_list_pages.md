@@ -21,7 +21,7 @@ Basically, you want to alter the structure of all links except the last one. Thi
 
 ### The code
 
-```language-php
+```php
 <?php
 $args = array(
   'sort_column' => 'menu_order',

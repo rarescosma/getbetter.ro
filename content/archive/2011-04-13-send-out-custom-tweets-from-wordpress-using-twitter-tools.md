@@ -52,7 +52,7 @@ Suppose your website uses a [Custom Post Type](http://codex.wordpress.org/Post_T
 
 First let's create a custom function that uses (or hijacks) the Twitter Tools objects to tweet out a text portion, a link and some hashtags:
 
-```language-php
+```php
 <?php
 function my_tweet( $args = array() ) {
   // Check reqs
@@ -95,7 +95,7 @@ function my_tweet( $args = array() ) {
 
 Armed with this function, we'll use the `wp_insert_post` action hook to check when a new **'product'** is added:
 
-```language-php
+```php
 <?php
 add_action( 'wp_insert_post' , 'my_twitter_notifications' , 99 );
 function my_twitter_notifications( $post_id ) {

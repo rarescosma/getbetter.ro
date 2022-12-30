@@ -22,7 +22,7 @@ We also need a way to find the current URL, or the URL being browsed.
 
 ### The Code
 
-```language-php
+```php
 <?php
 add_filter( 'nav_menu_css_class', 'add_parent_url_menu_class', 10, 2 );
 
