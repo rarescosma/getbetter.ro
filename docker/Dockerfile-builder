@@ -9,8 +9,4 @@ RUN apt-get -qq update \
     && pip install --no-cache-dir poetry \
     && rm -rf /var/lib/apt
 
-RUN wget -qO- "https://github.com/watchexec/watchexec/releases/download/1.12.0/watchexec-1.12.0-x86_64-unknown-linux-gnu.tar.xz" \
-  | tar -xJf - --strip-components 1 -C /tmp/ \
-  && mv /tmp/watchexec /usr/bin
-
 RUN POETRY_VIRTUALENVS_CREATE=false poetry install --without dev
