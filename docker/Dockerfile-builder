@@ -13,4 +13,4 @@ RUN wget -qO- "https://github.com/watchexec/watchexec/releases/download/1.12.0/w
   | tar -xJf - --strip-components 1 -C /tmp/ \
   && mv /tmp/watchexec /usr/bin
 
-RUN poetry install --without dev
+RUN POETRY_VIRTUALENVS_CREATE=false poetry install --without dev
