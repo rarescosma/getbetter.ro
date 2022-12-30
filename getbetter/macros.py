@@ -72,7 +72,7 @@ def _thumb_path(img_path: Path) -> Path:
     return img_path.with_suffix(f".thumb{img_path.suffix}")
 
 
-def define_env(env: Any):
+def define_env(env: Any) -> None:
     """Hook for declaring variables, macros and filters."""
     env.macro(youtube, "yt")
     env.macro(mymaps)

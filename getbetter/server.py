@@ -7,10 +7,11 @@ from collections import defaultdict
 from difflib import SequenceMatcher
 from functools import lru_cache
 from pathlib import Path
-from typing import Iterable, Optional, Pattern
+from typing import Any, Iterable, Optional, Pattern, Union
 
 from flask import Flask, redirect, request, send_from_directory
 from mkdocs.config import load_config
+from werkzeug import Response
 
 WWW_DIR: str = os.getenv("WWW_DIR", "www")
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
@@ -24,7 +25,9 @@ app = Flask(__name__, static_url_path=f"/{WWW_DIR}")
 
 
 @lru_cache(maxsize=1)
-def _sitemap_paths(sitemap_file: Path = Path(WWW_DIR) / "sitemap.xml"):
+def _sitemap_paths(
+    sitemap_file: Path = Path(WWW_DIR) / "sitemap.xml",
+) -> list[str]:
     cfg = load_config()
     return [
         _.replace(cfg["site_url"], "").strip("/")
@@ -69,7 +72,7 @@ def _find_similar(req_path: str, known_paths: Iterable[str]) -> Optional[str]:
 
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
-def handle_static(path):
+def handle_static(path: str) -> Response:
     if not path:
         logging.info("Serving root /")
         return send_from_directory(WWW_DIR, "index.html")
@@ -84,7 +87,7 @@ def handle_static(path):
 
 
 @app.errorhandler(404)
-def handle_not_found(_):
+def handle_not_found(_: Any) -> Union[Response, tuple[str, int]]:
     similar_url = _find_similar(request.path, known_paths=_sitemap_paths())
     if similar_url is not None:
         logging.info(f"Redirecting '{request.path}' to '/{similar_url}/'")

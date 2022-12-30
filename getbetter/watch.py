@@ -32,7 +32,7 @@ class ProcessEvent(pyinotify.ProcessEvent):
         super().__init__(**kargs)
 
     # noinspection PyPep8Naming
-    def _process(self, event):
+    def _process(self, event: dict) -> None:
         """Handle CLOSE_WRITE"""
         debug(event)
         try:
