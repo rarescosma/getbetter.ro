@@ -4,6 +4,7 @@ PROJECT=getbetter.ro
 
 BUILD_DEPS=$(shell find content -type f)
 BUILD_DIR=www
+LIVE_DIR=var/www
 
 REGISTRY?=registry-np.storage-system.svc.k8s.local:5000
 
@@ -37,6 +38,10 @@ gserve: ## Serve the site on http://localhost:8000 via gunicorn
 .PHONY: clean
 clean: ## Cleanup
 	rm -rf build dist $(BUILD_DIR)/*
+
+.PHONY: sync
+sync: build ## Sync the live website to $(LIVE_DIR)
+	rsync -avP --delete --checksum $(BUILD_DIR)/ $(LIVE_DIR)/
 
 .PHONY: builder
 builder: ## Build the builder
