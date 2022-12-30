@@ -12,7 +12,7 @@ from typing import Iterable, Optional, Pattern
 from flask import Flask, redirect, request, send_from_directory
 from mkdocs.config import load_config
 
-WWW_DIR: str = os.getenv("WWW_DIR", "../www")
+WWW_DIR: str = os.getenv("WWW_DIR", "www")
 LOC_PATTERN: Pattern = re.compile("<loc>([^<]+)</loc>")
 SIMILARITY_THRESHOLD: float = 0.65
 SIMILARITY_RATIO_THRESHOLD: float = 1.4

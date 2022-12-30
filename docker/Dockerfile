@@ -3,8 +3,6 @@ ARG REGISTRY
 
 FROM ${REGISTRY}/getbetter.ro:${BUILDER_VERSION} as BUILDER
 
-WORKDIR /pv
-
 COPY getbetter ./getbetter
 COPY pyproject.toml ./
 COPY hacks/gallerize-entrypoint.sh /usr/bin/

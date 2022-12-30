@@ -18,10 +18,10 @@ from .fun import flatmap
 from .watch import start_notifier
 
 RAW_GALLERIES: Path = Path(
-    os.getenv("RAW_GALLERIES", "/pv/raw_galleries")
+    os.getenv("RAW_GALLERIES", "raw_galleries")
 ).resolve()
 RESIZED_GALLERIES: Path = Path(
-    os.getenv("RESIZED_GALLERIES", "/pv/content/galleries")
+    os.getenv("RESIZED_GALLERIES", "galleries")
 ).resolve()
 EXTENSIONS: List[str] = ["jpg", "jpeg"]
 RESIZED_Q: int = 98
