@@ -1,6 +1,6 @@
 ARG REGISTRY
 
-FROM ${REGISTRY}/snakes/python:3.10.4
+FROM ${REGISTRY}/python:3.10.4
 
 COPY Pipfile* ./
 
