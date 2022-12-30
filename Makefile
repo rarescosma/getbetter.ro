@@ -62,8 +62,8 @@ push:  ## Publish the docker image
 
 .PHONY: push-head
 push-head:
-	docker tag $(REGISTRY)/$(PROJECT_TAG) $(REGISTRY)/$(PROJECT):v2.1
-	docker push $(REGISTRY)/$(PROJECT):v2.1
+	docker tag $(REGISTRY)/$(PROJECT_TAG) $(REGISTRY)/$(PROJECT):v2.2
+	docker push $(REGISTRY)/$(PROJECT):v2.2
 
 .PHONY: test
 test: ## Run python code tests
@@ -75,3 +75,9 @@ drone-mkdocs:
 	docker run --rm -v $(PWD):/drone/src -v /getbetter.ro:/getbetter.ro -w /drone/src \
 	  $(REGISTRY)/$(PROJECT):$(BUILDER_VERSION) \
 	  make build
+
+.PHONY: drone-sync
+drone-sync:
+	docker run --rm -v $(PWD):/drone/src -v /getbetter.ro:/getbetter.ro -w /drone/src \
+	  $(REGISTRY)/$(PROJECT):$(BUILDER_VERSION) \
+	  rsync -avP --delete www/ /getbetter.ro/www/

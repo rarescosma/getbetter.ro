@@ -50,7 +50,7 @@ steps:
     <<: *agent
     commands:
       - cp -f getbetter/server.py mkdocs.yml /getbetter.ro/
-      - rsync -avP --delete www/ /getbetter.ro/www/
+      - make drone-sync
 
 services:
   - name: docker-daemon
