@@ -9,4 +9,4 @@ RUN apt-get -qq update \
     && pip install --no-cache-dir poetry \
     && rm -rf /var/lib/apt
 
-RUN POETRY_VIRTUALENVS_CREATE=false poetry install --without dev
+RUN POETRY_VIRTUALENVS_CREATE=false poetry install --without dev --no-root
