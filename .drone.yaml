@@ -49,6 +49,7 @@ steps:
         - main
     <<: *agent
     commands:
+      - cp -f getbetter/server.py mkdocs.yml /getbetter.ro/
       - rsync -avP --delete www/ /getbetter.ro/www/
 
 services:
