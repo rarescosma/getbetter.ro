@@ -80,4 +80,4 @@ drone-mkdocs:
 drone-sync:
 	docker run --rm -v $(PWD):/drone/src -v /getbetter.ro:/getbetter.ro -w /drone/src \
 	  $(REGISTRY)/$(PROJECT):$(BUILDER_VERSION) \
-	  rsync -avP --delete www/ /getbetter.ro/www/
+	  rsync -ah --delete www/ /getbetter.ro/www/
