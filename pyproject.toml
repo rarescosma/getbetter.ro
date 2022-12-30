@@ -33,3 +33,6 @@ pylint = "*"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gallerize = { callable = "getbetter.gallerize:main" }
