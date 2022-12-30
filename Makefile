@@ -72,6 +72,6 @@ test: ## Run python code tests
 
 .PHONY: drone-mkdocs
 drone-mkdocs:
-	docker run --rm -v $(PWD):/drone/src -v /sandbox:/sandbox -w /drone/src \
+	docker run --rm -v $(PWD):/drone/src -v /getbetter.ro:/getbetter.ro -w /drone/src \
 	  $(REGISTRY)/$(PROJECT):$(BUILDER_VERSION) \
 	  make build
