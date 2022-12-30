@@ -62,8 +62,8 @@ push:  ## Publish the docker image
 
 .PHONY: push-head
 push-head:
-	docker tag $(REGISTRY)/$(PROJECT_TAG) $(REGISTRY)/$(PROJECT):v2
-	docker push $(REGISTRY)/$(PROJECT):v2
+	docker tag $(REGISTRY)/$(PROJECT_TAG) $(REGISTRY)/$(PROJECT):v2.1
+	docker push $(REGISTRY)/$(PROJECT):v2.1
 
 .PHONY: test
 test: ## Run python code tests
