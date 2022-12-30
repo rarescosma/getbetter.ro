@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "getbetter"
+version = "0.1.0"
+description = "supporting code for mkdocs generation of getbetter.ro"
+authors = ["Rareș Cosma <rares@getbetter.ro>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+devtools = "^0.10"
+htmlmin = {git = "https://github.com/rarescosma/htmlmin.git", rev = "v0.1.12-gb"}
+mkdocs = "^1.4"
+markdown-include = "==0.8.0"
+mkdocs-exclude = "^1"
+mkdocs-git-revision-date-plugin = "^0.3"
+mkdocs-macros-plugin = "^0.7"
+mkdocs-material = "^9.0.0b4"
+mkdocs-material-extensions = "^1.1"
+mkdocs-minify-plugin = "^0.6.2"
+pymdown-extensions = "^9.9"
+mkdocs-awesome-pages-plugin = {git = "https://github.com/rarescosma/mkdocs-awesome-pages-plugin.git", rev = "v2.2.2"}
+Pygments = "^2.13"
+Markdown = "^3.3"
+gunicorn = "^20.1"
+Flask = "^2.2"
+sh = "^1.14"
+pyinotify = "^0.9.6"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "*"
+pylint = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -7,8 +7,8 @@ ROOT=$(git rev-parse --show-toplevel)
 
 REQ_HASH=$(
   cat \
-    "$ROOT/Pipfile" \
-    "$ROOT/Pipfile.lock" \
+    "$ROOT/pyproject.toml" \
+    "$ROOT/poetry.lock" \
     "$ROOT/docker/Dockerfile-builder" \
   | ${md5_cmd} \
   | cut -d' ' -f1 \

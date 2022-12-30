@@ -1,17 +1,23 @@
-site_name: getbetter
+site_name: Getbetter
 site_description: Rareș' 2nd brain
 strict: true
 site_url: https://getbetter.ro/
 copyright: |
-  Copyright &copy; 2010 - 2022 <a href="https://github.com/rarescosma"  target="_blank" rel="noopener">Rareș Cosma</a>
+  Copyright &copy; 2010 - 2023 <a href="https://github.com/rarescosma"  target="_blank" rel="noopener">Rareș Cosma</a>
 
 theme:
-  name: 'material'
+  name: material
+  logo: logo.svg
+  favicon: favicon.png
   palette:
-    primary: indigo
-    accent: indigo
-  logo: 'logo.svg'
-  favicon: 'favicon.png'
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 extra_css:
   - extra/macros.css
@@ -31,10 +37,10 @@ site_dir: www
 
 markdown_extensions:
   - admonition
-  - codehilite
   - extra
-  - markdown.extensions.codehilite:
-      guess_lang: false
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
   - markdown_include.include:
       base_path: content
   - pymdownx.emoji:
@@ -56,5 +62,4 @@ plugins:
       module_name: "getbetter/macros"
   - minify:
       minify_html: true
-  - search:
-      prebuild_index: false
+  - search
