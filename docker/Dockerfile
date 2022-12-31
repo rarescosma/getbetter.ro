@@ -11,5 +11,3 @@ RUN pip install . --no-deps
 
 RUN useradd -u 1000 -U getbetter
 USER getbetter
-
-CMD ["gunicorn", "-b", "0.0.0.0:8000"]

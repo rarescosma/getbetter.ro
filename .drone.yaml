@@ -49,7 +49,6 @@ steps:
         - main
     <<: *agent
     commands:
-      - cp -f getbetter/server.py mkdocs.yml /getbetter.ro/
       - make drone-sync
 
 services:
