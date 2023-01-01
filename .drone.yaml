@@ -28,6 +28,7 @@ steps:
     commands:
       - export BUILDER_VERSION=$(./docker/hacks/builder-version.sh)
       - ln -sf /getbetter.ro/galleries content/
+      - ./hacks/cache-bust-extras.sh
       - make drone-mkdocs
   - name: preview
     when:
