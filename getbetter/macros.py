@@ -22,15 +22,8 @@ MAPS_TPL = """
 </div>
 """
 
-IMAGE_TEMPLATE = """
-<a href="/{url}" title="{title}">
-<picture>
-    <source srcset="/{webp_thumb}" type="image/webp">
-    <source srcset="/{thumb}" type="image/jpeg">
-    <img src="/{thumb}">
-</picture>
-</a>
-"""
+IMAGE_FORMAT = "webp"
+IMAGE_TPL = """<a href="/{url}" title="{title}"><img src="/{thumb}"></a>"""
 
 CONTENT_DIR = (Path(__file__).parent / "../content").resolve()
 GALLERIES_DIR = CONTENT_DIR / "galleries"
@@ -64,16 +57,15 @@ def gallery(gallery_id: str) -> str:
     image_paths = sorted(
         [
             _.relative_to(CONTENT_DIR)
-            for _ in gallery_dir.glob("*.jpg")
-            if _thumb_path(_).exists() and _webp_thumb_path(_).exists()
+            for _ in gallery_dir.glob(f"*.{IMAGE_FORMAT}")
+            if _thumb_path(_).exists()
         ]
     )
     image_markup = "\n".join(
-        IMAGE_TEMPLATE.format(
+        IMAGE_TPL.format(
             url=_,
             title=_.name,
             thumb=_thumb_path(_),
-            webp_thumb=_webp_thumb_path(_),
         )
         for _ in image_paths
     )
@@ -83,11 +75,6 @@ def gallery(gallery_id: str) -> str:
 def _thumb_path(img_path: Path) -> Path:
     """image.jpg -> image.thumb.jpg"""
     return img_path.with_suffix(f".thumb{img_path.suffix}")
-
-
-def _webp_thumb_path(img_path: Path) -> Path:
-    """image.jpg -> image.thumb.jpg"""
-    return img_path.with_suffix(f".thumb.webp")
 
 
 def define_env(env: Any) -> None:

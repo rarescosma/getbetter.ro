@@ -7,7 +7,7 @@ from dataclasses import dataclass, replace
 from multiprocessing import Pool
 from pathlib import Path
 from threading import Thread
-from typing import List, Optional, Tuple
+from typing import List, Optional
 
 import pyinotify
 import sh
@@ -47,10 +47,6 @@ class ResizeOp:
         )
 
     @property
-    def webp_thumb(self) -> "ResizeOp":
-        return replace(self.thumb, dest=self.dest.with_suffix(".thumb.webp"))
-
-    @property
     def as_convert_args(self) -> List[str]:
         args = [self.src, "-resize", f"{self.size}>"]
         if self.quality is not None:
@@ -62,9 +58,12 @@ class ResizeOp:
 
 def get_resize_ops(image: Path) -> list[ResizeOp]:
     rel = image.relative_to(RAW_GALLERIES)
-    resize_op = ResizeOp(src=image, dest=RESIZED_GALLERIES / str(rel).lower())
+    resize_op = ResizeOp(
+        src=image,
+        dest=(RESIZED_GALLERIES / str(rel).lower()).with_suffix(".webp"),
+    )
 
-    return [resize_op, resize_op.thumb, resize_op.webp_thumb]
+    return [resize_op, resize_op.thumb]
 
 
 def resize(op: ResizeOp) -> str:
