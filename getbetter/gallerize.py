@@ -34,7 +34,7 @@ THUMB_SIZE: str = "640x480"
 class ResizeOp:
     src: Path
     dest: Path
-    quality: int = RESIZED_Q
+    quality: Optional[int] = RESIZED_Q
     size: str = RESIZED_SIZE
 
     @property
@@ -47,25 +47,24 @@ class ResizeOp:
         )
 
     @property
+    def webp_thumb(self) -> "ResizeOp":
+        return replace(self.thumb, dest=self.dest.with_suffix(".thumb.webp"))
+
+    @property
     def as_convert_args(self) -> List[str]:
-        return [
-            str(_)
-            for _ in [
-                self.src,
-                "-resize",
-                f"{self.size}>",
-                "-quality",
-                self.quality,
-                self.dest,
-            ]
-        ]
+        args = [self.src, "-resize", f"{self.size}>"]
+        if self.quality is not None:
+            args = [*args, "-quality", self.quality]
+        if self.dest.suffix == ".webp":
+            args = [*args, "-auto-orient"]
+        return list(map(str, [*args, self.dest]))
 
 
-def get_resize_ops(image: Path) -> Tuple[ResizeOp, ResizeOp]:
+def get_resize_ops(image: Path) -> list[ResizeOp]:
     rel = image.relative_to(RAW_GALLERIES)
     resize_op = ResizeOp(src=image, dest=RESIZED_GALLERIES / str(rel).lower())
 
-    return resize_op, resize_op.thumb
+    return [resize_op, resize_op.thumb, resize_op.webp_thumb]
 
 
 def resize(op: ResizeOp) -> str:
