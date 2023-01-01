@@ -23,7 +23,11 @@ MAPS_TPL = """
 """
 
 IMAGE_FORMAT = "webp"
-IMAGE_TPL = """<a href="/{url}" title="{title}"><img src="/{thumb}"></a>"""
+IMAGE_TPL = """
+<a href="/{url}" title="{title}">
+    <img src="/{thumb}" alt="a picture is worth a thousand words">
+</a>
+"""
 
 CONTENT_DIR = (Path(__file__).parent / "../content").resolve()
 GALLERIES_DIR = CONTENT_DIR / "galleries"
