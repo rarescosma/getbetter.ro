@@ -25,11 +25,11 @@ theme:
         name: Switch to dark mode
 
 extra_css:
-  - assets/gfonts.css
-  - assets/macros.css
-  - assets/popup.css
+  - assets/stylesheets/gfonts.css
+  - assets/stylesheets/macros.css
+  - assets/stylesheets/popup.css
 extra_javascript:
-  - assets/gallery.js
+  - assets/javascripts/gallery.js
 
 extra:
   social:

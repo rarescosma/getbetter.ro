@@ -1,3 +1,8 @@
+[data-md-color-scheme="slate"] {
+    --md-default-fg-color: #cbcfe6;
+    --md-default-bg-color: #181920;
+}
+
 .videobox {
     overflow: hidden;
     height: 0;
