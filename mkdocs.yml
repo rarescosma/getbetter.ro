@@ -9,6 +9,7 @@ theme:
   name: material
   logo: logo.svg
   favicon: favicon.png
+  font: false
   palette:
     - scheme: slate
       primary: black
@@ -24,6 +25,7 @@ theme:
         name: Switch to dark mode
 
 extra_css:
+  - assets/gfonts.css
   - assets/macros.css
   - assets/popup.css
 extra_javascript:
