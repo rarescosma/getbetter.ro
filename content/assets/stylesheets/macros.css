@@ -3,7 +3,7 @@
     --md-default-bg-color: #181920;
 }
 
-.md-content a {
+.md-content a:not(.headerlink) {
     text-decoration: underline;
 }
 
