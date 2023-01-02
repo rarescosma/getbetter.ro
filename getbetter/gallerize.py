@@ -84,7 +84,7 @@ def resize_handler(event: pyinotify.Event) -> pyinotify.Event:
 
 
 def get_resize_path(event: pyinotify.Event) -> Optional[Path]:
-    if event.maskname != "IN_CLOSE_WRITE":
+    if event.maskname not in ["IN_CLOSE_WRITE", "IN_MOVED_TO"]:
         return None
 
     event_path = Path(event.pathname)

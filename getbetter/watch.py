@@ -22,7 +22,7 @@ class WatchManager(pyinotify.WatchManager):
 
 
 class ProcessEvent(pyinotify.ProcessEvent):
-    """Calls handler with the changed file path on CLOSE_WRITE"""
+    """Calls handler with the changed file path"""
 
     def __init__(
         self, handler: Callable, error_handler: Callable, **kargs: Any
@@ -33,7 +33,7 @@ class ProcessEvent(pyinotify.ProcessEvent):
 
     # noinspection PyPep8Naming
     def _process(self, event: dict) -> None:
-        """Handle CLOSE_WRITE"""
+        """Handle events"""
         debug(event)
         try:
             self.__handler(event)
@@ -41,6 +41,7 @@ class ProcessEvent(pyinotify.ProcessEvent):
             self.__error_handler(exc)
 
     process_IN_CLOSE_WRITE = _process
+    process_IN_MOVED_TO = _process
     process_IN_CREATE = _process
 
 
