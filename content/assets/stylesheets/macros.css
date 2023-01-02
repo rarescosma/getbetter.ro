@@ -3,6 +3,14 @@
     --md-default-bg-color: #181920;
 }
 
+.md-content a {
+    text-decoration: underline;
+}
+
+.md-content a:hover {
+    text-decoration: none;
+}
+
 .videobox {
     overflow: hidden;
     height: 0;
