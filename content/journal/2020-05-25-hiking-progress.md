@@ -39,7 +39,7 @@ between some boulders and the sea
 * Late but smooth fire making and steaks grilling
 * Snugged up under the UQ by 1AM
 * Saw a seal the next morning
-* Moslty chilled in the hammock
+* Mostly chilled in the hammock
 * Had a blast 2001-ing a large herbivorous skull 💀
 * Hiked back with a nice swim on the way
 * Found a creepy crypt belonging to a "Sjögren" and tried to figure out
@@ -82,7 +82,7 @@ one from one station farther North instead
 a mask for blocking out light
 * Fruits + veggies infinitely better than ketchup/senap/fried onion retardation
 * Devise method for checking horizontal level of ridge line
-* ~~Buy more wool stuff + a damn towel~~
+* *Buy more wool stuff + a damn towel*
 * Weigh all components and re-think pack to make it even lighter
 * Try out a single cocoon-like quilt for warm weather instead of pad + bag
 * Splitting wood is fun
@@ -102,7 +102,7 @@ instead of filter)
 * Prusiks + carbines rock
 * Don't put scorching hot titanium parts on top of textile sleeves
 * No more ketchup + senap, go with spring onions instead
-* Dry fatwood is really nice to get the fire going
+* Dry fat wood is really nice to get the fire going
 * Still need a plate
 * Have spare batteries
 * Have drumliner trash bags
@@ -125,7 +125,7 @@ for culinary spoiling
 * Get: hiking towel, <del>thermal pad</del>, <del>wool shirts</del>, ...,
 large titanium saucepan (to be used as plate too)
 * Wood stove is friggin' amazing if the weather / fuel situation permits it
-* Ridgeline: move Prusiks on other side of Bowline
+* Ridge-line: move Prusiks on other side of Bowline
 *before* tightening up with hitch
 * Should clean up water filter at home after usage
 * Do not use gloves when filling up water filter
@@ -179,7 +179,7 @@ intrinsically reflective or get a paracord lanyard
 ### Experiences
 
 * First hike with the [65L Osprey](https://www.outdoorgearlab.com/reviews/camping-and-hiking/backpacks-backpacking/osprey-atmos-65-ag) - amazing suspension, awesome camelbak
-* Didn't even bring a knife to sharpen sticks for hotdogs :-(
+* Didn't even bring a knife to sharpen sticks for hot dogs :-(
 * Viking fire lay worked very well in windy conditions
 * Random dude on the other side of the lake navigating through seemingly
 impossible terrain while looking at his phone

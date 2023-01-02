@@ -90,7 +90,7 @@ wooden benches, which is nice. Firewood is also provided in a box further
 North on the road, which we obviously missed so there was a lot of hatchet
 action instead to split wood.
 
-We drank beers, cooked hotdogs and chorizo, chatted about random stuff and
+We drank beers, cooked hot dogs and chorizo, chatted about random stuff and
 huddled around the fire as the temperature slowly dropped to 1-2 °C. Time flies
 when you're having fun and soon it was 2AM so we went to sleep.
 
@@ -110,7 +110,7 @@ and went back to sleep.
 
 I woke up to the sound of birds chirping which is always nice. However, there
 was this nagging sensation of always having the palms cold which only went away
-after doing some morning exercises: jumping jacks, pushups, squat jumps, etc.
+after doing some morning exercises: jumping jacks, push-ups, squat jumps, etc.
 
 One of my friends cooked an awesome breakfast: oatmeal with 2 cartons of
 coconut milk (100%, no water, just the milk) and raisins. We added some

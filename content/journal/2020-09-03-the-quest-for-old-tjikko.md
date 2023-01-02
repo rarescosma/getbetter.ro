@@ -57,8 +57,8 @@ Title: The Quest for Old Tjikko in Fulufjället
 - It's always such an exquisite feeling: on one side you're super-delighted to be sheltered from the outside madness, on the other side you can't stop thinking that perhaps the entire tent will get blown down (and then what?). But I always lean more towards the former, so storms actually make me sleep better.
 
 <audio controls="controls">
-  <source type="audio/mp3" src="/audio/fulufjallet_rain.mp3"></source>
-  <source type="audio/ogg" src="/audio/fulufjallet_rain.ogg"></source>
+  <source type="audio/mp3" src="/audio/fulufjallet_rain.mp3" />
+  <source type="audio/ogg" src="/audio/fulufjallet_rain.ogg" />
 </audio>
 
 ## Day 3 - September 5th, 2020
@@ -120,7 +120,7 @@ Title: The Quest for Old Tjikko in Fulufjället
 - Took another nap, then in full rain gear went for another tour of the waterfall, this time taking the trail leading to its left bank.
 - It started raining, but did not care - my rain gear is quite invincible.
 - Managed to do some bouldering and get to a really cool meditation spot to the left of the waterfall, as inspired by a fellow climber. It was there that for the 2nd time in a day I got washed over (both literally and figuratively) by a feeling of absolute gratitude for being alive and getting to experience all this natural beauty our home planet has to offer. [Simulation or not](https://en.wikipedia.org/wiki/Simulation_hypothesis), the cascading water patterns along with the falling rain made me feel very at peace with everything.
-- Remembering an old dude who showed up at the waterfall together with his lady and 2 cool dogges:
+- Remembering an old dude who showed up at the waterfall together with his lady and 2 cool doggos:
     - Man, he looked funky: leather cap with textile rim and puffball + leather shoes on top of thick woolen socks + some sort of leathery contraption strapped around his neck containing the map. Should've asked him politely if I could take a photo. What is it with me and not talking to people?
 - Back at the station 1620, fucked around the tent for a bit before heading in for a burger at 1635. The dude in the kitchen was like: __"a burger?!?"__
 - Apparently they close at 17 but last order is 1630... But, he still fixed it for me and it was glorious!

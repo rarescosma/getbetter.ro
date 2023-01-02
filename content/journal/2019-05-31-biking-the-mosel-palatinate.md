@@ -203,7 +203,7 @@ decided to veer off towards the city center and look for some sunscreen.
 A fortunate decision since the pharmacy was quite close to supermarket, where
 we all got our second breakfast and got some super-fruity supplies as well.
 
-A couple of kilometers before Traben-Trarback we passed under a *massive*
+A couple of kilometers before Traben-Trarbach we passed under a *massive*
 suspended concrete bridge. Say what you will about medieval / antic structures
 being prettier, but sometimes their modern counterparts are just unbelievable.
 (well, for the engineering part anyway)

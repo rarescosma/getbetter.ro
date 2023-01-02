@@ -3,7 +3,7 @@ Tags: Interview, Wiki
 
 This is a summarized version of the well-established 12 factor applications concept from the DevOps world, sorted by importance. 
 
-## Non-negociable
+## Non-negotiable
 
 ### 1. The codebase
 

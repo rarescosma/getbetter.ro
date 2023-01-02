@@ -25,7 +25,7 @@ Hence, I'll be using IntelliJ as the main IDE for the Haskell Book setup.
 
 Install IntelliJ by following the
 [comprehensive guide](https://www.jetbrains.com/help/idea/installation-guide.html)
-provided by Jetbrains or by using the prefered package manager for your OS.
+provided by Jetbrains or by using the preferred package manager for your OS.
 
 (I live on [Arch Linux](https://www.archlinux.org/) so in my case this is
 `trizen intellij-idea`)

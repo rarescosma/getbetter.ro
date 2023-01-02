@@ -201,5 +201,5 @@
 * Consider PNF (proprioceptive neuromuscular facilitation) for overcoming uncommon lack of flexibility
 * Concentrate on the area you’re stretching. Focus on relaxing the muscle and visualize tension escaping like air from a balloon.
 * Maintain slow, deep breathing throughout the stretch. Inhale through your nose and exhale through your mouth.
-* Maintain a neutral back position - neither rounded nor hyperextended - to maximize the stretch and avoid injury.
+* Maintain a neutral back position - neither rounded nor hyper-extended - to maximize the stretch and avoid injury.
 * Engage in some stretching five or six days per week, and not just on climbing days.
