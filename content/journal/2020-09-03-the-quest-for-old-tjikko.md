@@ -14,7 +14,7 @@ Title: The Quest for Old Tjikko in Fulufjället
 
 {{ gallery("2020.09.fulufjallet") }}
 
-### Day 1 - September 3rd 2020
+## Day 1 - September 3rd 2020
 
 - Started the day by finishing preparations for the trip, making sure I got a hefty breakfast, shaving and going through the pack checklist one last time.
 - Met Andrew at the central station and got onto the first train going all the way to Gävle.
@@ -38,7 +38,7 @@ Title: The Quest for Old Tjikko in Fulufjället
 - During the night some weird birds sang ["Prego, prego!"](https://www.collinsdictionary.com/dictionary/italian-english/prego)
 - Also, there was a lot of light outside from the full moon.
 
-### Day 2 - September 4th, 2020
+## Day 2 - September 4th, 2020
 
 - Slept poorly, probably due to [Full Moon Madness](https://en.wikipedia.org/wiki/Lunar_effect), ate the usual oatmeal breakfast, then gathered the camp.
 - Decided to keep heading west along the lake trail, then swing around lake Getsjön through Lorthån and take the trail down south at a trail intersection.
@@ -61,7 +61,7 @@ Title: The Quest for Old Tjikko in Fulufjället
   <source type="audio/ogg" src="/audio/fulufjallet_rain.ogg"></source>
 </audio>
 
-### Day 3 - September 5th, 2020
+## Day 3 - September 5th, 2020
 
 - Woke up later than usual and made breakfast while the wind calmed down a bit, sitting in the tent door, overlooking a lake and cupping my hands around the steaming titanium pot. Felt pretty cool.
 - The "metasack" technique paid off, as I was able to pack everything up pretty fast, planning to move all the wet stuff into the shared cabin so it gets a chance to dry up.
@@ -95,7 +95,7 @@ Title: The Quest for Old Tjikko in Fulufjället
 - After sacrificing the last traces of light in favor of cooking and consuming the last MRE (I was starved), I ended up pitching the Kuiu in complete darkness using the headlamp. It was more straightforward than I though, and I used the shelter cabin intelligently during the process (i.e. took out only the tent bags when setting up, then returned for the full pack + made sure I was properly clothed as it also got pretty darn cold).
 - And that's it, it was probably a 40+ km day, but at the end of it I was, once more, in a good position to resume the quest for the oldest tree in the world. Totally worth it.
 
-### Day 4 - September 6th, 2020
+## Day 4 - September 6th, 2020
 
 - Early (0630-ish) breakfast in the shelter-stuga near Naturum.
 - Filtered some water from the stream, useless in retrospect as there was potable water in the facility near Naturum (look for the drinkable water sign).
