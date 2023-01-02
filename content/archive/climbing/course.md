@@ -1,11 +1,9 @@
 Title: Climbing Course
 Tags: Climbing, Wiki
 
-# Part 1
-
 ## The harness
 
-#### Putting a harness on:
+### Putting a harness on:
 
 * there shouldn't be any twists and turns
 * equipment hooks should point downwards
@@ -14,7 +12,7 @@ Tags: Climbing, Wiki
 
 ## Using figure-8 knots to tie-in
 
-#### Figure-8 knot tie-in:
+### Figure-8 knot tie-in:
 
 * loop should be as big or smaller than the belay hoop
 * should pass through both upper and lower harness hoops
@@ -26,7 +24,7 @@ through the upper and lower harness hoops: OUTSIDE, OUTSIDE, INSIDE
 
 ## Belaying
 
-#### The device:
+### The device:
 
 * climber end should point upwards
 * hand end should point downwards
@@ -34,7 +32,7 @@ through the upper and lower harness hoops: OUTSIDE, OUTSIDE, INSIDE
 the rope bite, the belay device cable and into the belay loop
 * there should be a knot near the end of the rope
 
-#### The technique:
+### The technique:
 
 * *always* use full hand grips (4 fingers + thumb around)
 * thumbs always point towards the belay
@@ -47,24 +45,24 @@ the rope bite, the belay device cable and into the belay loop
 
 ## Body checks
 
-#### Climber body check:
+### Climber body check:
 
 * compare the knot loop length to the belay loop length
 * check that the figure 8 is correctly tied (5 times 2 on up/down sides.
 4 parallel lines on left/right sides)
 * check that the slack is not longer than 10cm
 
-#### Belayer check:
+### Belayer check:
 
 * check that the belay device is correctly positioned and configured
 * tap the carbine to make sure it's correctly closed
 
-#### Both climber + belayer body check:
+### Both climber + belayer body check:
 
 * check the harness -> equipment + metallic hooks positioning
 * check the harness -> should not slide up/down the hip bone
 
-#### Rope checks:
+### Rope checks:
 
 * check that the rope is the same
 * check that there are no twists and turns
@@ -72,7 +70,7 @@ the rope bite, the belay device cable and into the belay loop
 
 ## Signaling
 
-#### Before each climb:
+### Before each climb:
 
 * belayer shouts _"on belay!"_
 * climber shouts _"climbing!"_
