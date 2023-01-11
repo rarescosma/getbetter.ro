@@ -4,13 +4,13 @@ type: kubernetes
 name: dockery
 
 __dind_agent: &agent
-  image: registry-np.storage-system.svc.k8s.local:5000/dind:v8
+  image: registry-np.storage-system.svc.k8s.local/dind:v8
   pull: always
   volumes:
     - name: dockersock
       path: /var/run
   environment:
-    REGISTRY: registry-np.storage-system.svc.k8s.local:5000
+    REGISTRY: registry-np.storage-system.svc.k8s.local
 
 steps:
   - name: build-the-builder

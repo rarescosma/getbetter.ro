@@ -5,7 +5,7 @@ PROJECT=getbetter.ro
 BUILD_DEPS=$(shell find content -type f)
 BUILD_DIR=www
 
-REGISTRY?=registry-np.storage-system.svc.k8s.local:5000
+REGISTRY?=registry-np.storage-system.svc.k8s.local
 
 DOCKERFILE?=Dockerfile
 BUILDER_VERSION?=$(shell ./docker/hacks/builder-version.sh)
