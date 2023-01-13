@@ -38,7 +38,7 @@ steps:
     <<: *agent
     environment:
       MCONF:
-        from_secret: minio-creds-pr
+        from_secret: minio-cli-config
     commands:
       - mkdir -p /tmp/mcli && echo $${MCONF} | base64 -d > /tmp/mcli/config.json
       - mcli --quiet --config-dir /tmp/mcli mirror --overwrite --md5 www/galleries/ local/getbetter-staging/galleries >/dev/null
