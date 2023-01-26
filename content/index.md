@@ -1,8 +1,13 @@
 Title: About
 
-Hej, I'm Rareș, and I welcome you to get some good vibes.
+> When Mother Earth catches a bad case of industrialization, She fights it off with a fever.
+> 
+> --  _Science: Abridged to the Point of Uselessness_
 
-I'm a senior software engineer with deep experience in systems programming, automation, site reliability, performance optimization & monitoring. I really like Linux and try to use it on every possible device. (including the work mac)
+Hi, I'm Rareș, and I welcome you to get some good vibes.
+
+I'm a senior software engineer with deep experience in systems programming, automation, site reliability, performance optimization & monitoring. 
+I'm a big fan of Linux and and use it on all my devices.
 
 ----
 
