@@ -10,7 +10,7 @@ python = "^3.10"
 devtools = "^0.10"
 htmlmin = {git = "https://github.com/rarescosma/htmlmin.git", rev = "v0.1.12-gb"}
 mkdocs = "^1.4"
-markdown-include = "==0.8.0"
+markdown-include = "==0.8.1"
 mkdocs-exclude = "^1"
 mkdocs-git-revision-date-plugin = "^0.3"
 mkdocs-macros-plugin = "^0.7"
