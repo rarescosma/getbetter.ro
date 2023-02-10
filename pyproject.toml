@@ -21,7 +21,7 @@ pymdown-extensions = "^9.9"
 mkdocs-awesome-pages-plugin = {git = "https://github.com/rarescosma/mkdocs-awesome-pages-plugin.git", rev = "v2.2.2"}
 Pygments = "^2.13"
 Markdown = "^3.3"
-sh = "^1.14"
+sh = "^2.0"
 pyinotify = "^0.9.6"
 
 [tool.poetry.group.dev.dependencies]

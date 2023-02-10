@@ -924,13 +924,14 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "sh"
-version = "1.14.3"
+version = "2.0.0"
 description = "Python subprocess replacement"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "sh-1.14.3.tar.gz", hash = "sha256:e4045b6c732d9ce75d571c79f5ac2234edd9ae4f5fa9d59b09705082bdca18c7"},
+    {file = "sh-2.0.0-py3-none-any.whl", hash = "sha256:5ca2efaf99362428abc95154ab438c647fb5d8a1d7bf6cde139fe2afc8037793"},
+    {file = "sh-2.0.0.tar.gz", hash = "sha256:a43aef83fe07b96cb4147c61f3a1ab43fabb58505a8196c5049a76deee076248"},
 ]
 
 [[package]]
@@ -1143,4 +1144,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "725f7818b7f789ebbb6a77a8bc59a1f626a5b22defb587f938b468d471592acd"
+content-hash = "34cd796812f3a9a3141b9c01e0b8cf66823e0f454c01b64fd2577bb1b4bfaa20"
