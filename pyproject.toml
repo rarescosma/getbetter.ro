@@ -19,7 +19,7 @@ mkdocs-material-extensions = "^1.1"
 mkdocs-minify-plugin = "^0.6.2"
 pymdown-extensions = "^10.0"
 mkdocs-awesome-pages-plugin = {git = "https://github.com/rarescosma/mkdocs-awesome-pages-plugin.git", rev = "v2.2.2"}
-Pygments = "^2.13"
+Pygments = "^2.15"
 Markdown = "^3.3"
 sh = "^2.0"
 pyinotify = "^0.9.6"
