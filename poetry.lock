@@ -985,13 +985,13 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "sh"
-version = "2.0.4"
+version = "2.0.5"
 description = "Python subprocess replacement"
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "sh-2.0.4-py3-none-any.whl", hash = "sha256:14265a4cd1622429edcf300292ec98193530fb143fe642b3437024eca9bee8c5"},
-    {file = "sh-2.0.4.tar.gz", hash = "sha256:a18920f0839991bc9dfddb6dcc006c360b1064ba96257359f0ea356e9fa75a60"},
+    {file = "sh-2.0.5-py3-none-any.whl", hash = "sha256:a52f6e064919fdf198c7383ccdd570fe0acde74b92bc7149863c1fe652ab7e11"},
+    {file = "sh-2.0.5.tar.gz", hash = "sha256:9d9e59498da2871c51d6170a8815da83a72c2c2d29f335e7abf0202e1a8fdb7f"},
 ]
 
 [[package]]
