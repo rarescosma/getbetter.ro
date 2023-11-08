@@ -60,7 +60,7 @@ notes.
 You learn by creating information and being active in the process.
 
 
-### S- State (all learning is state dependent)
+### S - State (all learning is state dependent)
 
 Information combined with emotion becomes a long-term memory.
 
@@ -79,7 +79,7 @@ Instead of being clever during the class, aim to be bewildered by the new
 information.
 
 
-### T- Teach (when you teach something you get to learn it twice)
+### T - Teach (when you teach something you get to learn it twice)
 
 Learn with the intention of teaching it to somebody else.
 
