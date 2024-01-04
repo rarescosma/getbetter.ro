@@ -4,7 +4,7 @@ type: kubernetes
 name: dockery
 
 __dind_agent: &agent
-  image: registry-np.storage-system.svc.k8s.local/orbs/dind:blue
+  image: registry-np.storage-system.svc.k8s.local/orbs/dind:green
   pull: always
   volumes:
     - name: dockersock
