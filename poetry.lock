@@ -193,21 +193,19 @@ files = [
 
 [[package]]
 name = "devtools"
-version = "0.11.0"
+version = "0.12.2"
 description = "Python's missing debug print command, and more."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "devtools-0.11.0-py3-none-any.whl", hash = "sha256:22a3b65b58713ccd7e8586feffdefaad57bbdbc6ff76bd68ecf3150a00cf41e3"},
-    {file = "devtools-0.11.0.tar.gz", hash = "sha256:4a6d987dfab0c7513a514e7faf0a71296d220423470204e76e0752d146dfad62"},
+    {file = "devtools-0.12.2-py3-none-any.whl", hash = "sha256:c366e3de1df4cdd635f1ad8cbcd3af01a384d7abda71900e68d43b04eb6aaca7"},
+    {file = "devtools-0.12.2.tar.gz", hash = "sha256:efceab184cb35e3a11fa8e602cc4fadacaa2e859e920fc6f87bf130b69885507"},
 ]
 
 [package.dependencies]
 asttokens = ">=2.0.0,<3.0.0"
 executing = ">=1.1.1"
-
-[package.extras]
-pygments = ["pygments (>=2.2.0)"]
+pygments = ">=2.15.0"
 
 [[package]]
 name = "dill"
@@ -1164,4 +1162,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "cb4833f2c567e164b0e4f514141bde23aecc8de7d37d644a80516441a265474a"
+content-hash = "89cf6f80ff952626985dacf5dce80dee6bb007f234aa143faefb0682f2ce90fe"
