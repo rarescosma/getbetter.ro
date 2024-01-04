@@ -47,7 +47,7 @@ pull: ## Pull docker image
 
 .PHONY: docker
 docker: ## Build the docker image
-	docker build -t $(REGISTRY)/$(PROJECT_TAG) \
+	docker build --no-cache -t $(REGISTRY)/$(PROJECT_TAG) \
 	  --build-arg BUILDER_VERSION=$(BUILDER_VERSION) \
 	  --build-arg REGISTRY=$(REGISTRY) \
 	  -f docker/$(DOCKERFILE) .
