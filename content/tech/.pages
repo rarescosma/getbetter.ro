@@ -1,4 +1,5 @@
 arrange:
 - tunnel-colocated-services-openvpn.md
+- migrate-to-ecr.md
 - rsync-tricks.md
 - ...
