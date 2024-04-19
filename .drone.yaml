@@ -33,8 +33,9 @@ steps:
   - name: preview
     when:
       branch:
-        exclude:
-          - main
+        - main
+      event:
+        - pull_request
     <<: *agent
     environment:
       MCONF:
@@ -49,9 +50,16 @@ steps:
     when:
       branch:
         - main
+      event:
+        - push
     <<: *agent
     commands:
       - make drone-sync
+
+trigger:
+  branch:
+    exclude:
+      - renovate/*
 
 services:
   - name: docker-daemon
