@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 devtools = "^0.12.0"
-htmlmin = {git = "https://github.com/rarescosma/htmlmin.git", rev = "v0.1.12-gb"}
+htmlmin = {git = "https://github.com/rarescosma/htmlmin.git", rev = "dca6ed24ead9dc0422fb7ce3ab6af11d8206f49b"}
 mkdocs = "^1.4"
 markdown-include = "==0.8.1"
 mkdocs-exclude = "^1"
