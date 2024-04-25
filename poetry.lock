@@ -528,7 +528,7 @@ mkdocs = ">=1"
 [package.source]
 type = "git"
 url = "https://github.com/rarescosma/mkdocs-awesome-pages-plugin.git"
-reference = "v2.2.2"
+reference = "2788b3709f8dd0285e14d86a251b7e68c7020720"
 resolved_reference = "2788b3709f8dd0285e14d86a251b7e68c7020720"
 
 [[package]]
@@ -1179,4 +1179,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "2a1f7029702026d9d3a83e3eda9ae22b867e4f08f8e84878d392982fa853fd00"
+content-hash = "224c7a7864253cb9e1c2295da360c8be459c05f78bdcbe87f38d48657c3bf05a"
