@@ -1,6 +1,6 @@
 ARG REGISTRY
 
-FROM ${REGISTRY}/python:3.11.1
+FROM ${REGISTRY}/python:3.12.2
 
 COPY pyproject.toml poetry.lock ./
 
