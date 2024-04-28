@@ -23,6 +23,7 @@ Pygments = "^2.13"
 Markdown = "^3.3"
 sh = "^2.0"
 pyinotify = "^0.9.6"
+pyasyncore = "^1.0.4"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "*"

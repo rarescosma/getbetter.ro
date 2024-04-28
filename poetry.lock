@@ -758,6 +758,17 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4.3)", "pytest-
 type = ["mypy (>=1.8)"]
 
 [[package]]
+name = "pyasyncore"
+version = "1.0.4"
+description = "Make asyncore available for Python 3.12 onwards"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyasyncore-1.0.4-py3-none-any.whl", hash = "sha256:9e5f6dc9dc057c56370b7a5cdb4c4670fd4b0556de2913ed1f428cd6a5366895"},
+    {file = "pyasyncore-1.0.4.tar.gz", hash = "sha256:2c7a8b9b750ba6260f1e5a061456d61320a80579c6a43d42183417da89c7d5d6"},
+]
+
+[[package]]
 name = "pygments"
 version = "2.17.2"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -1165,4 +1176,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "7f3f83dd6486988f3e17a61ad0dd0a3d2b246e942ddf2a31d9083eba351604c7"
+content-hash = "7d7c3fe1a6119911d2e5e2238032093ca56d83345a4e967d068f62d0d0f33b40"
