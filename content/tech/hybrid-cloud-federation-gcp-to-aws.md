@@ -49,19 +49,16 @@ GCB Service Account                      GCP API                      AWS API
     Because long-lived credentials are a [bad idea](https://medium.com/datamindedbe/why-you-should-not-use-iam-users-d0368dd319d3).
 
 We'll use Python to express the flow with the ambition level that the resulting 
-code should be runnable by any GCP Cloud Builds.
+code should be runnable during any GCP Cloud Build runs.
 
-But first, let's do some quick terraform to define the assumable AWS IAM role and the GCP Service Account.
+But first, let's start with some quick [terraform](https://developer.hashicorp.com/terraform/language) to define the assumable AWS IAM role and the GCP Service Account.
 
 ### Prerequisite: creating an assumable IAM role in AWS
 
 In this section we'll focus on creating an IAM role in AWS that's assumable 
 by the GCP Service Account. 
 
-We'll be using the [terraform language](https://developer.hashicorp.com/terraform/language) 
-to define our resources.
-
-Let's start by defining our provider:
+Begin by defining the `aws` provider:
 
 ```terraform
 # in providers.tf
@@ -176,7 +173,7 @@ First, define the gcloud provider:
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = ">= 5.26"
     }
   }
@@ -194,7 +191,7 @@ property of most resources:
 ```terraform
 # in variables.tf
 variable "project" {
-  type = string
+  type    = string
   default = "genial-theory-419908"
 }
 ```
@@ -208,19 +205,19 @@ to be able to use the SA for cloud builds and allow it to log.
 ```terraform
 # in service_account.tf
 resource "google_service_account" "gcp-sa" {
-  project = var.project
+  project    = var.project
   account_id = "gcp-assumer"
 }
 
 resource "google_project_iam_member" "gcp-project-iam-member" {
-  project = var.project
+  project  = var.project
   for_each = toset([
     "roles/iam.serviceAccountTokenCreator",
     "roles/logging.logWriter",
     "roles/cloudbuild.builds.builder",
   ])
-  role = each.key
-  member = "serviceAccount:${google_service_account.gcp-sa.email}"
+  role     = each.key
+  member   = "serviceAccount:${google_service_account.gcp-sa.email}"
 }
 ```
 
