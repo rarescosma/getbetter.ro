@@ -1,38 +1,25 @@
-Title: Migrating from a heterogeneous Docker setup to a centralized ECR registry
+Title: Hybrid cloud federation - authenticating from GCP into AWS
 
-### The Problem
+### Intro
 
-Say our organization that uses Kubernetes, powered by EKS on AWS, has 
-"organically" evolved to a state where its Docker images are built and/or hosted on 
-an amalgamation of vendors, cloud providers & services:
+This article is part of an upcoming series focusing on hosting all the container
+images of an organization in a centralized ECR repository. 
 
-- some are built on GCP using Cloud Build and then pushed to Artifact Registry
-- some are built on GitHub actions and then pushed to Artifact Registry and/or ECR
-- others are simply pulled by the EKS worker nodes from random registries all over the Internet
+The scenario presupposes that we start with a hybrid cloud setup: GCP + AWS.
 
-The third point should especially make you cringe, especially if, like me, you
-have a history with financial services. With the frequency of supply 
-chain attacks these days, pulling Docker images from outside-the-house
-registries is a big no-no.
+Hence, the first problem we're going to solve is authenticating from GCP into
+AWS.
 
-But I digress: the point of this article is to present a solution for migrating
-all of the Docker images pulled by the EKS workers onto a private container
-registry on AWS, powered by ECR.
+Since 2024 is the [year of the serverless***less***ness](https://www.youtube.com/watch?v=aWfYxg-Ypm4),
+we're going to assume we have _somewhere_ to run our code on the GCP side. Most
+of the time that'll be just a [Cloud Build](https://cloud.google.com/build/docs) pipeline.
 
-To make things spicy we'll also make a couple of scale- and isolation-related
-assumptions:
+The main implication here is that the authentication flow will be executed using a GCP [Service Account](https://cloud.google.com/iam/docs/service-account-overview).
 
-- our fictive organization uses multiple different AWS _accounts_ (think `prod`, `staging`, `ci`)
-- our fictive organization has EKS clusters in different _regions_
+Successfully authenticating from this Service Account into AWS will let us,
+for example, push resulting container images into ECR.
 
-### The Solution
-
-#### Federated authentication from Google CloudBuild to AWS ECR
-
-First, we'll need to make sure the GCP service account building our docker images
-can authenticate towards AWS. We'll use Terraform syntax to encode the IAM resources
-required on the AWS side and a bit of Python glue code to perform all the token
-juggling.
+### Sneak peek: authentication flow
 
 This is how the authentication flow will look like:
 
@@ -53,26 +40,55 @@ GCB Service Account                      GCP API                      AWS API
   |                                         |                            |
 ```
 
-First, we'll need to create an IAM role that's assumable by the GCB Service 
-Account. For brevity, we'll give this role full administrative permissions
-over the ECR service, but in a real-world scenario you should definitely distill
-these down to only the actions/repositories that you intend to let GCB push to.
+!!! info "But why?"
 
-First, let's define some variables that we'll use to parametrize our resources.
+    At this point you might be wondering: "Why go through all _that_, when I can
+    generate some long-lived AWS credentials, store them somewhere in GCP and
+    decode them when needed?"
 
+    Because long-lived credentials are a [bad idea](https://medium.com/datamindedbe/why-you-should-not-use-iam-users-d0368dd319d3).
+
+We'll use Python to express the flow with the ambition level that the resulting 
+code should be runnable by any GCP Cloud Builds.
+
+But first, let's do some quick terraform to define the assumable AWS IAM role and the GCP Service Account.
+
+### Prerequisite: creating an assumable IAM role in AWS
+
+In this section we'll focus on creating an IAM role in AWS that's assumable 
+by the GCP Service Account. 
+
+We'll be using the [terraform language](https://developer.hashicorp.com/terraform/language) 
+to define our resources.
+
+Let's start by defining our provider:
+
+```terraform
+# in providers.tf
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+  }
+}
+```
+
+Next, let's define a few variables common to all upcoming resources:
 
 ```terraform
 # in variables.tf
 variable "prefix" {
   type    = string
-  default = "acme-inc"
+  default = "acme"
 }
 
 variable "gcp_service_account" {
   description = "GCP service account email to allow federated login from."
   type        = string
   nullable    = false
-  default     = "replace@me.com"
+  default     = "gcp-assumer@gcp-project-id.iam.gserviceaccount.com"
 }
 
 variable "target_audience" {
@@ -84,19 +100,19 @@ variable "target_audience" {
 ```
 
 The GCP service account is usually a valid "email" address in the form:
-`role-name@<gcp-project-id>.iam.gserviceaccount.com`.
+`gcp-assumer@gcp-project-id.iam.gserviceaccount.com`.
 
 Creating the AWS IAM role is straightforward:
 
 ```terraform
 # in federated_role.tf
 resource "aws_iam_role" "gcp_to_aws" {
-  name               = "${var.prefix}-gcp-to-aws-role"
+  name               = "${var.prefix}-gcp-to-aws"
   assume_role_policy = data.aws_iam_policy_document.gcp_to_aws_policy.json
 }
 ```
 
-We'll give it a role assuming policy checking both the target audience and the
+We'll then attach a role-assuming policy checking both the target audience and the
 requesting service account:
 
 ```terraform
@@ -139,62 +155,85 @@ data "aws_iam_policy_document" "gcp_to_aws_policy" {
 }
 ```
 
-Then we'll create a role policy that allows all actions to be performed on
-all ECR repositories and attach the policy to our new role:
+Then go through a `terraform init; terraform plan; terraform apply` cycle,
+making sure to replace the defaults in the `variables.tf` files with the values
+from your organization / setup. Alternatively, you can pass the values via
+`-var` command line arguments to terraform.
 
-```terraform
-# in federated_role.tf
-resource "aws_iam_policy" "ecr_push" {
-  name   = "${var.prefix}-gcp-to-aws-ecr-permissions"
-  policy = data.aws_iam_policy_document.ecr_permissions.json
-}
+If all worked well, you should have a new IAM role in your AWS account that's 
+assumable via federation.
 
-data "aws_iam_policy_document" "ecr_permissions" {
-  statement {
-    actions   = ["ecr:*"]
-    resources = ["*"]
-    effect    = "Allow"
-  }
-  statement {
-    actions   = ["ecr:GetAuthorizationToken"]
-    resources = ["*"]
-    effect    = "Allow"
-  }
-}
+Hurray! 🥳
 
-resource "aws_iam_role_policy_attachment" "ecr_permissions" {
-  role       = aws_iam_role.gcp_to_aws.name
-  policy_arn = aws_iam_policy.ecr_permissions.arn
-}
-```
+### Prerequisite: creating a GCP Service Account
 
-Don't forget to specify the AWS provider for the Terraform setup:
+This section focuses on defining the GCP Service Account.
+
+First, define the gcloud provider:
 
 ```terraform
 # in providers.tf
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 5.0"
+    google = {
+      source = "hashicorp/google"
+      version = ">= 5.26"
     }
   }
 }
 ```
 
-Then go through a `terraform init; terraform plan; terraform apply` cycle,
-making sure to replace the defaults in the `variables.tf` files with the values
-from your organization / setup. Alternatively, you can pass the values via
-`-var` command line flags to terraform.
+!!! warning
 
-If all worked well, you should have a new IAM role in your account that's 
-assumable via federation.
+    Use a different directory for this set of `.tf` files than the one you used
+    in the previous step. Separation of concerns and all that.
 
-Hurray! 🥳
+We'll capture our GCP project name in a variable, since it tends to be a required
+property of most resources:
 
-Ok, now let's move on with the Python glue code. This code will be executed
-by the GCB runner and will go through the flow described at the beginning of the
-section.
+```terraform
+# in variables.tf
+variable "project" {
+  type = string
+  default = "genial-theory-419908"
+}
+```
+
+Finally we'll define our service account making sure to grant the ["Service Account Token Creator"](https://cloud.google.com/iam/docs/service-account-permissions#token-creator-role) 
+role which will allow it to generate JWT tokens and exchange them for OAuth tokens.
+
+We'll also grant the `cloudbuild.builds.builder` and `logging.logWriter` roles 
+to be able to use the SA for cloud builds and allow it to log.
+
+```terraform
+# in service_account.tf
+resource "google_service_account" "gcp-sa" {
+  project = var.project
+  account_id = "gcp-assumer"
+}
+
+resource "google_project_iam_member" "gcp-project-iam-member" {
+  project = var.project
+  for_each = toset([
+    "roles/iam.serviceAccountTokenCreator",
+    "roles/logging.logWriter",
+    "roles/cloudbuild.builds.builder",
+  ])
+  role = each.key
+  member = "serviceAccount:${google_service_account.gcp-sa.email}"
+}
+```
+
+Another `terraform init; terraform plan; terraform apply` cycle and the new 
+Service Account should pop up in the GCP IAM console.
+
+Hurray again! 🥳
+
+### The federation dance
+
+Ok, now let's move on to the Python code. This code will be executed
+by the GCB runner (using the Service Account we created earlier) and will go 
+through the flow described at the beginning of the article.
 
 Let's get a minimal Python dev environment going:
 
@@ -220,19 +259,16 @@ purposes:
 - `google-api-python-client` and `google-auth-oauthlib` to interact with the GCP APIs
 - `click` to wrap it all up in a nice CLI
 
+!!! info
+
+    For brevity, I'll skip over the `import` statements in the sample code, but you're
+    welcome to grab the final version of the script from [this gist](https://gist.github.com/rarescosma/03a50a9695ef420f23faad12bbb990f8).
+
 Let's obtain credentials from GCP that we can later use to generate the 
-signed JWT token:
+signed JWT token. For code running inside Cloud Build the `auth/userinfo.email` 
+scope would suffice. However, we'd like to test this code locally so we'll add the `auth/iam` scope.
 
 ```python
-import sys
-from typing import Optional
-
-from google.auth.credentials import Credentials
-from google.auth import default
-from google.auth.exceptions import GoogleAuthError
-from google.auth.transport.requests import Request
-
-
 def _get_default_credentials() -> Optional[Credentials]:
     credentials, _ = default(
         scopes=[
@@ -254,26 +290,14 @@ Now, let's use these credentials in a function that generates the signed JWT
 token:
 
 ```python
-import sys
-import time
-from typing import Callable, Optional
-
-from google.auth import jwt
-from google.auth.credentials import Credentials
-from google.auth.exceptions import GoogleAuthError
-from google.auth.iam import Signer
-from google.auth.transport.requests import Request
-
 JWT_BEARER_TOKEN_EXPIRY_TIME: int = 3600
 OAUTH_TOKEN_URI: str = "https://www.googleapis.com/oauth2/v4/token"
 
 
 def _get_signed_jwt(
-        service_account: str,
-        target_audience: str,
-        credential_provider: Callable[
-            ..., Optional[Credentials]
-        ] = _get_default_credentials,
+    service_account: str,
+    target_audience: str,
+    credential_provider: Callable[..., Optional[Credentials]] = _get_default_credentials,
 ) -> Optional[bytes]:
     if (credentials := credential_provider()) is None:
         return None
@@ -296,23 +320,19 @@ def _get_signed_jwt(
         return None
 ```
 
-We're using a simple "dependency injection" pattern here and passing the function
-generating the credentials as an argument of `_get_signed_jwt`. This will help
-with writing tests.
+!!! note
 
-The other two arguments to this function are the service account identifier
+    We're using a simple "dependency injection" pattern here and passing the function
+    generating the credentials as an argument of `_get_signed_jwt`. This will help
+    with writing tests.
+
+The other two arguments of this function are the service account identifier
 and the target audience, both of which should precisely match what we used earlier
 in the Terraform code.
 
-After the GCP API has so kindly provided us with a signed JWT token, we'll 
-exchange it for an OAuth token:
+Next, we'll exchange the signed JWT token for an OAuth token:
 
 ```python
-import sys
-from typing import Callable, Optional
-
-import requests
-
 JWT_BEARER_TOKEN_GRANT_TYPE: str = "urn:ietf:params:oauth:grant-type:jwt-bearer"
 OAUTH_TOKEN_URI: str = "https://www.googleapis.com/oauth2/v4/token"
 
@@ -336,20 +356,12 @@ def _get_oauth_token(
 Finally, if all went well, we'll be able to pass the OAuth token to the AWS API
 via boto and get those temporary AWS credentials we've worked so hard for.
 
-We'll wrap the result in dataclass (TODO: link) so it's strongly typed and
-we have a convenient place for format transformations. As an example, we can
-format them as shell export block, so the output of our program could be directly
-`eval`-ed.
+We'll wrap the result in a [dataclass](https://docs.python.org/3/library/dataclasses.html) 
+so it's strongly typed and we have a convenient place for format transformations. 
+As an example, we can format them as shell export block, 
+so the output of our program could be directly `eval`-ed in a shell script.
 
 ```python
-from dataclasses import dataclass
-import sys
-from typing import Optional
-
-import boto3
-from botocore.exceptions import ClientError as BotoError
-
-
 @dataclass(frozen=True)
 class BotoCredentials:
     access_key_id: str
@@ -365,7 +377,7 @@ class BotoCredentials:
 
 
 def _get_boto_credentials(
-        role_arn: str, session_name: str, token: str
+    role_arn: str, session_name: str, token: str
 ) -> Optional[BotoCredentials]:
     client = boto3.client("sts")
 
@@ -390,10 +402,6 @@ Putting all of it together and wrapping it with some `click` decorators to
 get a smooth CLI:
 
 ```python
-import sys
-
-import click
-
 @click.command
 @click.option(
     "--gcp-service-account",
@@ -458,11 +466,32 @@ if __name__ == "__main__":
     federate_gcp_to_aws()
 ```
 
-For the TLDR inclined among us, here's the final version of the script [hosted
-as a gist](https://gist.github.com/rarescosma/03a50a9695ef420f23faad12bbb990f8).
+For the TLDR-inclined among us, here's [a gist](https://gist.github.com/rarescosma/03a50a9695ef420f23faad12bbb990f8) 
+with the final version of the script. 
 
-## TODO
-- ditto for github
-- horizontal replication: images from the `ci` account should be replicated to ECR repositories
-sitting in the `prod` and `staging` accounts
-- vertical replication: images in the `prod` and `staging` registries should be available in both `eu-north-1` and `eu-west-1` availability zones
+To test the entire script locally we'll [impersonate](https://cloud.google.com/docs/authentication/use-service-account-impersonation)
+the GCP Service Account locally and call our python script with it:
+
+```shell
+gcloud auth application-default login --impersonate-service-account=gcp-assumer@gcp-project-id.iam.gserviceaccount.com
+
+./auth.py \
+  --gcp-service-account gcp-assumer@gcp-project-id.iam.gserviceaccount.com \
+  --target-audience-url https://gcp-to-aws-federation.acme.com \
+  --aws-iam-role-arn arn:aws:iam::123456123456:role/acme-gcp-to-aws \
+  --aws-session-name test-session
+```
+
+Replace with your own GCP project ID, AWS account ID, the target audience URL
+you used when defining the AWS IAM role and the proper prefix (instead of `acme`)
+and give it a go. If all worked well, you should be getting temporary AWS credentials,
+formated shell-exportable variables:
+
+```shell
+export AWS_ACCESS_KEY_ID=...
+export AWS_SECRET_ACCESS_KEY=...
+export AWS_SESSION_TOKEN=...
+```
+
+And that's all folks. Stay tuned for part two, where we'll continue our federation
+journey, this time going from GitHub actions into AWS.
