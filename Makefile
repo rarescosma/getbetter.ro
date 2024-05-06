@@ -6,6 +6,7 @@ BUILD_DEPS=$(shell find content -type f)
 BUILD_DIR=www
 
 REGISTRY?=registry-np.storage-system.svc.k8s.local
+HUB?=$(REGISTRY)
 
 DOCKERFILE?=Dockerfile
 BUILDER_VERSION?=$(shell ./docker/hacks/builder-version.sh)
@@ -50,6 +51,7 @@ docker: ## Build the docker image
 	docker build -t $(REGISTRY)/$(PROJECT_TAG) \
 	  --build-arg BUILDER_VERSION=$(BUILDER_VERSION) \
 	  --build-arg REGISTRY=$(REGISTRY) \
+	  --build-arg HUB=$(HUB) \
 	  -f docker/$(DOCKERFILE) .
 
 .PHONY: push
