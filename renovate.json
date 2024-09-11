@@ -4,8 +4,12 @@
     "renovate/{{depName}}"
   ],
   "extends": [
-    "config:base",
+    "config:recommended",
+    "group:allNonMajor",
     ":dependencyDashboard",
     ":rebaseStalePrs"
-  ]
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "branchConcurrentLimit": 0
 }
