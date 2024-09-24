@@ -76,6 +76,10 @@ plugins:
   - minify:
       minify_html: true
   - search
+  - exclude-search:
+      exclude:
+        - journal/*
+        - archive/*
 
 nav:
   - Home:
