@@ -17,19 +17,18 @@ theme:
     - navigation.indexes
     - navigation.top
   palette:
-    - scheme: slate
-      primary: black
-      accent: blue
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
     - scheme: default
       primary: black
       accent: blue
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 extra_css:
   - assets/stylesheets/gfonts.css
   - assets/stylesheets/macros.css
