@@ -1,4 +1,8 @@
-Title: About
+---
+hide:
+  - navigation
+  - toc
+---
 
 > When Mother Earth catches a bad case of industrialization, She fights it off with a fever.
 > 
