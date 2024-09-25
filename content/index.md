@@ -4,18 +4,59 @@ hide:
   - toc
 ---
 
-> When Mother Earth catches a bad case of industrialization, She fights it off with a fever.
-> 
-> --  _Science: Abridged to the Point of Uselessness_
+<style>
+.md-content__inner > h1:nth-of-type(1) { display: none; }
+.md-content__inner::before { height: 0; }
+</style>
 
-Hi, I'm Rareș, and I welcome you to get some good vibes.
+Hello and welcome! I'm Rareș, and this is my corner of the web. On most platforms I go by `rarescosma`, but sometimes
+also `karelian`. I was born in Romania, but became a Swedish citizen in 2024.
 
-I'm a senior software engineer with deep experience in systems programming, automation, site reliability, performance optimization & monitoring. 
-I'm a big fan of Linux and and use it on all my devices.
+In 2011, I got a _Masters in Digital Networks_ following a _Bachelors in Telecommunications_.
 
-----
+In my early university years I taught myself web development for some extra pocket capital. Small _WordPress_ sites led to
+bigger ones and soon I picked up skills for running elephant-traffic sites in production. 
 
-**Links**
+At _Sony Mobile_, my love for performance met with my teenage-years Linux passion as I advanced to take charge of the
+entire platform in what could be described as one of the earliest DevOps roles.
+
+My next big role was at _Klarna_, in Stockholm, where I did systems programming, developed a monitoring platform and honed
+my Kubernetes skills.
+
+I like automation, site reliability, loosely coupled systems & performance optimization.
+
+I also value simplicity and efficiency. Broken, undocumented and accidentally complex things waste everyone's time.
+
+I believe in optimizing processes and solid engineering as a good way to spend our time, over pushing for getting things
+done the "quick and dirty way". 
+
+As a platform engineer, the best thing to hear is: _"Wow, I don't know what you did, but `X` works much faster now!"_
+
+`X` can be a part of the product itself, where optimizations have been applied with an SRE mindset, or it can be part of
+a development loop that took way too long and hampered fellow engineers' ability to iterate fast.
+
+I'm all about the idea of building large complex systems that are still reliable and fast by composing together small
+simple pieces, often catalogued as ["boring" tech](https://mcfunley.com/choose-boring-technology){ target="_blank" },
+that make sense individually.
+
+The [UNIX philosophy](https://en.wikipedia.org/wiki/Unix_philosophy){ target="_blank" }, [Urbit's
+precepts](https://urbit.org/blog/precepts){ target="_blank" } and [Bill de hÓra's
+principles](https://dehora.net/principles){ target="_blank" } have all been great inspiration to me over the years.
+
+When I'm not coding I like to walk, swim, bike, lift and sometimes climb. It's a very comforting thought that no matter
+how much capital some might accrue, if they don't put in the hard work of staying fit, some of our planet's most awesome
+landscapes will remain inaccessible for them.
+
+---
+
+On this website you'll find a showcase of [projects](projects/index.md) that kept me busy lately, a couple of long(ish) form
+[articles](tech/hybrid-cloud-federation-gcp-to-aws.md) on various tech topics, but also a sort of
+[travelogue](journal/2022-08-17-tour-de-mont-blanc.md) / [photo gallery](journal/2020-09-03-the-quest-for-old-tjikko.md)
+of my latest adventures.
+
+---
+
+**If you'd like to reach out:**
 
 <div class="md-typeset__scrollwrap">
     <div class="md-typeset__table">
@@ -55,3 +96,7 @@ I'm a big fan of Linux and and use it on all my devices.
         </table>
     </div>
 </div>
+
+> When Mother Earth catches a bad case of industrialization, She fights it off with a fever.
+>
+> --  _Science: Abridged Beyond the Point of Usefulness_

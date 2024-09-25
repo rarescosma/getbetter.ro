@@ -50,6 +50,9 @@ site_dir: www
 markdown_extensions:
   - admonition
   - extra
+  - attr_list
+  - md_in_html
+  - footnotes
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
@@ -65,7 +68,8 @@ markdown_extensions:
 
 plugins:
   - awesome-pages
-  - include_dir_to_nav
+  - include_dir_to_nav:
+      file_pattern: '^(?!index\.md$).*\.md$'
   - exclude:
       glob:
       - _build/*
@@ -82,14 +86,13 @@ plugins:
         - archive/*
 
 nav:
-  - Home:
-      - About: index.md
-  - Tech articles:
-      - tech
-  - Journal:
-      - journal
-  - Archive:
-      - archive
+  - Home: index.md
+  - Projects:
+      - projects/index.md
+      - projects
+  - Tech articles: tech
+  - Journal: journal
+  - Archive: archive
 
 validation:
   absolute_links: ignore
