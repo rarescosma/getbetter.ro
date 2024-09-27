@@ -34,6 +34,7 @@ extra_css:
   - assets/stylesheets/macros.css
   - assets/stylesheets/popup.css
 extra_javascript:
+  - assets/javascripts/plausible.js
   - assets/javascripts/gallery.js
 
 extra:
