@@ -49,7 +49,7 @@ landscapes will remain inaccessible for them.
 
 ---
 
-On this website you'll find a showcase of [projects](projects/index.md) that kept me busy lately, a couple of long(ish) form
+On this website you'll find a showcase of projects that kept me busy lately, a couple of long(ish) form
 [articles](tech/hybrid-cloud-federation-gcp-to-aws.md) on various tech topics, but also a sort of
 [travelogue](journal/2022-08-17-tour-de-mont-blanc.md) / [photo gallery](journal/2020-09-03-the-quest-for-old-tjikko.md)
 of my latest adventures.
