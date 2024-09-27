@@ -87,9 +87,6 @@ plugins:
 
 nav:
   - Home: index.md
-  - Projects:
-      - projects/index.md
-      - projects
   - Tech articles: tech
   - Journal: journal
   - Archive: archive
