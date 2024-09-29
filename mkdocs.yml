@@ -15,7 +15,6 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.indexes
-    - navigation.top
   palette:
     - scheme: default
       primary: black
