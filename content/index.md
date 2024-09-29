@@ -4,10 +4,7 @@ hide:
   - toc
 ---
 
-<style>
-.md-content__inner > h1:nth-of-type(1) { display: none; }
-.md-content__inner::before { height: 0; }
-</style>
+# Welcome
 
 Hello and welcome! I'm Rareș, and this is my corner of the web. On most platforms I go by `rarescosma`, but sometimes
 also `karelian`. I was born in Romania, but became a Swedish citizen in 2024.
